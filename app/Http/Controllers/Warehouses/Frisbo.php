@@ -65,6 +65,7 @@ class Frisbo extends Controller
                     "sku" => $subproductItem->subproduct->product->code,
                     "name" => $subproductItem->subproduct->product->translation->name,
                     "price" => $subproductItem->set_id == 0 ? $subproductItem->subproduct->product->personalPrice->price : $subproductItem->subproduct->product->personalPrice->set_price,
+                    "price_float" => $subproductItem->set_id == 0 ? $subproductItem->subproduct->product->personalPrice->price : $subproductItem->subproduct->product->personalPrice->set_price,
                     "quantity" => $subproductItem->qty,
                     "vat" => 0,
                     "discount" => $subproductItem->subproduct->product->discount
