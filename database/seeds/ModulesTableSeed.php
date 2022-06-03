@@ -365,17 +365,3 @@ class ModulesTableSeed extends Seeder
         ]);
     }
 }
-
-       });
-    }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('parameters');
-    }
-}

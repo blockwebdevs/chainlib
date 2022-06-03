@@ -42,26 +42,3 @@ class CreateUserfields extends Migration
         Schema::dropIfExists('userfields');
     }
 }
-
-:dropIfExists('oauth_refresh_tokens');
-    }
-}
-
-
-;
-            $table->text('motive')->nullable();
-            $table->dateTime('datetime')->useCurrent();
-            $table->timestamps();
-        });
-    }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('returns');
-    }
-}

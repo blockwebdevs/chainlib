@@ -38,20 +38,3 @@ class CreateSetsProductsImages extends Migration
         Schema::dropIfExists('set_product_images');
     }
 }
-
-s')->nullable();
-            $table->boolean('revoked');
-            $table->dateTime('expires_at')->nullable();
-        });
-    }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('oauth_auth_codes');
-    }
-}

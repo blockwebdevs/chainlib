@@ -32,4 +32,3 @@ class CreateContacts extends Migration
         Schema::dropIfExists('contacts');
     }
 }
-
