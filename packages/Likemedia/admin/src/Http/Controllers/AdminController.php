@@ -32,20 +32,6 @@ class AdminController extends Controller
     {
         $langs = Lang::pluck('id')->toArray();
 
-        // $translations = TranslationLine::whereNotIn('lang_id', $langs)->delete();
-
-        // $products = Product::get();
-        //
-        // if ($products->count() > 0) {
-        //     foreach ($products as $key => $product) {
-        //         $mainPrice = $product->mainPrice->price;
-        //         $product->update([
-        //             'price' => $mainPrice,
-        //             'actual_price' => $mainPrice,
-        //         ]);
-        //     }
-        // }
-
         return view('admin::admin.dashbord');
     }
 

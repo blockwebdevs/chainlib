@@ -164,9 +164,9 @@ class ProductCategoryController extends Controller
     {
         $koha = new KohaController();
 
+        print_r($koha);
         return $koha->synchOpac($opacItem);
     }
-
 
     public function store(Request $request)
     {
