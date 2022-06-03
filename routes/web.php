@@ -39,10 +39,7 @@ Route::group(['prefix' => $prefix], function() use ($types)  {
     Route::get('/order', 'CheckoutController@renderCheckoutShipping')->name('order');
     Route::get('/order/payment/{orderId}', 'CheckoutController@renderCheckoutPayment')->name('order-payment');
     Route::get('/thanks', 'CheckoutController@renderThankyouPage')->name('thanks');
-
-    Route::get('/paydo/payment/success/{orderId}/{payment}', 'Payments\Methods\Paydo@getSuccessStatus')->name('paydo-success');
-    Route::get('/paydo/payment/fail/{orderId}/{payment}', 'Payments\Methods\Paydo@getFailStatus')->name('paydo-fail');
-
+    
     Route::get('/login/{provider}', 'AuthController@redirectToProvider');
     Route::get('/login/{provider}/callback', 'AuthController@handleProviderCallback');
 
