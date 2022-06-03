@@ -15,4 +15,3 @@ class SetTranslation extends Model
         return $this->belongsTo(Set::class);
     }
 }
-
