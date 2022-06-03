@@ -1,3 +1,6 @@
 <?php
 
-return [];
+return [
+    'drawer' => 'session',
+    'version' => '1.0'
+];
