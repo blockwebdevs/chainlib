@@ -44,7 +44,7 @@
 </template>
 
 <script>
-    import { bus } from "../../app_mobile";
+    import { bus } from "../app_mobile";
 
     export default {
         data() {

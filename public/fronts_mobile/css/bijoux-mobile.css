@@ -41,20 +41,20 @@
 /* collection buttons HP */
 
 /* add to cart and wish one product page,
-                          add to cart collection page,
-                          modal form button submit,
-                          404 page button,
-                          thank you page button,
-                          bijoux button topbar1,
-                          promocode button,
-                          order summary steps,
-                          promocodes page discount */
+add to cart collection page,
+modal form button submit,
+404 page button,
+thank you page button,
+bijoux button topbar1,
+promocode button,
+order summary steps,
+promocodes page discount */
 
 /* contact page from,
-                            order summary label, input, a, p,
-                            modal labels,
-                            input modal,
-                            inputs and textarea */
+    order summary label, input, a, p,
+    modal labels,
+    input modal,
+    inputs and textarea */
 
 header.jewerly {
   background: #fff1d7;
@@ -82,8 +82,6 @@ header.jewerly #navOpen span {
 
 header.jewerly #navOpen .jrwNavAbout.navAbout {
   display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -288,7 +286,7 @@ footer.footerJewerly .fonran {
   font-family: "GillSans-Light";
   font-size: 24px;
   color: #42261D;
-  letter-spacing: -.03px;
+  letter-spacing: -0.03px;
   text-align: center;
   text-transform: uppercase;
   line-height: 1.4;
@@ -380,8 +378,7 @@ footer.footerJewerly .fonran {
 
 .oneProductContent .slick-dots button {
   background-color: #5C591A;
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
   border-radius: 50%;
 }
 
@@ -489,8 +486,7 @@ footer.footerJewerly .fonran {
   z-index: 5;
   background-image: url(/fronts_mobile/img/icons/sizeBack.jpg);
   background-size: cover;
-  -webkit-transition: bottom .5s ease;
-  transition: bottom .5s ease;
+  transition: bottom 0.5s ease;
 }
 
 .sizeContainerProduct .head {
