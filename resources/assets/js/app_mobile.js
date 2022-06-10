@@ -47,6 +47,7 @@ Vue.component('collection', require('./components/front/collections/Collections.
 Vue.component('set', require('./components/front/collections/Set.vue'));
 Vue.component('set-modal', require('./components/front/collections/SetModal.vue'));
 Vue.component('search',  require('./components/front/Search.vue'));
+Vue.component('near-log-in',  require('./components/near/NearLogIn.vue'));
 
 
 const app = new Vue({
