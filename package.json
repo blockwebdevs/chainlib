@@ -20,7 +20,14 @@
     "vue": "^2.5.7",
     "vue-select": "^3.1.0",
     "vue-slick": "^1.1.15",
-    "hooper": "^0.3.4"
+    "hooper": "^0.3.4",
+    "near-api-js": "^0.44.2",
+    "near-cli": "^3.3.1",
+    "near-sdk-as": "^3.2.3",
+    "near-workspaces": "^2.0.0",
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
   },
   "dependencies": {
     "hooper": "^0.3.4",
