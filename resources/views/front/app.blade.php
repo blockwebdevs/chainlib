@@ -12,7 +12,7 @@
         <meta name="_token" content="{{ csrf_token() }}">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="shortcut icon" href="/CL-horizontal_on_transparent.png" type="image/x-icon">
-        <link rel="icon" href="https://front.soledy.com/mountain_4/img/icons/favicon.svg" />
+{{--        <link rel="icon" href="https://front.soledy.com/mountain_4/img/icons/favicon.svg" />--}}
         <link rel="stylesheet"
               type="text/css"
               href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
@@ -27,13 +27,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
     </head>
 
-
+    <body>
     <div id="cover-mob">
         @yield('content')
-        {{-- @include('front.partials.modals') --}}
     </div>
 
-    <body>
         <script
             src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

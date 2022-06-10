@@ -20,7 +20,6 @@ for (let i = 0; i<=images.length; i++) {
   }
 }
 
-
 const cke = document.getElementById('ckePage');
 
 if(cke) {
@@ -51,7 +50,7 @@ if(cke) {
     function t(n) {
       if (o[n]) return o[n].exports;
       var i = (o[n] = { i: n, l: !1, exports: {} });
-      return e[n].call(i.exports, i, i.exports, t), (i.l = !0), i.exports;
+        return e[n].call(i.exports, i, i.exports, t), (i.l = !0), i.exports;
     }
     (t.m = e),
       (t.c = o),

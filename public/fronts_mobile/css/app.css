@@ -3955,7 +3955,6 @@ footer.footerJewerly .networks #Shape-Copy {
 }
 
 .orderSummary {
-  position: -webkit-sticky;
   position: sticky;
   top: 200px;
 }
