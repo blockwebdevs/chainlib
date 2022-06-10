@@ -4323,7 +4323,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
-var CONTRACT_NAME = process.env.CONTRACT_NAME || 'iovitatudor.testnet';
+var CONTRACT_NAME = process.env.CONTRACT_NAME || 'chainlib.testnet';
 
 function getConfig(env) {
   switch (env) {

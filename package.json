@@ -1,7 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "dev": "npm run development",
+    "build1": "yarn build:contract",
+    "build:contract": "asb",
+    "build:contract:debug": "asb --target debug",
+    "build:web": "parcel build src/index.html --public-url ./",
+    "deploy": "yarn build1 && near deploy",
+    "dev": "yarn build:contract:debug && near dev-deploy && npm run watch",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "dev:start": "env-cmd -f ./neardev/dev-account.env parcel npm run watch",
     "development": "mix",
     "watch": "mix watch",
     "watch-poll": "mix watch -- --watch-options-poll=1000",
