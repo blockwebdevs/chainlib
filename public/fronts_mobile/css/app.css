@@ -1,90 +1,72 @@
 /* Green old: backgroud alb       HP background sub sliders Categorii */
-
 /* DARK OLIVE DE ADAUGAT: HP background sub section 4 advantages (sub main Slider) si about Us section */
-
 /*1. Primul topbar APL
-					                    2. Filters Section	*/
-
+2. Filters Section	*/
 /* topbar 2 */
-
 /*1. APL Background la submeniu in topbar
-                     					2. Pages background: Cat-one-main-section
-                     														   Promo-all-Page
-                     															 Outlet-main-section
-                     															 Prod-one-main-section
-                     															 Collection-one-seturi-impare
-                     															 Favorites-all-Page */
-
+2. Pages background: Cat-one-main-section
+									   Promo-all-Page
+										 Outlet-main-section
+										 Prod-one-main-section
+										 Collection-one-seturi-impare
+										 Favorites-all-Page */
 /* 1. Pages background: Prod-one-similar-and-recently-viewed-prods
 //																			              Outlet-recently-viewed-prods
 //																			              Cabinet-summary-menu */
-
 /* APJ footer and header */
-
 /*	1. APJ Background la submeniu in topbar
-															        2. Pages background: Collection-one-seturi-pare
-															           Cart-Checkout-Pages-all-Page
-																			   Cabinet-main-page-section*/
-
+ 2. Pages background: Collection-one-seturi-pare
+    Cart-Checkout-Pages-all-Page
+Cabinet-main-page-section*/
 /* 1. Pages background: Prod-one-similar-and-recently-viewed-prods
-																			  Outlet-recently-viewed-prods
-																			  Cabinet-summary-menu */
-
+Outlet-recently-viewed-prods
+Cabinet-summary-menu */
 /* Green old: backgroud alb       HP background sub sliders Categorii */
-
 /* DARK OLIVE DE ADAUGAT: HP background sub section 4 advantages (sub main Slider) si about Us section */
-
 /* collection buttons HP,
-                                                                    add to cart and wish one product page,
-                                                                    add to cart collection page,
-                                                                    modal form button submit,
-                                                                    404 page button,
-                                                                    thank you page button,
-                                                                    bijoux button topbar1,
-                                                                    promocode button,
-                                                                    order summary steps,
-                                                                    promocodes page discount */
-
+                                       add to cart and wish one product page,
+                                       add to cart collection page,
+                                       modal form button submit,
+                                       404 page button,
+                                       thank you page button,
+                                       bijoux button topbar1,
+                                       promocode button,
+                                       order summary steps,
+                                       promocodes page discount */
 /*ORAQNGE  Popups background: Country-lang-selection
-											  Registration-login-when-clicking-on-cabinet-icon
-											  Registration-login-when-making-order
-											  Filter */
-
+Registration-login-when-clicking-on-cabinet-icon
+Registration-login-when-making-order
+Filter */
 /* contact page from,
-                            order summary label,
-                            modal labels,
-                            input modal,
-                            inputs and textarea */
-
+    order summary label,
+    modal labels,
+    input modal,
+    inputs and textarea */
 @font-face {
-  font-family: 'NorthWellAlt';
+  font-family: "NorthWellAlt";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: local("NorthWellAlt"), url(/fronts/fonts/Northwell-Alt.woff2) format("woff2"), url(/fronts/fonts/Northwell-Alt.woff) format("woff");
 }
-
 @font-face {
-  font-family: 'GillSans-Light';
+  font-family: "GillSans-Light";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
   src: local("GillSans-Light"), url(/fronts/fonts/GillSans-Light.woff2) format("woff2"), url(/fronts/fonts/GillSans-Light.woff) format("woff");
 }
-
 @font-face {
-  font-family: 'GillSans';
+  font-family: "GillSans";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
   src: local("GillSans"), url(/fronts/fonts/GillSans.woff2) format("woff2"), url(/fronts/fonts/GillSans.woff) format("woff");
 }
-
 img {
   display: block;
   width: 100%;
 }
-
 img:focus {
   outline: 0;
 }
@@ -98,7 +80,6 @@ ul {
 a {
   color: #42261D;
 }
-
 a:focus {
   outline: 0;
 }
@@ -139,26 +120,21 @@ section {
 .sliderContainer {
   position: relative;
 }
-
 .sliderContainer .slick-arrow {
   position: absolute;
   z-index: 2;
   font-size: 0;
   padding: 0;
   border: 0;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
-
 .sliderContainer .slick-arrow:focus {
   outline: none;
 }
-
 .sliderContainer .slick-arrow svg {
   margin: auto;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 body {
@@ -172,8 +148,6 @@ body {
 }
 
 .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -193,7 +167,6 @@ body {
   text-transform: uppercase;
   vertical-align: baseline;
 }
-
 .addToCart span,
 .addToWish span {
   position: relative;
@@ -203,7 +176,6 @@ body {
 .addToWish.elAdded {
   background-image: url(/fronts/img/backgrounds/filter.jpg);
 }
-
 .addToCart.elAdded path:last-child,
 .addToWish.elAdded path:last-child {
   fill: #B22D00 !important;
@@ -216,7 +188,6 @@ body {
 .addToCart {
   width: 70%;
 }
-
 .addToCart img {
   width: 25px;
   display: inline-block;
@@ -231,13 +202,11 @@ body {
   text-transform: uppercase;
   margin: 20px 0;
 }
-
 .price span:nth-child(2) {
-  opacity: .6;
+  opacity: 0.6;
   text-decoration: none;
   position: relative;
 }
-
 .price span:nth-child(2):after {
   content: "";
   left: 0;
@@ -246,8 +215,7 @@ body {
   width: 100%;
   position: absolute;
   background: #42261D;
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
+  transform: rotate(-15deg);
   z-index: 1;
 }
 
@@ -255,36 +223,30 @@ body {
   margin-bottom: 10px !important;
   padding-left: 120px;
 }
-
 .collectionContent .price.priceCollection span {
   font-weight: bold;
   margin-left: 10px;
 }
-
 .collectionContent .price.priceCollection span:nth-child(1) {
   padding-left: 0;
   margin-left: 0;
 }
-
 .collectionContent .price.priceCollection span:nth-child(2) {
   opacity: 1;
   text-decoration: none;
   padding-left: 0;
   margin-right: 3px;
 }
-
 .collectionContent .price.priceCollection span:nth-child(2):after {
   display: none;
 }
-
 .collectionContent .price.priceCollection span:nth-child(3) {
   position: relative;
   padding-left: 0;
-  opacity: .6;
+  opacity: 0.6;
   text-decoration: none;
   margin-left: 3px;
 }
-
 .collectionContent .price.priceCollection span:nth-child(3):after {
   content: "";
   left: -3px;
@@ -293,8 +255,7 @@ body {
   width: 120%;
   position: absolute;
   background: #42261D;
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
+  transform: rotate(-15deg);
   z-index: 1;
 }
 
@@ -302,7 +263,6 @@ body {
   margin-bottom: 30px;
   position: relative;
 }
-
 .sizeContainer #sizeError {
   position: absolute;
   font-size: 18px;
@@ -313,26 +273,18 @@ body {
   line-height: 24px;
   bottom: -60px;
   left: 5px;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
-
 .sizeContainer #sizeError.show {
   height: auto;
   opacity: 1;
   bottom: -36px;
 }
-
 .sizeContainer div:first-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   max-width: 275px;
 }
-
 .sizeContainer div:first-child span:first-child {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 14px;
@@ -341,7 +293,6 @@ body {
   text-transform: uppercase;
   display: none;
 }
-
 .sizeContainer div:first-child span:last-child {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 14px;
@@ -349,13 +300,11 @@ body {
   letter-spacing: 0;
   text-align: center;
 }
-
 .sizeContainer div:first-child span:last-child img {
   width: 15px;
   display: inline-block;
   margin-right: 10px;
 }
-
 .sizeContainer .chooseSize {
   width: 100%;
   max-width: 310px;
@@ -363,10 +312,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .sizeContainer .chooseSize span {
   text-transform: uppercase;
-  font-family: GillSans-Light, Georgia, 'Times New Roman', Times, serif;
+  font-family: GillSans-Light, Georgia, "Times New Roman", Times, serif;
   font-size: 14px;
   color: #42261D;
   letter-spacing: 0;
@@ -374,11 +322,9 @@ body {
   height: 40px;
   cursor: pointer;
 }
-
 .sizeContainer .chooseSize span.selected {
   color: white;
 }
-
 .sizeContainer button {
   width: 100%;
   max-width: 310px;
@@ -393,12 +339,10 @@ body {
   height: 40px;
   line-height: 40px;
 }
-
 .sizeContainer button:hover {
   background: transparent;
   color: #85736b;
 }
-
 .sizeContainer button::after {
   background: transparent;
   color: #85736b;
@@ -414,7 +358,6 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-
 .newSizeContainer #sizeError {
   position: absolute;
   font-size: 18px;
@@ -425,23 +368,17 @@ body {
   line-height: 24px;
   bottom: -60px;
   left: 5px;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
-
 .newSizeContainer #sizeError.show {
   height: auto;
   opacity: 1;
   bottom: -36px;
 }
-
 .newSizeContainer .sizeContainerUp {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
-
 .newSizeContainer .sizeContainerUp a {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 14px;
@@ -449,13 +386,11 @@ body {
   letter-spacing: 0;
   text-transform: uppercase;
 }
-
 .newSizeContainer .sizeContainerUp img {
   width: 15px;
   display: inline-block;
   margin-right: 10px;
 }
-
 .newSizeContainer .chooseSize {
   width: 100%;
   max-width: 310px;
@@ -463,10 +398,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .newSizeContainer .chooseSize span {
   text-transform: uppercase;
-  font-family: GillSans-Light, Georgia, 'Times New Roman', Times, serif;
+  font-family: GillSans-Light, Georgia, "Times New Roman", Times, serif;
   font-size: 14px;
   color: #42261D;
   letter-spacing: 0;
@@ -474,11 +408,9 @@ body {
   height: 40px;
   cursor: pointer;
 }
-
 .newSizeContainer .chooseSize span.selected {
   color: white;
 }
-
 .newSizeContainer button {
   width: 100%;
   max-width: 100%;
@@ -493,12 +425,10 @@ body {
   height: 40px;
   line-height: 40px;
 }
-
 .newSizeContainer button:hover {
   background: transparent;
   color: #85736b;
 }
-
 .newSizeContainer button::after {
   background: transparent;
   color: #85736b;
@@ -509,15 +439,10 @@ body {
 
 .buttonsBox {
   display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
-
 .buttonsBox > div {
   width: 48%;
 }
@@ -528,7 +453,6 @@ body {
   cursor: pointer;
   margin-bottom: 0;
 }
-
 .selSize input {
   position: absolute;
   left: 0;
@@ -538,34 +462,25 @@ body {
   opacity: 0;
   z-index: -1;
 }
-
 .selSize .check {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding-left: 15px;
   padding-right: 15px;
   border: 1px solid #85736b;
   border-bottom: 1px solid #85736b;
   background-color: #fef0db;
 }
-
 .selSize .check span:first-child {
   text-transform: uppercase;
 }
-
 .selSize .check span:last-child {
   text-transform: none;
 }
-
 .selSize input:checked ~ .check {
   background-color: #edcac1;
   color: #fff;
 }
-
 .selSize input:disabled ~ .check {
   pointer-events: none;
 }
@@ -574,7 +489,6 @@ body {
   position: static;
   width: 100vw;
 }
-
 .titlePage h3 {
   font-family: "GillSans", Georgia, "Times New Roman", Times, serif;
   font-size: 40px;
@@ -583,8 +497,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   line-height: 1.7;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   vertical-align: middle;
   margin: 0;
   padding-top: 5px;
@@ -596,30 +509,20 @@ body {
   margin-left: auto;
   margin-right: 0;
 }
-
 .mainSlider .slick-slide {
   padding-bottom: 40px;
 }
-
 .mainSlider .slick-slide img {
   margin-left: auto;
   margin-right: 0;
   width: 95%;
 }
-
 .mainSlider .slick-list {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
 }
-
 .mainSlider .slick-dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   top: 0;
   left: 0;
   width: 100px;
@@ -627,11 +530,9 @@ body {
   overflow-y: scroll;
   position: absolute;
 }
-
 .mainSlider .slick-dots::-webkit-scrollbar {
   display: none;
 }
-
 .mainSlider .slick-dots li {
   display: block;
   width: 100px;
@@ -641,7 +542,6 @@ body {
   margin-bottom: 20px;
   opacity: 0.4;
 }
-
 .mainSlider .slick-dots li.slick-active {
   opacity: 1;
 }
@@ -658,7 +558,6 @@ body {
   line-height: 1;
   letter-spacing: 0;
 }
-
 .checkContainer input {
   position: absolute;
   height: 100%;
@@ -668,7 +567,6 @@ body {
   left: 0;
   z-index: -1;
 }
-
 .checkContainer .check {
   position: absolute;
   left: 0;
@@ -677,7 +575,6 @@ body {
   width: 16px;
   height: 16px;
 }
-
 .checkContainer .check:after {
   content: "";
   position: absolute;
@@ -689,11 +586,9 @@ body {
   border: 1px solid #42261D;
   display: none;
 }
-
 .checkContainer input:checked ~ .check:after {
   display: block;
 }
-
 .checkContainer:hover .check {
   outline: 1px solid #42261D;
 }
@@ -701,7 +596,6 @@ body {
 .oneProduct {
   position: relative;
 }
-
 .oneProduct .addToWish {
   width: 30px;
   height: 30px;
@@ -716,11 +610,9 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-
 .oneProduct .addToWish.addedToWish {
   background-image: url(/fronts/img/backgrounds/wishIconAdded.svg);
 }
-
 .oneProduct a {
   display: block;
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
@@ -731,7 +623,6 @@ body {
   line-height: 1.2;
   margin-top: 10px;
 }
-
 .oneProduct .price {
   font-size: 18px;
   margin: 0;
@@ -739,27 +630,19 @@ body {
   text-align: center;
   width: 100%;
 }
-
 .oneProduct .imgBlock {
   display: block;
   overflow: hidden;
 }
-
 .oneProduct img {
-  -webkit-transition: -webkit-transform 2s ease;
-  transition: -webkit-transform 2s ease;
   transition: transform 2s ease;
-  transition: transform 2s ease, -webkit-transform 2s ease;
 }
-
 .oneProduct:hover a,
 .oneProduct:hover .price {
   color: #B22D00;
 }
-
 .oneProduct:hover img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .additionalSlide {
@@ -769,7 +652,6 @@ body {
   background-size: 100%;
   background-repeat: repeat-y;
 }
-
 .additionalSlide .title {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 30px;
@@ -778,51 +660,40 @@ body {
   text-transform: uppercase;
   line-height: 1.5;
 }
-
 .additionalSlide .slick-slide .imgBlock {
   width: 90%;
   margin: auto;
 }
-
 .additionalSlide .slick-slide .addToWish {
   top: 20px;
   left: 40px;
 }
-
 .additionalSlide .slick-list {
   padding: 0 !important;
 }
-
 .additionalSlide .slick-arrow {
   border: 1px solid #B22D00;
   width: 34px;
   height: 46px;
   top: -56px;
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
 }
-
 .additionalSlide .slick-arrow svg {
   width: 20px;
 }
-
 .additionalSlide .slick-arrow #slider-arrow {
   fill: #B22D00;
 }
-
 .additionalSlide .slick-arrow:active svg {
   width: 15px;
 }
-
 .additionalSlide .slick-prev {
   right: 50px;
   left: auto;
 }
-
 .additionalSlide .slick-next {
   right: 18px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .outlet,
@@ -832,31 +703,26 @@ body {
   background-size: 100%;
   background-repeat: repeat-y;
 }
-
 .outlet .imgBlock,
 .promo .imgBlock,
 .wishContent .imgBlock {
   margin-bottom: 10px;
 }
-
 .outlet .additionalSlide,
 .promo .additionalSlide,
 .wishContent .additionalSlide {
   margin-top: 80px;
 }
-
 .outlet .oneProduct,
 .promo .oneProduct,
 .wishContent .oneProduct {
   margin-bottom: 40px;
 }
-
 .outlet .oneProduct a,
 .promo .oneProduct a,
 .wishContent .oneProduct a {
   margin-top: 0;
 }
-
 .outlet .oneProduct .remove,
 .promo .oneProduct .remove,
 .wishContent .oneProduct .remove {
@@ -871,10 +737,8 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
 .outlet .oneProduct .remove:active,
 .promo .oneProduct .remove:active,
 .wishContent .oneProduct .remove:active {
@@ -888,7 +752,6 @@ body {
   letter-spacing: 0;
   text-transform: uppercase;
 }
-
 .promo .promoInner {
   padding: 80px 0;
 }
@@ -899,7 +762,6 @@ body {
   border: 1px solid #42261D;
   margin: 5px 0;
 }
-
 .selectContainer select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -916,11 +778,9 @@ body {
   padding-left: 15px;
   width: 100%;
 }
-
 .selectContainer select:focus {
   outline: 0;
 }
-
 .selectContainer span {
   position: absolute;
   right: 15px;
@@ -947,14 +807,12 @@ button:focus {
   padding-top: 53px;
   padding-bottom: 80px;
 }
-
 .wishContent .sizeContainer {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
   max-width: 275px;
 }
-
 .wishContent h3 {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 50px;
@@ -963,13 +821,11 @@ button:focus {
   text-align: center;
   text-transform: uppercase;
   line-height: 3;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   vertical-align: middle;
   margin: 0;
   padding-top: 5px;
 }
-
 .wishContent .addToCart {
   width: 100%;
   margin: 0;
@@ -978,16 +834,13 @@ button:focus {
   margin-left: auto;
   margin-right: auto;
 }
-
 .wishContent .addToCart svg {
   margin-left: 5px;
   margin-bottom: 10px;
 }
-
 .wishContent .addToCart svg path:last-child {
   fill: #B22D00;
 }
-
 .wishContent .oneProduct {
   margin-bottom: 30px;
 }
@@ -1006,7 +859,6 @@ button:focus {
   background-size: 30vw;
   background-repeat: no-repeat;
 }
-
 .notFoundContent a {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 24px;
@@ -1015,7 +867,6 @@ button:focus {
   text-align: center;
   text-transform: uppercase;
 }
-
 .notFoundContent .title {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 30vh;
@@ -1023,7 +874,6 @@ button:focus {
   text-align: left;
   line-height: 1.2;
 }
-
 .notFoundContent p {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 24px;
@@ -1032,18 +882,15 @@ button:focus {
   text-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
   line-height: 1.2;
 }
-
 .notFoundContent p:first-child {
   font-size: 50px;
   margin-bottom: 40px;
 }
-
 .notFoundContent p:nth-child(2) {
   width: 60%;
   margin: auto;
   margin-bottom: 40px;
 }
-
 .notFoundContent .buttons a {
   display: block;
   background-image: #fff1d7;
@@ -1053,7 +900,6 @@ button:focus {
   height: 50px;
   margin-top: 40px;
 }
-
 .notFoundContent .buttons a:first-child {
   background-image: url(/fronts/img/backgrounds/buttonBrown.jpg);
   margin-right: 30px;
@@ -1070,7 +916,6 @@ button:focus {
   text-align: center;
   overflow: hidden;
 }
-
 .butt span {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 24px;
@@ -1082,10 +927,8 @@ button:focus {
   position: relative;
   vertical-align: bottom;
   padding-right: 49px;
-  -webkit-transition: padding .3s ease-out;
-  transition: padding .3s ease-out;
+  transition: padding 0.3s ease-out;
 }
-
 .butt b {
   border: 3px solid #42261D;
   line-height: 0px;
@@ -1096,34 +939,26 @@ button:focus {
   right: 0;
   top: calc(50% - 2px);
   opacity: 1;
-  -webkit-transition: right .3s ease-out;
-  transition: right .3s ease-out;
+  transition: right 0.3s ease-out;
 }
-
 .butt b:nth-child(1) {
   right: 0px;
 }
-
 .butt b:nth-child(2) {
   right: 15px;
 }
-
 .butt b:nth-child(3) {
   right: 30px;
 }
-
 .butt:hover b:nth-child(1) {
   right: 0px;
 }
-
 .butt:hover b:nth-child(2) {
   right: 0;
 }
-
 .butt:hover b:nth-child(3) {
   right: 0;
 }
-
 .butt:hover span {
   padding-right: 15px;
 }
@@ -1132,15 +967,12 @@ button:focus {
   0% {
     opacity: 0;
   }
-
   49.99% {
     opacity: 0;
   }
-
   50% {
     opacity: 1;
   }
-
   100% {
     opacity: 1;
   }
@@ -1150,53 +982,39 @@ button:focus {
   0% {
     opacity: 0;
   }
-
   49.99% {
     opacity: 0;
   }
-
   50% {
     opacity: 1;
   }
-
   100% {
     opacity: 1;
   }
 }
-
 @media (max-width: 1100px) {
   .container {
     max-width: 95vw;
   }
-
   .price {
     font-size: 22px;
   }
 }
-
 @media (max-width: 992px) {
   .tabletNone {
     display: none;
   }
-
   .wishContent h3 {
     line-height: 1.2;
   }
 }
-
 .burger {
   width: 53px;
   line-height: 53px !important;
   height: 53px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #burger {
@@ -1211,9 +1029,7 @@ button:focus {
   -ms-user-select: none;
   user-select: none;
 }
-
-#burger:after,
-#burger:before {
+#burger:after, #burger:before {
   content: "";
   height: 2px;
   width: 25px;
@@ -1222,25 +1038,20 @@ button:focus {
   position: absolute;
   left: 0;
   background-color: #42261D;
-  -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-
 #burger:after {
   bottom: 6px;
 }
-
 #burger:before {
   top: 6px;
 }
-
 #burger .iconBar {
   width: 25px;
   height: 2px;
   display: inline-block;
   margin: 15px 0;
   background-color: #42261D;
-  -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   border-radius: 3px;
 }
@@ -1248,16 +1059,12 @@ button:focus {
 #burger.burgerOpen .iconBar {
   width: 0;
 }
-
 #burger.burgerOpen:after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
   bottom: 14px;
 }
-
 #burger.burgerOpen:before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   top: 14px;
 }
 
@@ -1270,10 +1077,8 @@ button:focus {
   z-index: 9;
   opacity: 0;
   background-color: #000000;
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
+  transition: opacity 0.5s ease;
 }
-
 #backHeader.show {
   width: 100vw;
   height: 100vh;
@@ -1291,43 +1096,27 @@ header {
   background-size: 100%;
   z-index: 10;
 }
-
 header .settings {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 header .settings #avatar {
   border: 0;
 }
-
 header .settings li {
   margin-right: 30px;
 }
-
 header .networks .dspflex {
   padding-right: 15px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 header .networks {
   margin-left: -15px;
   position: static;
   margin-top: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 header .settings img {
   display: inline-block;
   width: 30px;
@@ -1335,36 +1124,25 @@ header .settings img {
   top: 0px;
   margin-left: 10px;
 }
-
 header .settings p:nth-child(2) {
   position: relative;
   top: 4px;
 }
-
 header .settings a {
   position: relative;
   top: 7px;
   text-decoration: underline;
 }
-
 header .widthSettings {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   white-space: nowrap;
 }
-
 header .tabHeader {
   height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 header .tabHeader .buttHeader {
   font-family: "GillSans";
   font-size: 12px;
@@ -1377,51 +1155,33 @@ header .tabHeader .buttHeader {
   width: 100%;
   color: #B22D00;
 }
-
 header .tabHeader .buttHeader svg {
   margin-bottom: 3px;
   margin-right: 5px;
 }
-
 header .tabHeader #jewerlyButton.buttHeader {
   color: #5C591A;
 }
-
 header a:hover {
   text-decoration: none;
   color: #B22D00;
 }
-
 header .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-wrap: nowrap;
   padding-right: 15px;
 }
-
 header .nav li {
   height: 53px;
   line-height: 53px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 header .nav a {
   display: block;
 }
-
 header .nav li.logoCenter {
   width: 140px;
   position: fixed;
@@ -1429,28 +1189,20 @@ header .nav li.logoCenter {
   right: 0;
   margin: auto;
 }
-
 header .home {
   background-image: url(/fronts_mobile/img/icons/home.svg);
   background-size: 24px 23px;
   background-position: center center;
   background-repeat: no-repeat;
 }
-
 header .home a {
   height: 53px;
   width: 100%;
 }
-
 header #settings {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  align-items: center;
+  flex-wrap: nowrap;
   white-space: nowrap;
   font-family: "GillSans-Light";
   font-size: 14px;
@@ -1459,37 +1211,29 @@ header #settings {
   text-transform: uppercase;
   padding-left: 5px;
 }
-
 header #settings img {
   width: auto;
   max-width: 30px;
   height: 20px;
   margin-bottom: 2px;
 }
-
 header .widthSettings {
   width: 100px !important;
   max-width: 100px !important;
 }
-
 header #avatar svg {
   width: 25px;
   height: 25px;
 }
-
 header #avatar {
   border: 1px solid #42261D;
   text-align: center;
   margin: 15px 0;
 }
-
-header #wish,
-header #cart {
+header #wish, header #cart {
   position: relative;
 }
-
-header #wish span,
-header #cart span {
+header #wish span, header #cart span {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1499,23 +1243,19 @@ header #cart span {
   font-size: 14px;
   color: #42261D;
 }
-
 header #wish svg {
   height: 25px;
 }
-
 header #cart svg {
   height: 29px;
   margin-bottom: 4px;
 }
-
 header #cart span {
   padding-top: 3px;
 }
 
 #categoryOpen {
-  -webkit-transform: none !important;
-          transform: none !important;
+  transform: none !important;
 }
 
 .navOpen {
@@ -1524,17 +1264,12 @@ header #cart span {
   width: 450px;
   top: 60px;
   left: 0;
-  -webkit-transform: translateX(-110vw);
-          transform: translateX(-110vw);
+  transform: translateX(-110vw);
   padding: 15px;
   background: #eddcd5;
   background-size: 100% 100%;
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
+  transition: transform 0.5s ease;
 }
-
 .navOpen::-webkit-scrollbar {
   display: none;
 }
@@ -1543,47 +1278,35 @@ header #cart span {
   background-image: none !important;
   position: relative;
 }
-
 #categoryButton svg {
   position: absolute;
   top: 15px;
   right: 5px;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: -webkit-transform .3s ease;
-  transition: -webkit-transform .3s ease;
-  transition: transform .3s ease;
-  transition: transform .3s ease, -webkit-transform .3s ease;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
 }
-
 #categoryButton.open svg {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 #navOpen #categoryOpen.navOpen {
   position: static;
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
   height: 0;
   overflow: hidden;
   opacity: 0;
   padding: 0;
-  -webkit-transition: opacity .3s ease;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
-
 #navOpen #categoryOpen.navOpen.showThis {
   height: auto;
   opacity: 1;
   padding: 10px;
 }
-
 #navOpen #categoryOpen.navOpen li.navBack span {
   padding-left: 25px !important;
   background-image: url(/fronts_mobile/img/icons/arrow.svg) !important;
 }
-
 #navOpen #categoryOpen.navOpen li span {
   padding-left: 0px !important;
   background-image: none !important;
@@ -1592,15 +1315,9 @@ header #cart span {
 #navOpen {
   position: fixed;
   z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 #navOpen > a {
   display: block;
   font-family: "GillSans-Light";
@@ -1610,11 +1327,9 @@ header #cart span {
   text-transform: uppercase;
   line-height: 2.3;
 }
-
 #navOpen > a:hover {
   color: #B22D00;
 }
-
 #navOpen p {
   display: block;
   font-family: "GillSans-Light";
@@ -1626,13 +1341,11 @@ header #cart span {
   line-height: 1;
   padding-left: 15px;
 }
-
 #navOpen li.navBack {
-  opacity: .7;
+  opacity: 0.7;
   margin-bottom: 30px;
   padding-left: 15px;
 }
-
 #navOpen li.navBack span {
   padding-left: 30px;
   background-image: url(/fronts_mobile/img/icons/undo.svg);
@@ -1641,11 +1354,9 @@ header #cart span {
   font-size: 20px;
   line-height: 24px !important;
 }
-
 #navOpen .navCollection2 .navOpen {
   z-index: 4;
 }
-
 #navOpen .navCollection2 span {
   font-family: "GillSans-Light";
   font-size: 20px;
@@ -1659,19 +1370,15 @@ header #cart span {
   line-height: 2.3;
   width: 100%;
 }
-
 #navOpen .navCollection2 #collectionsOpen {
   position: fixed;
-  -webkit-transform: translateX(-110vw);
-          transform: translateX(-110vw);
+  transform: translateX(-110vw);
   top: 0;
 }
-
 #navOpen .navCollection2 .collButton {
   width: 100%;
   line-height: 1;
 }
-
 #navOpen .navCollection2 .collButton span {
   font-size: 20px;
   color: #42261D;
@@ -1684,26 +1391,20 @@ header #cart span {
   padding-right: 20px;
   padding-left: 15px;
 }
-
 #navOpen .navCollection2 .collButton span:active {
   color: #B22D00;
 }
-
 #navOpen .navOpen.navOneCollection {
   position: fixed;
-  -webkit-transform: translateX(-110vw);
-          transform: translateX(-110vw);
+  transform: translateX(-110vw);
   top: 0;
 }
-
 #navOpen .navOpen.navOneCollection li {
   padding-left: 15px;
 }
-
 #navOpen .navOpen.navOneCollection li span {
   padding-left: 25px;
 }
-
 #navOpen .navOpen.navOneCollection a {
   font-family: "GillSans-Light";
   font-size: 20px;
@@ -1712,22 +1413,18 @@ header #cart span {
   line-height: 2.3;
   text-transform: uppercase;
 }
-
 #navOpen .navOpen.navOneCollection a:hover {
   color: #B22D00;
 }
-
 #navOpen .navCategories {
   width: 90%;
   padding: 0;
   margin: 0;
   margin-bottom: 10px;
 }
-
 #navOpen .navCategories li {
   display: block;
 }
-
 #navOpen .navCategories a {
   font-family: "GillSans-Light";
   font-size: 20px;
@@ -1738,14 +1435,9 @@ header #cart span {
   text-align: left;
   display: block;
 }
-
 #navOpen .navAbout {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   background-color: #e7d6b8;
   padding: 10px;
   width: 100%;
@@ -1753,7 +1445,6 @@ header #cart span {
   padding-bottom: 0;
   display: none;
 }
-
 #navOpen .navAbout span {
   font-family: "GillSans-Light";
   font-size: 20px;
@@ -1763,7 +1454,6 @@ header #cart span {
   text-transform: uppercase;
   padding-right: 20px;
 }
-
 #navOpen .navAbout img {
   width: 150px;
   max-width: 150px;
@@ -1775,92 +1465,69 @@ header #cart span {
     padding: 0 5px;
     display: block;
   }
-
   .headerTop a {
     font-size: 16px;
   }
-
   .headerTop .logo img {
     width: 100px;
   }
-
   .tabHeader .buttHeader {
     font-size: 14px;
     padding: 0 15px;
   }
-
   .tabHeader img {
     width: 140px;
   }
-
   .tabHeader .activeTab {
     font-size: 16px;
     margin-top: 10px;
   }
 }
-
 .slideHome .slick-arrow {
   width: 58px;
   height: 70px;
   top: calc(50% - 35px);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .slideHome .slick-arrow svg {
   width: 35px;
 }
-
 .slideHome .slick-arrow:active svg {
   width: 25px;
 }
-
 .slideHome .slick-next {
   right: 30px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-
 .slideHome .slick-prev {
   left: 30px;
   top: 50%;
 }
-
 .slideHome .item {
   position: relative;
   display: block;
 }
-
 .slideHome .item:focus {
   outline: none;
 }
-
 .slideHome .text {
   position: absolute;
   left: 10vw;
   top: calc(50% - 95px);
   font-size: 50px;
-  line-height: .7;
+  line-height: 0.7;
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   text-align: center;
 }
-
 .slideHome .text span {
   font-size: 90px;
 }
-
 .slideHome .text.white {
   color: #fff;
   z-index: 2;
 }
-
 .slideHome .text.red {
   color: #B22D00;
   z-index: 1;
@@ -1871,87 +1538,62 @@ header #cart span {
 .homeContent > div:first-child {
   width: 100%;
 }
-
 .homeContent > div:first-child .slick-arrow {
   width: 70px;
   height: 70px;
 }
-
 .homeContent > div:first-child .slick-arrow svg {
   position: absolute;
   z-index: -1;
 }
-
 .homeContent > div:first-child #container {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 .homeContent > div:first-child #halfclip {
   width: 50%;
   height: 100%;
   right: 0px;
   position: absolute;
   overflow: hidden;
-  -webkit-transform-origin: left center;
-          transform-origin: left center;
+  transform-origin: left center;
 }
-
 .homeContent > div:first-child #container:hover #halfclip {
   -webkit-animation: cliprotate 0.6s 1;
           animation: cliprotate 0.6s 1;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-
 @-webkit-keyframes cliprotate {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-
   50% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-
   50.01% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
-
   100% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
-
 @keyframes cliprotate {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-
   50% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-
   50.01% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
-
   100% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
   }
 }
-
 .homeContent > div:first-child .halfcircle {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   height: 100%;
   position: absolute;
   right: 0;
@@ -1960,51 +1602,36 @@ header #cart span {
   border-left-color: white;
   border-radius: 50%;
 }
-
 .homeContent > div:first-child #clipped {
   width: 200%;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
-
 .homeContent > div:first-child #container:hover #clipped {
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
+  transform: rotate(135deg);
   -webkit-animation: rotate 0.3s linear 2;
           animation: rotate 0.3s linear 2;
 }
-
 @-webkit-keyframes rotate {
   0% {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
-
   100% {
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+    transform: rotate(135deg);
   }
 }
-
 @keyframes rotate {
   0% {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
-
   100% {
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+    transform: rotate(135deg);
   }
 }
-
 .homeContent > div:first-child #fixed {
   width: 100%;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
+  transform: rotate(135deg);
   opacity: 0;
 }
-
 .homeContent > div:first-child #container:hover #fixed {
   opacity: 1;
   -webkit-animation: showfixed 0.6s 1;
@@ -2014,29 +1641,24 @@ header #cart span {
 .homeContent .points {
   background: #fffcf5;
 }
-
 .homeContent .points .item {
   padding: 50px 0;
   text-align: center;
 }
-
 .homeContent .points span {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 25px;
   color: #42261D;
   letter-spacing: 0;
 }
-
 .homeContent .points svg {
   width: 70px;
   margin: auto;
   display: block;
 }
-
 .homeContent .points .row div:nth-child(2) img {
   width: 50px;
 }
-
 .homeContent .points a {
   opacity: 0.51;
   font-size: 20px;
@@ -2045,48 +1667,32 @@ header #cart span {
   text-align: center;
   text-decoration: underline;
   padding-bottom: 30px;
-  -webkit-transition: opacity .3s ease;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
-
 .homeContent .points a:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
-
 .homeContent .collection {
   background: #fffcf5;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding-bottom: 30px;
 }
-
 .homeContent .collection h4 {
   width: 100%;
   white-space: nowrap;
 }
-
-.homeContent .collection aside,
-.homeContent .collection > div {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.homeContent .collection aside, .homeContent .collection > div {
+  flex: 1;
 }
-
 .homeContent .collection div.dan {
   width: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
+  flex: auto;
 }
-
 .homeContent .collection a.butt {
   margin-left: auto;
   margin-right: auto;
 }
-
 .homeContent .collection h4 {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 70px;
@@ -2096,80 +1702,57 @@ header #cart span {
   font-weight: 300;
   line-height: 2;
 }
-
 .homeContent .collection .slick-list {
   padding: 0 15vw !important;
   width: 100%;
 }
-
 .homeContent .collection .slick-slider {
   width: 60vw;
 }
-
 .homeContent .collection .slick-slide {
   opacity: 0.3;
   width: 30vw;
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
+  transition: opacity 0.5s ease;
 }
-
 .homeContent .collection .slick-slide.slick-current {
   opacity: 1;
-  -webkit-transition: opacity .5s ease;
-  transition: opacity .5s ease;
+  transition: opacity 0.5s ease;
 }
-
 .homeContent .collection .slick-arrow {
   border: 1px solid #B22D00;
   border-radius: 0;
-  opacity: .5;
+  opacity: 0.5;
   background: none;
   background-image: url(/fronts/img/icons/sliderRed.svg);
   background-position: center center;
   background-repeat: no-repeat;
 }
-
 .homeContent .collection .slick-arrow:hover {
   opacity: 1;
 }
-
 .homeContent .collection .slick-prev {
   left: 0;
 }
-
 .homeContent .collection .slick-next {
   right: 0;
 }
-
 .homeContent .collection:nth-child(even) aside {
   background-color: #fffcf5;
 }
-
 .homeContent aside {
   width: 40vw;
   background-image: url(/fronts/img/backgrounds/collectionAside.jpg);
   background-size: cover;
   background-position: center center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 .homeContent aside h4,
 .homeContent aside p {
   max-width: 60%;
 }
-
 .homeContent aside p {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 24px;
@@ -2180,17 +1763,13 @@ header #cart span {
   margin-top: 10px;
   opacity: 0;
 }
-
 .homeContent .about {
   background: #fffcf5;
   padding: 60px 0;
 }
-
 .homeContent .about img {
-  -webkit-transition: top 0.5s ease;
   transition: top 0.5s ease;
 }
-
 .homeContent .about h3 {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 70px;
@@ -2198,18 +1777,14 @@ header #cart span {
   letter-spacing: -0.09px;
   text-align: center;
   position: relative;
-  -webkit-transition: top 0.5s ease;
   transition: top 0.5s ease;
 }
-
 .homeContent .about .container {
   max-width: 90vw;
 }
-
 .homeContent .about .row {
   margin-top: 40px;
 }
-
 .homeContent .about .text h4 {
   font-family: "NorthWellAlt", Georgia, "Times New Roman", Times, serif;
   font-size: 70px;
@@ -2218,7 +1793,6 @@ header #cart span {
   margin-left: -60px;
   margin-bottom: 20px;
 }
-
 .homeContent .about .text p {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   color: #42261D;
@@ -2226,19 +1800,16 @@ header #cart span {
   font-size: 24px;
   line-height: 1.3;
 }
-
 .homeContent .about .text p:nth-child(2) {
   font-size: 30px;
   line-height: 1.5;
 }
-
 .homeContent .about #about1 {
   position: relative;
   top: 70px;
   width: 85%;
   z-index: 2;
 }
-
 .homeContent .about #about2 {
   position: relative;
   width: 40%;
@@ -2246,14 +1817,12 @@ header #cart span {
   margin-left: auto;
   z-index: 1;
 }
-
 .homeContent .about #about3 {
   position: relative;
   top: 65px;
   width: 70%;
   z-index: 1;
 }
-
 .homeContent .about #about4 {
   position: relative;
   width: 45%;
@@ -2261,20 +1830,16 @@ header #cart span {
   margin-left: auto;
   z-index: 2;
 }
-
 .homeContent .about a {
   margin-right: 20%;
   position: relative;
 }
-
 .homeContent .about a:hover ul li {
   margin-right: -100px;
 }
-
 .homeContent .about a:hover ul li:first-child {
   width: 100%;
 }
-
 .homeContent .about a span {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 24px;
@@ -2282,14 +1847,9 @@ header #cart span {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
 .homeContent .about a ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -2297,21 +1857,16 @@ header #cart span {
   padding-right: 5px;
   overflow: hidden;
 }
-
 .homeContent .about a li {
   border: 2px solid #42261D;
   border-radius: 50%;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
-
 .homeContent .about a li:first-child {
   width: 70%;
   border-radius: 3px;
-  -webkit-transition-delay: .2s;
-          transition-delay: .2s;
+  transition-delay: 0.2s;
 }
-
 .homeContent .oneProduct {
   padding: 10px;
 }
@@ -2321,43 +1876,35 @@ header #cart span {
     font-size: 50px;
     line-height: 1.2;
   }
-
   .homeContent aside .butt {
     width: 380px;
   }
-
   .homeContent .about .text h4 {
     font-size: 40px;
   }
-
   .homeContent .about .text p {
     font-size: 20px;
     line-height: 1.3;
   }
-
   .homeContent .about .text p:nth-child(2) {
     font-size: 25px;
     line-height: 1.5;
   }
 }
-
 @media (max-width: 1100px) {
   .homeContent .about img {
     display: none;
   }
 }
-
 footer {
   padding: 100px 0;
   background-size: 100%;
   position: relative;
 }
-
 footer .jrwLogo,
 footer .lngwLogo {
   position: relative;
 }
-
 footer .jrwLogo p,
 footer .lngwLogo p {
   font-family: "GillSans";
@@ -2367,11 +1914,9 @@ footer .lngwLogo p {
   top: -30px;
   text-transform: uppercase;
 }
-
 footer .lngwLogo p {
   color: #B22D00;
 }
-
 footer .fontran {
   position: absolute;
   top: 0;
@@ -2380,27 +1925,22 @@ footer .fontran {
   height: 100%;
   z-index: 1;
 }
-
 footer .container {
   max-width: 90vw;
 }
-
 footer .logo {
   display: block;
   min-width: 170px;
   margin-top: 15px;
 }
-
 footer .col img {
   max-width: 170px;
   margin-left: 0;
   margin-top: -10px;
 }
-
 footer .col {
   max-width: 170px;
 }
-
 footer .support {
   max-width: 20vw;
   margin-left: auto;
@@ -2408,7 +1948,6 @@ footer .support {
   position: relative;
   z-index: 2;
 }
-
 footer li {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 14px;
@@ -2417,11 +1956,9 @@ footer li {
   line-height: 1.3;
   text-align: left;
 }
-
 footer li:first-child {
   text-transform: uppercase;
 }
-
 footer p {
   font-family: "GillSans-Light", Georgia, "Times New Roman", Times, serif;
   font-size: 14px;
@@ -2430,15 +1967,12 @@ footer p {
   line-height: 20px;
   margin-bottom: 10px;
 }
-
 footer p:last-child {
   font-family: "GillSans";
 }
-
 footer .col-12 {
   margin-top: 40px;
 }
-
 footer ul {
   margin-bottom: 30px;
 }
@@ -2447,7 +1981,6 @@ footer.footerLoungewear {
   background: none;
   background-color: #eddcd5;
 }
-
 footer.footerLoungewear .jrwLogo {
   display: none;
 }
@@ -2455,27 +1988,22 @@ footer.footerLoungewear .jrwLogo {
 footer.footerJewerly {
   background: #fff1d7;
 }
-
 footer.footerJewerly .lngwLogo {
   display: none;
 }
-
 footer.footerJewerly .fontran {
   background: none;
 }
-
 footer.footerJewerly p,
 footer.footerJewerly div,
 footer.footerJewerly li,
 footer.footerJewerly a {
   color: #5C591A;
 }
-
 footer.footerJewerly .networks li:hover {
   background: none;
   background-color: #F1C179;
 }
-
 footer.footerJewerly .networks #Shape,
 footer.footerJewerly .networks #Shape-Copy {
   fill: #5c591a;
@@ -2489,49 +2017,34 @@ footer.footerJewerly .networks #Shape-Copy {
   margin-right: 0;
   margin-top: 50px;
 }
-
 .networks .dspflex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-left: -15px;
 }
-
 .networks li {
   width: 48px;
   height: 48px;
   border-radius: 50%;
 }
-
 .networks li:hover {
-  background-color: #ffefe8;
+  background-color: rgb(255, 239, 232);
   background-image: url(/fronts/img/networks/netHover.png);
 }
-
 .networks li:first-child svg {
   height: 50%;
 }
-
 .networks svg {
   height: 50%;
   width: auto;
   margin: auto;
 }
-
 .networks a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-self: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 48px;
 }
-
 .networks p {
   text-align: left;
   margin: 0;
@@ -2543,179 +2056,136 @@ footer.footerJewerly .networks #Shape-Copy {
     height: 60px;
     top: calc(50% - 30px);
   }
-
   .slideHome .slick-prev {
     top: 50%;
   }
-
   .slick-arrow {
     width: 60px;
     height: 60px;
     top: calc(50% - 30px);
   }
-
   .slick-arrow svg {
     width: 30px;
   }
-
   .slick-arrow:before {
     width: 60px;
     height: 60px;
     border-radius: 50%;
   }
-
   .slick-arrow:active svg {
     width: 20px;
   }
-
   .homeContent .points img {
     height: 70px;
     width: auto;
     margin-bottom: 20px;
   }
-
   .homeContent .points span {
     font-size: 18px;
   }
-
   .homeContent .collection:nth-child(odd) .slick-list {
     padding: 0 10vw !important;
   }
-
   .homeContent .collection:nth-child(odd) .slick-slide {
     width: 40vw;
   }
-
   .homeContent aside h4 {
     font-size: 30px;
   }
-
   .homeContent aside p {
     font-size: 18px;
   }
-
   .homeContent aside .butt {
     width: 290px;
   }
-
   .homeContent aside .butt span {
     font-size: 18px;
   }
-
   .homeContent .about #about1 {
     width: 50%;
   }
-
   .homeContent .about #about3,
-  .homeContent .about #about4 {
+.homeContent .about #about4 {
     width: 40%;
   }
-
   .homeContent .about .text h4 {
     margin-left: -30px;
   }
-
   footer {
     padding: 80px 0;
   }
-
   footer .fontran {
     width: 35vw;
   }
-
   footer .col {
     margin-bottom: 60px;
   }
-
   footer .support {
     max-width: 24vw;
   }
-
   footer li {
     font-size: 18px;
   }
-
   footer p {
     margin: 20px 0;
   }
-
   .networks {
     max-width: 24vw;
   }
 }
-
 .collectionContent {
   background: #fffcf5;
 }
-
 .collectionContent .sliderContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .collectionContent .oneCollectionSlider {
   width: calc(100% - 100px);
 }
-
 .collectionContent .navCollection {
   width: 100px;
 }
-
 .collectionContent .navCollection .slick-track {
-  -webkit-transform: none !important;
-          transform: none !important;
+  transform: none !important;
 }
-
 .collectionContent .navCollection .slick-slide {
   margin-bottom: 10px;
   cursor: pointer;
 }
-
 .collectionContent .navCollection .slick-list {
   height: 100% !important;
 }
-
 .collectionContent section {
   background-size: 100%;
   background-repeat: repeat-y;
   padding-bottom: 100px;
 }
-
 .collectionContent section:first-child {
   padding-top: 50px;
 }
-
 .collectionContent section:nth-child(even) {
   background: #fffcf5;
 }
-
 .collectionContent section:nth-child(odd) {
   background: #fffcf5;
 }
-
 .collectionContent .mainSlider .slick-list {
   padding: 0 !important;
 }
-
 .collectionContent .mainSlider .slick-dots li {
   width: 70px;
   margin: 5px;
 }
-
 .collectionContent .mainSlider .slick-slide {
   padding-bottom: 0;
   opacity: 0.5;
 }
-
 .collectionContent .mainSlider .slick-slide.slick-current {
   opacity: 1;
 }
-
 .collectionContent .mainSlider .slick-slide img {
   width: 95%;
 }
-
 .collectionContent h4 {
   font-family: "GillSans-Light";
   font-size: 30px;
@@ -2726,18 +2196,11 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: uppercase;
   padding-top: 20px;
 }
-
 .collectionContent aside {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   height: 100%;
 }
-
 .collectionContent aside .title {
   font-family: "GillSans-Light";
   font-size: 25px;
@@ -2746,66 +2209,49 @@ footer.footerJewerly .networks #Shape-Copy {
   text-align: left;
   margin-bottom: 30px;
 }
-
 .collectionContent aside img {
   width: 100px;
 }
-
 .collectionContent .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
   position: relative;
 }
-
 .collectionContent .item:first-child {
   margin-top: 0;
 }
-
 .collectionContent .name {
   font-family: "GillSans-Light";
   font-size: 18px;
   color: #42261D;
   letter-spacing: -0.03px;
 }
-
 .collectionContent .price {
   font-size: 16px;
   margin: 0;
 }
-
 .collectionContent .descr {
   padding-left: 20px;
 }
-
 .collectionContent .sizeContainer {
   margin: 0;
   width: 275px;
   margin-bottom: 10px;
   margin-top: 0px;
 }
-
 .collectionContent .sizeContainer div:first-child {
   display: none;
 }
-
 .collectionContent .sizeContainer div:first-child span:first-child,
 .collectionContent .sizeContainer div:first-child span:last-child {
   font-size: 14px;
   text-transform: none;
 }
-
 .collectionContent .buttonsSet {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 275px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .collectionContent .buttonsSet .discountBox {
   position: absolute;
   top: -35px;
@@ -2822,21 +2268,11 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.2;
   text-align: center;
   display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 .collectionContent .buttonsSet .discountBox span {
   display: block;
   font-size: 14px;
@@ -2844,7 +2280,6 @@ footer.footerJewerly .networks #Shape-Copy {
   color: #AC6565;
   line-height: 1;
 }
-
 .collectionContent .buttonsSet > div {
   text-align: center;
   height: 40px;
@@ -2853,11 +2288,9 @@ footer.footerJewerly .networks #Shape-Copy {
   border: 1px solid #fff;
   cursor: pointer;
 }
-
 .collectionContent .buttonsSet > div:active span {
   font-size: 14px;
 }
-
 .collectionContent .buttonsSet span {
   font-family: GillSasns-Light;
   font-size: 16px;
@@ -2866,32 +2299,26 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: uppercase;
   line-height: 40px;
 }
-
 .collectionContent .buttonsSet svg {
   margin-left: 5px;
   margin-bottom: 4px;
   width: 25px;
 }
-
 .collectionContent .buttonsSet #Shape,
 .collectionContent .buttonsSet #wishButton {
   fill: #B22D00;
 }
-
 .collectionContent .buttonsSet .wishButton {
   background-color: #eddcd5;
 }
-
 .collectionContent .buttonsSet .cartButton {
   background: #fff1d7;
   border: 1px solid #42261D;
   position: relative;
 }
-
 .collectionContent .buttonsSet .cartButton svg {
   width: 18px;
 }
-
 .collectionContent .products > a {
   text-decoration: underline;
   padding-left: 120px;
@@ -2903,47 +2330,38 @@ footer.footerJewerly .networks #Shape-Copy {
   .collectionContent .sizeContainer {
     width: 250px;
   }
-
   .collectionContent aside {
     height: auto;
   }
-
   .collectionContent .buttons,
-  .collectionContent .products {
+.collectionContent .products {
     margin-top: 30px;
   }
 }
-
 @media (max-width: 991px) {
   .collectionContent .slick-slider .slick-slide img {
     width: 100%;
   }
-
   .collectionContent .slick-slider .slick-dots {
     display: none !important;
   }
 }
-
 .categoryContent {
   padding-top: 53px;
   background: #fffcf5;
   background-size: 100vw 100vh;
   background-attachment: fixed;
 }
-
 .categoryContent .oneCateProd {
   width: 85%;
   margin: auto;
   margin-bottom: 60px;
   position: relative;
-  -webkit-transition: top .3s ease;
-  transition: top .3s ease;
+  transition: top 0.3s ease;
 }
-
 .categoryContent .container {
   position: relative;
 }
-
 .categoryContent h3 {
   font-family: "GillSans-Light";
   font-size: 40px;
@@ -2953,7 +2371,6 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: uppercase;
   line-height: 3;
 }
-
 .categoryContent .filterContainer {
   background: #fee8c9;
   width: 440px;
@@ -2964,7 +2381,6 @@ footer.footerJewerly .networks #Shape-Copy {
   position: relative;
   z-index: 4;
 }
-
 .categoryContent .filterContainer #filterButton {
   font-family: "GillSans-Light";
   font-size: 30px;
@@ -2975,29 +2391,18 @@ footer.footerJewerly .networks #Shape-Copy {
   border: 0;
   background: none;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   align-items: center;
   position: relative;
 }
-
 .categoryContent .filterContainer #filterButton svg {
   position: absolute;
   right: 15px;
   top: 12px;
-  -webkit-transition: -webkit-transform .3s ease;
-  transition: -webkit-transform .3s ease;
-  transition: transform .3s ease;
-  transition: transform .3s ease, -webkit-transform .3s ease;
+  transition: transform 0.3s ease;
 }
-
 .categoryContent .filterContainer #filterButton span:first-child {
   padding-left: 40px;
   background-image: url(/fronts/img/icons/filterIcon.svg);
@@ -3005,7 +2410,6 @@ footer.footerJewerly .networks #Shape-Copy {
   background-position: 0 center;
   background-repeat: no-repeat;
 }
-
 .categoryContent .filterContainer #filterButton span:nth-child(2) {
   width: 22px;
   height: 22px;
@@ -3016,31 +2420,21 @@ footer.footerJewerly .networks #Shape-Copy {
   position: absolute;
   right: 15px;
   top: 10px;
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
+  transition: transform 0.5s ease;
 }
-
 .categoryContent .filterContainer #filterButton.active span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
 .categoryContent .filterContainer .filterInner {
   height: 0;
   overflow: hidden;
   opacity: 0;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-  -webkit-transform: padding 0s ease;
-          transform: padding 0s ease;
+  transition: all 0.3s ease;
+  transform: padding 0s ease;
 }
-
 .categoryContent .filterContainer .filterInner span {
   cursor: pointer;
 }
-
 .categoryContent .filterContainer .filterInner.show {
   height: auto;
   overflow: visible;
@@ -3050,7 +2444,6 @@ footer.footerJewerly .networks #Shape-Copy {
   width: 100%;
   background: #fee8c9;
 }
-
 .categoryContent .filterContainer .filterButton {
   font-family: "GillSans-Light";
   font-size: 100%;
@@ -3059,15 +2452,9 @@ footer.footerJewerly .networks #Shape-Copy {
   letter-spacing: -0.03px;
   text-align: left;
   text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
   line-height: 50px;
   height: 50px;
@@ -3077,34 +2464,27 @@ footer.footerJewerly .networks #Shape-Copy {
   background-size: 22px;
   margin-top: 30px;
 }
-
 .categoryContent .filterContainer .filterButton.active {
   background-image: url(/fronts/img/icons/minusIcon.svg);
 }
-
 .categoryContent .filterContainer li {
   font-size: 18px;
 }
-
 .categoryContent .filterContainer .options {
   height: 0;
   overflow: hidden;
   opacity: 0;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
-
 .categoryContent .filterContainer .options.show {
   height: auto;
   overflow: visible;
   opacity: 1;
 }
-
 .categoryContent .filterContainer .filterCat #catPlus,
 .categoryContent .filterContainer .filterCat #catMinus {
   fill: #B22D00;
 }
-
 .categoryContent .filterContainer button {
   font-family: "GillSans-Light";
   font-size: 24px;
@@ -3116,27 +2496,19 @@ footer.footerJewerly .networks #Shape-Copy {
   height: 40px;
   line-height: 40px;
   width: 45%;
-  -webkit-transition: font-size .4s ease;
-  transition: font-size .4s ease;
+  transition: font-size 0.4s ease;
   background: #fff1d7;
   border: 1px solid #42261D;
 }
-
 .categoryContent .filterContainer button:focus {
   outline: 0;
 }
-
 .categoryContent .filterContainer button:active {
   font-size: 20px;
 }
-
 .categoryContent .filterContainer .filterFooter {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding-bottom: 20px;
   padding-top: 40px;
 }
@@ -3144,43 +2516,31 @@ footer.footerJewerly .networks #Shape-Copy {
 .oneProductContent {
   padding-top: 60px;
 }
-
 .oneProductContent section:nth-child(2) {
   padding-top: 100px;
 }
-
 .oneProductContent section:last-child {
   padding-bottom: 100px;
 }
-
 .oneProductContent .sliderContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .oneProductContent .oneCollectionSlider {
   width: calc(100% - 100px);
 }
-
 .oneProductContent .navCollection {
   width: 90px;
 }
-
 .oneProductContent .navCollection .slick-track {
-  -webkit-transform: none !important;
-          transform: none !important;
+  transform: none !important;
 }
-
 .oneProductContent .navCollection .slick-slide {
   cursor: pointer;
   opacity: 0.5;
 }
-
 .oneProductContent .navCollection .slick-slide:last-child div {
   position: relative;
 }
-
 .oneProductContent .navCollection .slick-slide:last-child div:after {
   content: "";
   position: absolute;
@@ -3194,21 +2554,17 @@ footer.footerJewerly .networks #Shape-Copy {
   background-repeat: no-repeat;
   background-position: center center;
 }
-
 .oneProductContent .navCollection .slick-slide.slick-current {
   opacity: 1;
 }
-
 .oneProductContent .navCollection .slick-list {
   height: 100% !important;
 }
-
 .oneProductContent section {
   background: #fffcf5;
   background-size: 100%;
   background-repeat: repeat;
 }
-
 .oneProductContent span.undo {
   font-family: "GillSans-Light";
   font-size: 25px;
@@ -3227,7 +2583,6 @@ footer.footerJewerly .networks #Shape-Copy {
   margin: 30px 0;
   display: none;
 }
-
 .oneProductContent .videoContainer {
   position: absolute;
   width: 95%;
@@ -3235,7 +2590,6 @@ footer.footerJewerly .networks #Shape-Copy {
   right: 0;
   z-index: 1;
 }
-
 .oneProductContent .videoContainer .soundButton {
   width: 30px;
   height: 30px;
@@ -3249,15 +2603,12 @@ footer.footerJewerly .networks #Shape-Copy {
   cursor: pointer;
   z-index: 3;
 }
-
 .oneProductContent .videoContainer .soundButton.soundEnabled {
   background-image: url(/fronts/img/icons/soundEnable.svg);
 }
-
 .oneProductContent .videoContainer img {
   opacity: 0;
 }
-
 .oneProductContent .videoContainer video {
   width: 100%;
   height: 100%;
@@ -3268,39 +2619,30 @@ footer.footerJewerly .networks #Shape-Copy {
   -o-object-position: center center;
      object-position: center center;
 }
-
 .oneProductContent .mainSlider .oneCollectionSlider .slick-list {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   padding: 0 !important;
 }
-
 .oneProductContent .mainSlider .slick-slide {
   padding-bottom: 10px;
   position: relative;
 }
-
 .oneProductContent .buttons {
   max-width: 275px;
 }
-
 .oneProductContent .addToCart {
   margin-left: 20px;
 }
-
 .oneProductContent .addToCart svg {
   margin-left: 5px;
   margin-bottom: 5px;
 }
-
 .oneProductContent .addToCart #Shape {
   fill: #B22D00;
 }
-
 .oneProductContent .addToWish path:last-child {
   fill: #B22D00;
 }
-
 .oneProductContent aside .name {
   font-family: "GillSans-Light";
   font-size: 40px;
@@ -3308,7 +2650,6 @@ footer.footerJewerly .networks #Shape-Copy {
   letter-spacing: 0;
   line-height: 55px;
 }
-
 .oneProductContent aside .color {
   font-family: "GillSans-Light";
   font-size: 20px;
@@ -3317,7 +2658,6 @@ footer.footerJewerly .networks #Shape-Copy {
   margin-bottom: 30px;
   text-transform: uppercase;
 }
-
 .oneProductContent aside > a:last-child {
   font-family: "GillSans-Light";
   font-size: 18px;
@@ -3332,21 +2672,17 @@ footer.footerJewerly .networks #Shape-Copy {
   background-position: 0 center;
   background-size: 20px;
 }
-
 .oneProductContent .sizeContainer {
   margin-bottom: 50px;
 }
-
 .oneProductContent .moreDetails {
   margin-top: 40px;
   max-height: 350px;
   overflow: hidden;
 }
-
 .oneProductContent .moreDetails::-webkit-scrollbar {
   display: none;
 }
-
 .oneProductContent .moreDetails .title {
   font-family: "GillSans-Light";
   font-size: 24px;
@@ -3357,34 +2693,28 @@ footer.footerJewerly .networks #Shape-Copy {
   position: relative;
   cursor: pointer;
 }
-
 .oneProductContent .moreDetails .title:after {
-  content: '+';
+  content: "+";
   position: absolute;
   font-size: 26px;
   right: 0;
 }
-
 .oneProductContent .moreDetails .title.minus:after {
-  content: '-';
+  content: "-";
 }
-
 .oneProductContent .moreDetails p,
 .oneProductContent .moreDetails li {
   font-size: 20px;
   color: #42261D;
   line-height: 1.2;
 }
-
 .oneProductContent .moreDetails p {
   margin-bottom: 5px;
 }
-
 .oneProductContent .moreDetails li {
   padding-left: 20px;
   position: relative;
 }
-
 .oneProductContent .moreDetails li:before {
   content: "";
   width: 10px;
@@ -3396,29 +2726,24 @@ footer.footerJewerly .networks #Shape-Copy {
   top: calc(50% - 5px);
   z-index: 1;
 }
-
 .oneProductContent .moreDetails .description div:nth-child(2) {
   height: 0;
   opacity: 0;
   overflow: hidden;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   padding-bottom: 0;
 }
-
 .oneProductContent .moreDetails .description div:nth-child(2).show {
   height: auto;
   opacity: 1;
   padding-bottom: 30px;
 }
-
 .oneProductContent .additionalSlide {
   padding: 50px 0;
   background: #fffcf5;
   background-size: 100%;
   background-repeat: repeat-y;
 }
-
 .oneProductContent .additionalSlide .title {
   font-family: "GillSans-Light";
   font-size: 50px;
@@ -3428,48 +2753,39 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.5;
   text-align: center;
 }
-
 .oneProductContent .additionalSlide .slick-slide .imgBlock {
   width: 90%;
   margin: auto;
 }
-
 .oneProductContent .additionalSlide .slick-slide .addToWish {
   top: 20px;
   left: 40px;
 }
-
 .oneProductContent .additionalSlide .slick-list {
   padding: 0 !important;
 }
-
 .oneProductContent .additionalSlide .slick-arrow {
   border: 1px solid #B22D00;
   width: 34px;
   height: 46px;
   top: -56px;
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
   background: none;
   background-image: url(/fronts/img/icons/sliderRed.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 20px;
 }
-
 .oneProductContent .additionalSlide .slick-arrow:active {
   background-size: 15px;
 }
-
 .oneProductContent .additionalSlide .slick-prev {
   right: 50px;
   left: auto;
 }
-
 .oneProductContent .additionalSlide .slick-next {
   right: 18px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 @media (max-width: 992px) {
@@ -3477,20 +2793,16 @@ footer.footerJewerly .networks #Shape-Copy {
     font-size: 30px;
     line-height: 1;
   }
-
   .oneProductContent aside .color {
     font-size: 18px;
   }
 }
-
 .contactContent {
   background-color: #fffcf5;
 }
-
 .contactContent .contactBanner {
   position: relative;
 }
-
 .contactContent .contactBanner .test {
   position: absolute;
   left: 0;
@@ -3498,49 +2810,32 @@ footer.footerJewerly .networks #Shape-Copy {
   width: 100%;
   height: 100%;
 }
-
 .contactContent .contactBanner .container {
   height: 100%;
 }
-
 .contactContent .contactBanner .innerTest {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   height: 100%;
 }
-
 .contactContent .contactBanner h3 {
   font-size: 50px;
 }
-
 .contactContent .contactBanner p {
   line-height: 1.5;
 }
-
-.contactContent .contactBanner h3,
-.contactContent .contactBanner p {
+.contactContent .contactBanner h3, .contactContent .contactBanner p {
   margin: 30px 0;
   color: #fff;
   text-align: center;
   width: 500px;
   font-family: "GillSans-Light";
 }
-
 .contactContent .container {
   max-width: 1350px;
 }
-
 .contactContent h3 {
   font-family: "GillSans-Light";
   font-size: 30px;
@@ -3550,20 +2845,16 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.1;
   margin: 50px 0;
 }
-
 .contactContent h3 small {
   font-size: 24px;
 }
-
 .contactContent .item {
   margin-right: -50px;
   margin-bottom: 30px;
 }
-
 .contactContent .item:last-child {
   margin-bottom: 0;
 }
-
 .contactContent .title {
   font-family: "CormorantSC";
   font-size: 18px;
@@ -3575,11 +2866,7 @@ footer.footerJewerly .networks #Shape-Copy {
   position: relative;
   padding-left: 30px;
 }
-
-.contactContent P,
-.contactContent li,
-.contactContent a,
-.contactContent .country {
+.contactContent P, .contactContent li, .contactContent a, .contactContent .country {
   font-family: "GillSans-Light";
   font-size: 20px;
   color: #42261D;
@@ -3587,23 +2874,19 @@ footer.footerJewerly .networks #Shape-Copy {
   margin-bottom: 5px;
   text-align: center;
 }
-
 .contactContent .country {
   font-size: 25px;
   margin: 20px 0;
   text-transform: uppercase;
   font-weight: bold;
 }
-
 .contactContent .bloc {
   text-align: center;
   padding-bottom: 50px;
 }
-
 .contactContent .bloc > p a:first-child {
   margin-right: 15px;
 }
-
 .contactContent .bloc img {
   display: block;
   margin-left: auto;
@@ -3611,7 +2894,6 @@ footer.footerJewerly .networks #Shape-Copy {
   height: 150px;
   width: auto;
 }
-
 .contactContent a.contButt {
   position: relative;
   top: 20px;
@@ -3621,11 +2903,9 @@ footer.footerJewerly .networks #Shape-Copy {
   padding: 10px;
   border: 1px solid #42261D;
 }
-
 .contactContent span {
   display: block;
 }
-
 .contactContent svg {
   left: 0;
   top: calc(50% - 10px);
@@ -3633,68 +2913,51 @@ footer.footerJewerly .networks #Shape-Copy {
   margin-right: 5px;
   margin-bottom: 5px;
 }
-
 .contactContent .imagesBloc {
   position: relative;
 }
-
 .contactContent .imagesBloc img {
   position: absolute;
   width: 70%;
-  -webkit-transition: all .5s linear 0s;
-  transition: all .5s linear 0s;
+  transition: all 0.5s linear 0s;
 }
-
 .contactContent .imagesBloc img:first-child {
   left: 15px;
   top: 0;
 }
-
 .contactContent .imagesBloc img:last-child {
   bottom: 0;
   right: 15px;
 }
-
 .contactContent .abs {
   padding-left: 50px;
 }
-
 .contactContent .imageContainer {
   background-color: #fffcf5;
   overflow: hidden;
   position: relative;
 }
-
 .contactContent .imageContainer img {
   width: 100%;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
   transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-          transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-
 .contactContent .formcontact {
   padding: 100px 0;
   background: #fffcf5;
   background-size: 100%;
   position: relative;
 }
-
 .contactContent .formcontact .imageContainer {
   padding-left: 0;
 }
-
 .contactContent .g-recaptcha {
   margin-top: 20px;
 }
-
 .contactContent .g-recaptcha > div {
   margin-left: auto;
   margin-right: auto;
 }
-
 .contactContent form {
   max-width: 440px;
   padding-left: 50px;
@@ -3702,29 +2965,24 @@ footer.footerJewerly .networks #Shape-Copy {
   position: relative;
   z-index: 2;
 }
-
 .contactContent form h3 {
   line-height: 2;
   margin-top: 0;
 }
-
 .contactContent form input {
   line-height: 50px;
   height: 50px;
   margin-bottom: 20px;
 }
-
 .contactContent form textarea {
   height: 100px;
 }
-
 .contactContent form p {
   margin-bottom: 30px;
   font-family: "GillSans-Light";
   font-size: 24px;
   color: #42261D;
 }
-
 .contactContent form label {
   line-height: 1;
   font-family: "GillSans-Light";
@@ -3732,15 +2990,12 @@ footer.footerJewerly .networks #Shape-Copy {
   color: #42261D;
   letter-spacing: 0;
 }
-
 .contactContent form .butt {
   width: 100%;
 }
-
 .contactContent form .butt span {
   display: inline;
 }
-
 .contactContent .fonop {
   width: calc(50vw - 60px);
   height: 100%;
@@ -3757,7 +3012,6 @@ footer.footerJewerly .networks #Shape-Copy {
   background-attachment: fixed;
   padding-bottom: 100px;
 }
-
 .cartContent h3 {
   font-family: "GillSans-Light";
   font-size: 40px;
@@ -3767,31 +3021,23 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: uppercase;
   line-height: 4;
 }
-
 .cartContent .cartItem {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   padding: 0 15px;
   margin-bottom: 20px;
 }
-
 .cartContent .cartItem .price span:nth-child(2):after {
   left: 8%;
   width: 80%;
 }
-
 .cartContent .cartItem .selectContainer {
   margin-bottom: 20px;
   width: 130px;
 }
-
 .cartContent .cartItem img {
   width: 120px;
-  -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
 }
-
 .cartContent .cartItem a,
 .cartContent .cartItem .params {
   font-family: "GillSans-Light";
@@ -3801,31 +3047,22 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.2;
   margin-bottom: 10px;
 }
-
 .cartContent .cartItem .description {
   padding-left: 20px;
 }
-
 .cartContent .cartItem .params {
   font-size: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 5px;
 }
-
 .cartContent .cartItem .params span:nth-child(2) {
   margin-left: 20px;
 }
-
 .cartContent .cartItem .methods {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 20px;
   position: relative;
 }
-
 .cartContent .cartItem .methods > div {
   font-family: "GillSans-Light";
   font-size: 18px;
@@ -3833,28 +3070,23 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.2;
   cursor: pointer;
 }
-
 .cartContent .cartItem .price {
   margin: 0;
   padding: 0 30px;
 }
-
 .cartContent .cartItem .price span {
   font-size: 24px;
   line-height: 1.6;
   display: block;
   text-align: center;
 }
-
 .cartContent .cartItem .price span:last-child {
   font-size: 18px;
 }
-
 .cartContent .cartItem .edit.viewSet {
   color: #B22D00;
   text-decoration: underline;
 }
-
 .cartContent .setOpen {
   position: relative;
   margin-right: -200px;
@@ -3862,41 +3094,33 @@ footer.footerJewerly .networks #Shape-Copy {
   display: none;
   top: -30px;
 }
-
 .cartContent .setOpen a,
 .cartContent .setOpen .params {
   font-size: 18px;
   line-height: 1.2;
 }
-
 .cartContent .setOpen a {
   padding-left: 0;
 }
-
 .cartContent .setOpen img {
   width: 100px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 .cartContent .setOpen .price {
   padding: 0;
   font-size: 25px;
   margin-bottom: 10px;
   margin-top: 5px;
 }
-
 .cartContent .setOpen .price span {
   display: inline;
   font-size: 20px;
   line-height: 1.2;
   padding: 0;
 }
-
 .cartContent .setOpen .price span:first-child {
   padding-right: 15px;
 }
-
 .cartContent .addToWish {
   width: auto;
   background: none;
@@ -3908,36 +3132,27 @@ footer.footerJewerly .networks #Shape-Copy {
   margin-left: 20px;
   border: 0;
 }
-
 .cartContent .addToWish svg {
   width: 23px;
   height: 20px;
 }
-
 .cartContent .remove {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
   cursor: pointer;
   padding: 0;
   margin-right: 15px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   background-image: url(/fronts/img/icons/plusIconBlack.svg);
   background-size: 20px 20px;
   background-position: center center;
   background-repeat: no-repeat;
 }
-
 .cartContent .remove:active {
   background-size: 15px;
 }
-
 .cartContent .closeSet {
   background: #FFF2DE;
   background-image: url(/fronts/img/backgrounds/closeSet.png);
@@ -3955,10 +3170,10 @@ footer.footerJewerly .networks #Shape-Copy {
 }
 
 .orderSummary {
+  position: -webkit-sticky;
   position: sticky;
   top: 200px;
 }
-
 .orderSummary > div {
   width: 390px;
   padding: 20px 15px;
@@ -3966,14 +3181,11 @@ footer.footerJewerly .networks #Shape-Copy {
   background-size: 100%;
   background-repeat: repeat-y;
   background-color: #FFF2EC;
-  -webkit-box-shadow: 0 3px 2px 0 #95908B;
-          box-shadow: 0 3px 2px 0 #95908B;
+  box-shadow: 0 3px 2px 0 #95908B;
 }
-
 .orderSummary > div:last-child {
   margin-top: 40px;
 }
-
 .orderSummary .title {
   font-family: "GillSans-Light";
   font-size: 24px;
@@ -3981,7 +3193,6 @@ footer.footerJewerly .networks #Shape-Copy {
   letter-spacing: 0;
   text-transform: uppercase;
 }
-
 .orderSummary span,
 .orderSummary label,
 .orderSummary button,
@@ -3993,43 +3204,30 @@ footer.footerJewerly .networks #Shape-Copy {
   letter-spacing: 0;
   line-height: 30px;
 }
-
 .orderSummary label {
   line-height: 1;
 }
-
 .orderSummary .bloc {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .orderSummary input,
 .orderSummary .selectContainer {
   width: 60%;
 }
-
 .orderSummary .checkContainer {
   font-size: 18px;
   line-height: 1;
   color: #42261D;
   margin: 20px 0;
 }
-
 .orderSummary .checkContainer a {
   line-height: 1;
 }
-
 .orderSummary .promoCode {
   margin: 10px 0;
 }
-
 .orderSummary .promoCode button {
   background: #fff1d7;
   border: 1px solid #42261D;
@@ -4039,15 +3237,12 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: uppercase;
   color: #B22D00;
 }
-
 .orderSummary .promoCode button:active {
   font-size: 14px;
 }
-
 .orderSummary .promoCode .error {
   display: none;
 }
-
 .orderSummary .total span {
   font-family: "GillSans-Light";
   font-size: 18px;
@@ -4055,7 +3250,6 @@ footer.footerJewerly .networks #Shape-Copy {
   letter-spacing: 0;
   line-height: 40px;
 }
-
 .orderSummary .last span {
   font-family: "GillSans-Light";
   font-size: 24px;
@@ -4064,7 +3258,6 @@ footer.footerJewerly .networks #Shape-Copy {
   text-align: right;
   line-height: 2;
 }
-
 .orderSummary button.onSubmit {
   background-color: #FFE7CB;
   background: #fff1d7;
@@ -4079,18 +3272,14 @@ footer.footerJewerly .networks #Shape-Copy {
   width: 100%;
   height: 58px;
   line-height: 58px;
-  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
-
 .orderSummary button.onSubmit:active {
   font-size: 16px;
 }
-
 .orderSummary p {
   font-size: 18px;
 }
-
 .orderSummary a {
   text-decoration: underline;
   font-size: 18px;
@@ -4100,43 +3289,28 @@ footer.footerJewerly .networks #Shape-Copy {
   margin-top: 60px;
   padding-left: 15px;
 }
-
 .info p.title {
   font-family: "GillSans-Light";
   font-size: 24px;
   color: #42261D;
 }
-
 .info .paymentMethods li {
   margin-right: 30px;
 }
-
 .info ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .info .infoBloc {
   margin-bottom: 30px;
 }
 
 .stepContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 100px;
 }
-
 .stepContainer .step {
   position: relative;
   width: 63px;
@@ -4144,25 +3318,20 @@ footer.footerJewerly .networks #Shape-Copy {
   background-image: #fff1d7;
   background-size: cover;
   background-position: 100%;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
 .stepContainer .step.opac {
-  opacity: .5;
+  opacity: 0.5;
 }
-
 .stepContainer span {
   font-family: "GillSans-Light";
   font-size: 18px;
   color: #42261D;
   display: block;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
   text-align: center;
   line-height: 63px;
 }
-
 .stepContainer .arrow {
   background-image: url(/fronts/img/icons/largeArrow.svg);
   background-size: 100%;
@@ -4175,7 +3344,6 @@ footer.footerJewerly .networks #Shape-Copy {
 .shippingInformation {
   padding: 0 15px;
 }
-
 .shippingInformation .subTitle {
   font-family: "GillSans-Light";
   font-size: 24px;
@@ -4186,21 +3354,17 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.2;
   margin-bottom: 30px;
 }
-
 .shippingInformation input {
   height: 44px;
   line-height: 44px;
   margin-bottom: 20px;
 }
-
 .shippingInformation label {
   line-height: 1;
 }
-
 .shippingInformation .shippingBloc {
   margin-bottom: 40px;
 }
-
 .shippingInformation .butt {
   height: 44px;
   line-height: 44px;
@@ -4212,21 +3376,15 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: uppercase;
   margin-top: 10px;
 }
-
 .shippingInformation .paymentMethod {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   outline: 1px solid #42261D;
   padding: 15px;
   height: 100%;
   width: 100%;
   cursor: pointer;
 }
-
 .shippingInformation .paymentMethod .checkMethod {
   width: 30px;
   height: 30px;
@@ -4235,7 +3393,6 @@ footer.footerJewerly .networks #Shape-Copy {
   position: relative;
   margin-right: 15px;
 }
-
 .shippingInformation .paymentMethod .checkMethod:after {
   content: "";
   position: absolute;
@@ -4247,17 +3404,13 @@ footer.footerJewerly .networks #Shape-Copy {
   left: 5px;
   border-radius: 50%;
 }
-
 .shippingInformation .paymentMethod.selected .checkMethod:after {
   display: block;
 }
-
-.shippingInformation .paymentMethod svg,
-.shippingInformation .paymentMethod img {
+.shippingInformation .paymentMethod svg, .shippingInformation .paymentMethod img {
   height: 20px;
   width: auto;
 }
-
 .shippingInformation .paymentMethod p {
   font-family: "GillSans-Light";
   font-size: 20px;
@@ -4265,33 +3418,24 @@ footer.footerJewerly .networks #Shape-Copy {
   letter-spacing: 0;
   text-align: left;
 }
-
 .shippingInformation .paymentMethod span {
   font-family: "GillSans-Light";
   font-size: 14px;
   color: rgba(66, 38, 29, 0.5);
   letter-spacing: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .shippingInformation .paymentMethod span img.master {
   height: 30px;
   margin-left: 10px;
 }
-
 .shippingInformation .paymentMethod span img.paypalnew {
   height: 25px;
 }
-
 .shippingInformation .paymentMethod span img {
   display: inline;
 }
-
 .shippingInformation .paymentMethodContainer .checkContainer {
   font-family: "GillSans-Light";
   font-size: 14px;
@@ -4300,25 +3444,19 @@ footer.footerJewerly .networks #Shape-Copy {
   margin-left: 15px;
   margin-top: 20px;
 }
-
 .shippingInformation .paymentMethodContainer .checkContainer .check {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   border: 1px solid #500504;
 }
-
 .shippingInformation .paymentMethodContainer > div {
   margin-bottom: 15px;
 }
-
 .shippingInformation .paymentMethodContainer > div:first-child {
   padding-left: 15px;
 }
-
 .shippingInformation .paymentMethodContainer > div:nth-child(3) {
   padding-right: 15px;
 }
-
 .shippingInformation er .checkContainer {
   font-family: "GillSans-Light";
   font-size: 16px;
@@ -4327,39 +3465,27 @@ footer.footerJewerly .networks #Shape-Copy {
   margin-left: 15px;
   margin-top: 20px;
 }
-
 .shippingInformation er .checkContainer .check {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   border: 1px solid #500504;
 }
-
 .shippingInformation er > div {
   padding: 3px;
 }
-
 .shippingInformation er > div:first-child {
   padding-left: 15px;
 }
-
 .shippingInformation er > div:last-child img {
   width: 60px;
   margin-bottom: 15px;
 }
 
 .titleCeck {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 40px;
 }
-
 .titleCeck p {
   font-family: "GillSans-Light";
   font-size: 30px;
@@ -4367,7 +3493,6 @@ footer.footerJewerly .networks #Shape-Copy {
   letter-spacing: 0;
   text-transform: uppercase;
 }
-
 .titleCeck span {
   font-family: "GillSans-Light";
   font-size: 16px;
@@ -4383,50 +3508,37 @@ footer.footerJewerly .networks #Shape-Copy {
 .footerOrder {
   padding: 40px 0;
 }
-
 .footerOrder .paymentMethodsFooter {
   margin-bottom: 30px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
-
 .footerOrder .paymentMethodsFooter li:first-child img {
   margin-left: 0;
 }
-
 .footerOrder .paymentMethodsFooter .mastercard img,
 .footerOrder .paymentMethodsFooter .visa img {
   height: 60px;
 }
-
 .footerOrder .paymentMethodsFooter .paypal {
   margin-top: 10px;
 }
-
 .footerOrder .paymentMethodsFooter .g2p img {
   height: 45px;
 }
-
 .footerOrder .paymentMethodsFooter .pp img {
   height: 40px;
 }
-
 .footerOrder .title {
   font-size: 22px;
   margin-bottom: 10px;
 }
-
 .footerOrder p {
   margin-bottom: 20px;
 }
-
 .footerOrder a {
   text-decoration: underline;
 }
-
-.footerOrder p,
-.footerOrder a {
+.footerOrder p, .footerOrder a {
   font-size: 16px;
 }
 
@@ -4434,27 +3546,21 @@ footer.footerJewerly .networks #Shape-Copy {
   padding-top: 100px;
   background-color: #fffcf5;
 }
-
 .aboutContent .container {
   max-width: 70vw;
 }
-
 .aboutContent section {
   padding: 50px 0;
 }
-
 .aboutContent a {
   position: relative;
 }
-
 .aboutContent a:hover ul li {
   margin-right: -100px;
 }
-
 .aboutContent a:hover ul li:first-child {
   width: 100%;
 }
-
 .aboutContent a span {
   font-family: "GillSans-Light";
   font-size: 24px;
@@ -4462,14 +3568,9 @@ footer.footerJewerly .networks #Shape-Copy {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
 .aboutContent a ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -4477,21 +3578,16 @@ footer.footerJewerly .networks #Shape-Copy {
   padding-right: 5px;
   overflow: hidden;
 }
-
 .aboutContent a li {
   border: 2px solid #42261D;
   border-radius: 50%;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
-
 .aboutContent a li:first-child {
   width: 70%;
   border-radius: 3px;
-  -webkit-transition-delay: .2s;
-          transition-delay: .2s;
+  transition-delay: 0.2s;
 }
-
 .aboutContent h3 {
   font-family: "GillSans-Light";
   font-size: 50px;
@@ -4500,7 +3596,6 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: uppercase;
   line-height: 2;
 }
-
 .aboutContent .tranText {
   font-family: "NorthWellAlt";
   font-size: 55px;
@@ -4508,22 +3603,18 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1;
   text-align: left;
   padding-left: 40px;
-  -webkit-transform: rotateZ(-10deg);
-          transform: rotateZ(-10deg);
+  transform: rotateZ(-10deg);
   position: relative;
   right: -205px;
   top: 47px;
   z-index: 3;
 }
-
 .aboutContent .tranText span:first-child {
   color: #5C591A;
 }
-
 .aboutContent .tranText span {
   font-family: "NorthWellAlt";
 }
-
 .aboutContent .colorRed {
   font-family: "GillSans-Light";
   font-size: 40px;
@@ -4533,7 +3624,6 @@ footer.footerJewerly .networks #Shape-Copy {
   padding-right: 80px;
   margin-top: 70px;
 }
-
 .aboutContent .scaleIn {
   position: relative;
   margin-top: 60px;
@@ -4541,60 +3631,41 @@ footer.footerJewerly .networks #Shape-Copy {
   z-index: 1;
   overflow: hidden;
 }
-
 .aboutContent .scaleIn img {
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transition: transform 0.5s ease;
+  transform: scale(1.5);
 }
-
 .aboutContent .scaleIn.defaScale img {
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
 }
-
 .aboutContent .scaleOut {
   overflow: hidden;
 }
-
 .aboutContent .scaleOut img {
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
+  transition: transform 0.5s ease;
 }
-
 .aboutContent .imgContainer {
   position: relative;
 }
-
 .aboutContent .imgContainer .crumbsabout {
   position: absolute;
   bottom: -40px;
   right: -40px;
   width: 200px;
 }
-
 .aboutContent .marb {
   margin-bottom: 60px;
 }
-
 .aboutContent section:nth-child(2) {
   padding-bottom: 150px;
 }
-
 .aboutContent section:nth-child(2) .block1 {
   width: 40%;
   max-width: 38%;
 }
-
 .aboutContent section:nth-child(2) .block2 {
   width: 60%;
 }
-
 .aboutContent section:nth-child(2) p {
   font-family: "GillSans-Light";
   font-size: 25px;
@@ -4603,34 +3674,28 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 33px;
   margin-top: 30px;
 }
-
 .aboutContent section:nth-child(2) .tranText {
   font-family: "GillSans-Light";
   right: auto;
   position: static;
   text-align: center;
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
   margin: 40px 0;
   margin-top: 0;
   font-size: 40px;
 }
-
 .aboutContent section:nth-child(2) .tranText span {
   font-family: "GillSans-Light";
   color: #42261D;
 }
-
 .aboutContent section:nth-child(3) {
   background-color: #eddcd5;
   padding-bottom: 0;
 }
-
 .aboutContent section:nth-child(3) .block1 {
   width: 65%;
   max-width: 65%;
 }
-
 .aboutContent section:nth-child(3) .block1 p {
   font-family: "GillSans-Light";
   font-size: 30px;
@@ -4638,17 +3703,14 @@ footer.footerJewerly .networks #Shape-Copy {
   letter-spacing: 0.21px;
   line-height: 60px;
 }
-
 .aboutContent section:nth-child(3) .block2 {
   width: 35%;
   max-width: 35%;
   padding-left: 80px;
 }
-
 .aboutContent section:nth-child(3) .block2 p {
   margin-top: 60px;
 }
-
 .aboutContent section:nth-child(3) p {
   font-family: "GillSans-Light";
   font-size: 25px;
@@ -4658,45 +3720,37 @@ footer.footerJewerly .networks #Shape-Copy {
   margin-top: 30px;
   margin-bottom: 60px;
 }
-
 .aboutContent section:nth-child(3) .imgContainer {
   margin-bottom: -50px;
   position: absolute;
   right: 0;
   width: 70vw;
 }
-
 .aboutContent section:nth-child(3) .imgContainer .crumbsabout {
   width: 100px;
   bottom: 40px;
 }
-
 .aboutContent section:nth-child(3) .tranText {
   margin: 0;
   padding: 0;
   right: auto;
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
   text-align: left;
   font-family: "GillSans-Light";
   color: #42261D;
   font-size: 40px;
 }
-
 .aboutContent section:nth-child(3) .top {
   position: relative;
   top: -170px;
-  -webkit-transition: top 1s ease;
   transition: top 1s ease;
 }
-
 .aboutContent section:nth-child(4) {
   background: #fffcf5;
   background-size: 100%;
   background-repeat: repeat-y;
   padding-bottom: 0;
 }
-
 .aboutContent section:nth-child(4) p:first-child {
   font-family: "GillSans-Light";
   font-size: 50px;
@@ -4705,7 +3759,6 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 60px;
   padding-top: 12vw;
 }
-
 .aboutContent section:nth-child(4) p:last-child {
   font-family: "GillSans-Light";
   font-size: 30px;
@@ -4713,7 +3766,6 @@ footer.footerJewerly .networks #Shape-Copy {
   letter-spacing: 0.13px;
   line-height: 40px;
 }
-
 .aboutContent section:nth-child(4) .imgContainer {
   width: 100vw;
   height: 100vh;
@@ -4724,17 +3776,14 @@ footer.footerJewerly .networks #Shape-Copy {
   margin-top: 80px;
   position: relative;
   z-index: 0;
-  -webkit-transition: background-position 1s ease;
   transition: background-position 1s ease;
 }
-
 .aboutContent section:nth-child(4) .imgContainer img {
   opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
 }
-
 .aboutContent section:nth-child(5) {
   background: #fffcf5;
   background-size: 100% 57%, 100% 43%;
@@ -4743,15 +3792,12 @@ footer.footerJewerly .networks #Shape-Copy {
   padding: 80px 0;
   overflow: hidden;
 }
-
 .aboutContent section:nth-child(5) a span {
   color: #5C591A;
 }
-
 .aboutContent section:nth-child(5) a li {
   border-color: #5C591A;
 }
-
 .aboutContent section:nth-child(5) h4 {
   font-family: "GillSans-Light";
   font-size: 40px;
@@ -4760,7 +3806,6 @@ footer.footerJewerly .networks #Shape-Copy {
   text-align: center;
   text-transform: uppercase;
 }
-
 .aboutContent section:nth-child(5) p {
   font-family: "GillSans-Light";
   font-size: 25px;
@@ -4770,20 +3815,16 @@ footer.footerJewerly .networks #Shape-Copy {
   margin: 50px 0;
   text-align: center;
 }
-
 .aboutContent section:nth-child(5) .top {
   position: relative;
   margin-right: -150px;
   z-index: 2;
   top: 630px;
 }
-
 .aboutContent section:nth-child(5) .top img {
   position: relative;
-  -webkit-transition: bottom .5s ease;
-  transition: bottom .5s ease;
+  transition: bottom 0.5s ease;
 }
-
 .aboutContent section:nth-child(5) .bottom {
   position: relative;
   margin-left: -100px;
@@ -4791,24 +3832,16 @@ footer.footerJewerly .networks #Shape-Copy {
   top: -360px;
   margin-bottom: 80px;
 }
-
 .aboutContent section:nth-child(5) .bottom img {
   position: relative;
-  -webkit-transition: top 1s ease;
   transition: top 1s ease;
 }
-
 .aboutContent section:nth-child(5) .scaleOut {
   overflow: hidden;
 }
-
 .aboutContent section:nth-child(5) .scaleOut img {
-  -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
 }
-
 .aboutContent section:nth-child(5) p.subtext {
   font-family: "GillSans-Light";
   font-size: 50px;
@@ -4818,11 +3851,9 @@ footer.footerJewerly .networks #Shape-Copy {
   margin-top: 20px;
   margin-right: -100px;
 }
-
 .aboutContent section:nth-child(5) .imgContainer {
   z-index: 1;
 }
-
 .aboutContent section:nth-child(5) .imgContainer .crumbsabout {
   position: absolute;
   bottom: -40px;
@@ -4831,12 +3862,10 @@ footer.footerJewerly .networks #Shape-Copy {
   width: 150%;
   z-index: -1;
 }
-
 .aboutContent section:nth-child(6) {
   padding: 80px 0;
   overflow: hidden;
 }
-
 .aboutContent section:nth-child(6) h4 {
   font-family: "GillSans-Light";
   font-size: 40px;
@@ -4845,7 +3874,6 @@ footer.footerJewerly .networks #Shape-Copy {
   text-align: center;
   text-transform: uppercase;
 }
-
 .aboutContent section:nth-child(6) p {
   font-family: "GillSans-Light";
   font-size: 25px;
@@ -4855,20 +3883,16 @@ footer.footerJewerly .networks #Shape-Copy {
   margin: 50px 0;
   text-align: center;
 }
-
 .aboutContent section:nth-child(6) .top {
   position: relative;
   margin-right: -150px;
   z-index: 2;
   top: -500px;
 }
-
 .aboutContent section:nth-child(6) .top img {
   position: relative;
-  -webkit-transition: top .5s ease;
-  transition: top .5s ease;
+  transition: top 0.5s ease;
 }
-
 .aboutContent section:nth-child(6) .bottom {
   position: relative;
   margin-left: -100px;
@@ -4876,38 +3900,27 @@ footer.footerJewerly .networks #Shape-Copy {
   top: -460px;
   margin-bottom: 80px;
 }
-
 .aboutContent section:nth-child(6) .bottom img {
   position: relative;
-  -webkit-transition: top 1s ease;
   transition: top 1s ease;
 }
-
 .aboutContent section:nth-child(6) .scaleOut {
   overflow: hidden;
 }
-
 .aboutContent section:nth-child(6) .scaleOut img {
-  -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
 }
-
 .aboutContent section:nth-child(6) p.subtext {
   margin-top: 80px;
   font-size: 40px;
   line-height: 40px;
 }
-
 .aboutContent section:nth-child(6) p.subtext img {
   width: 70%;
 }
-
 .aboutContent section:nth-child(6) .imgContainer {
   z-index: 1;
 }
-
 .aboutContent section:nth-child(6) .imgContainer .crumbsabout {
   position: absolute;
   bottom: -40px;
@@ -4916,7 +3929,6 @@ footer.footerJewerly .networks #Shape-Copy {
   width: 150%;
   z-index: -1;
 }
-
 .aboutContent section:nth-child(6) .welcome {
   width: 800px;
   margin: auto;
@@ -4927,12 +3939,10 @@ footer.footerJewerly .networks #Shape-Copy {
   .aboutContent .container {
     max-width: 95vw;
   }
-
   .aboutContent section:nth-child(4) .imgContainer {
     height: 500px;
   }
 }
-
 * {
   font-family: "GillSans-Light";
 }
@@ -4942,11 +3952,9 @@ footer.footerJewerly .networks #Shape-Copy {
   background-size: 100%;
   padding-bottom: 150px;
 }
-
 .clientArea .container {
   max-width: 1300px;
 }
-
 .clientArea h3 {
   font-family: "GillSans-Light";
   font-size: 40px;
@@ -4956,7 +3964,6 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: uppercase;
   line-height: 4;
 }
-
 .clientArea button {
   font-family: "GillSans-Light";
   font-size: 18px;
@@ -4969,23 +3976,18 @@ footer.footerJewerly .networks #Shape-Copy {
   background-size: 100% 100%;
   text-transform: uppercase;
   margin-top: 5px;
-  -webkit-transition: font-size .5s ease;
-  transition: font-size .5s ease;
+  transition: font-size 0.5s ease;
 }
-
 .clientArea button:active {
   font-size: 16px;
 }
-
 .clientArea .navArea {
   width: 400px;
   background: #eddcd5;
   background-size: 100%;
-  -webkit-box-shadow: 0 12px 20px 0 #D9CEC1;
-          box-shadow: 0 12px 20px 0 #D9CEC1;
+  box-shadow: 0 12px 20px 0 #D9CEC1;
   padding: 20px 0;
 }
-
 .clientArea .navArea p {
   font-family: "GillSans-Light";
   font-size: 18px;
@@ -4994,7 +3996,6 @@ footer.footerJewerly .networks #Shape-Copy {
   text-align: center;
   line-height: 1.2;
 }
-
 .clientArea .navArea a {
   opacity: 0.61;
   font-family: "GillSans-Light";
@@ -5005,39 +4006,28 @@ footer.footerJewerly .networks #Shape-Copy {
   display: block;
   padding-left: 30px;
   background-color: rgba(255, 232, 233, 0);
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
-
 .clientArea .navArea a:hover {
   opacity: 1;
-  background-color: #fff2de;
+  background-color: rgb(255, 242, 222);
 }
-
 .clientArea .navArea a.active {
   background-color: #FFF2DE;
   opacity: 1;
 }
-
 .clientArea .navArea ul {
   padding-top: 30px;
 }
-
 .clientArea .personalData .row {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 30px;
   min-height: 60px;
 }
-
 .clientArea .personalData .row:first-child p {
   font-size: 18px;
 }
-
 .clientArea .personalData .row p.name {
   font-family: "GillSans-Light";
   font-size: 30px;
@@ -5045,7 +4035,6 @@ footer.footerJewerly .networks #Shape-Copy {
   letter-spacing: -0.31px;
   text-align: left;
 }
-
 .clientArea .personalData p {
   font-family: "GillSans-Light";
   font-size: 18px;
@@ -5053,25 +4042,18 @@ footer.footerJewerly .networks #Shape-Copy {
   letter-spacing: -0.25px;
   text-align: left;
 }
-
 .clientArea .myCart button {
   margin-top: 30px;
 }
-
 .clientArea .myCart .cartItem {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   padding: 0 15px;
   margin-bottom: 20px;
 }
-
 .clientArea .myCart .cartItem img {
   width: 120px;
-  -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
 }
-
 .clientArea .myCart .cartItem a,
 .clientArea .myCart .cartItem .params {
   font-family: "GillSans-Light";
@@ -5081,31 +4063,22 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.2;
   margin-bottom: 10px;
 }
-
 .clientArea .myCart .cartItem .description {
   padding-left: 20px;
 }
-
 .clientArea .myCart .cartItem .params {
   font-size: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 5px;
 }
-
 .clientArea .myCart .cartItem .params span:nth-child(2) {
   margin-left: 20px;
 }
-
 .clientArea .myCart .cartItem .methods {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 20px;
   position: relative;
 }
-
 .clientArea .myCart .cartItem .methods > div {
   font-family: "GillSans-Light";
   font-size: 18px;
@@ -5113,69 +4086,56 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.2;
   cursor: pointer;
 }
-
 .clientArea .myCart .cartItem .price {
   margin: 0;
   padding: 0 30px;
 }
-
 .clientArea .myCart .cartItem .price span {
   font-size: 24px;
   line-height: 1.6;
   display: block;
   text-align: center;
 }
-
 .clientArea .myCart .cartItem .price span:last-child {
   font-size: 18px;
 }
-
 .clientArea .myCart .cartItem .edit.viewSet {
   color: #B22D00;
   text-decoration: underline;
 }
-
 .clientArea .myCart .setOpen {
   position: relative;
   margin-right: -200px;
   margin-bottom: 30px;
   display: none;
 }
-
 .clientArea .myCart .setOpen a,
 .clientArea .myCart .setOpen .params {
   font-size: 18px;
   line-height: 1.2;
 }
-
 .clientArea .myCart .setOpen a {
   padding-left: 0;
 }
-
 .clientArea .myCart .setOpen img {
   width: 100px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 .clientArea .myCart .setOpen .price {
   padding: 0;
   font-size: 25px;
   margin-bottom: 10px;
   margin-top: 5px;
 }
-
 .clientArea .myCart .setOpen .price span {
   display: inline;
   font-size: 20px;
   line-height: 1.2;
   padding: 0;
 }
-
 .clientArea .myCart .setOpen .price span:first-child {
   padding-right: 15px;
 }
-
 .clientArea .myCart .addToWish {
   width: auto;
   background: none;
@@ -5186,36 +4146,27 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: initial;
   margin-left: 20px;
 }
-
 .clientArea .myCart .addToWish svg {
   width: 23px;
   height: 20px;
 }
-
 .clientArea .myCart .remove {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
   cursor: pointer;
   padding: 0;
   margin-right: 15px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   background-image: url(/fronts/img/icons/plusIconBlack.svg);
   background-size: 20px 20px;
   background-position: center center;
   background-repeat: no-repeat;
 }
-
 .clientArea .myCart .remove:active {
   background-size: 15px;
 }
-
 .clientArea .myCart .closeSet {
   background: #FFF2DE;
   background-image: url(/fronts/img/backgrounds/closeSet.png);
@@ -5231,32 +4182,21 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: uppercase;
   cursor: pointer;
 }
-
 .clientArea .orderHistory {
   max-width: 700px;
 }
-
 .clientArea .orderHistory .order {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 40px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
-
 .clientArea .orderHistory .order > div:first-child {
   width: 340px;
 }
-
 .clientArea .orderHistory .order:last-child {
   margin-top: 0;
 }
-
 .clientArea .orderHistory p {
   font-family: "GillSans-Light";
   font-size: 18px;
@@ -5265,24 +4205,15 @@ footer.footerJewerly .networks #Shape-Copy {
   text-align: left;
   line-height: 1.5;
 }
-
 .clientArea .orderHistory p:first-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .clientArea .orderHistory p:last-child {
   text-transform: uppercase;
   font-family: "GillSans";
 }
-
 .clientArea .orderHistory .addToCart {
   font-size: 0;
   width: 58px;
@@ -5292,37 +4223,28 @@ footer.footerJewerly .networks #Shape-Copy {
   border: 1px solid #42261D;
   background-size: cover;
 }
-
 .clientArea .orderHistory .addToCart svg path:last-child {
   fill: #5C591A;
 }
-
 .clientArea .orderHistory button {
   width: 280px;
   height: 58px;
   margin-left: 30px;
 }
-
 .clientArea .oneHistory .titleOne {
   font-family: "GillSans-Light";
   font-size: 30px;
   color: #42261D;
   letter-spacing: -0.31px;
   text-align: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
-
 .clientArea .oneHistory .status {
   margin-left: 30px;
 }
-
 .clientArea .oneHistory .orderDetails {
   font-family: "GillSans-Light";
   font-size: 18px;
@@ -5332,32 +4254,23 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.2;
   margin-bottom: 40px;
 }
-
 .clientArea .oneHistory .orderDetails p {
   text-transform: uppercase;
   font-family: "GillSans";
   font-size: 18px;
   margin-bottom: 10px;
 }
-
 .clientArea .oneHistory .orderDetails span {
   display: block;
 }
-
 .clientArea .oneHistory .progressDetails {
   margin-bottom: 40px;
 }
-
 .clientArea .oneHistory .progressDetails > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 20px;
 }
-
 .clientArea .oneHistory .progressDetails p {
   font-family: "GillSans-Light";
   font-size: 18px;
@@ -5366,26 +4279,19 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.2;
   padding-left: 70px;
 }
-
 .clientArea .oneHistory .progressDetails svg {
   margin-right: 15px;
   position: absolute;
   left: 15px;
 }
-
 .clientArea .oneHistory .productsList .cartItem {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   margin-bottom: 20px;
 }
-
 .clientArea .oneHistory .productsList .cartItem img {
   width: 120px;
-  -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
 }
-
 .clientArea .oneHistory .productsList .cartItem a,
 .clientArea .oneHistory .productsList .cartItem .params {
   font-family: "GillSans-Light";
@@ -5395,38 +4301,29 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.2;
   margin-bottom: 10px;
 }
-
 .clientArea .oneHistory .productsList .cartItem .description {
   padding-left: 20px;
 }
-
 .clientArea .oneHistory .productsList .cartItem .params {
   font-size: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .clientArea .oneHistory .productsList .cartItem .params span:nth-child(2) {
   margin-left: 20px;
 }
-
 .clientArea .oneHistory .productsList .cartItem .price {
   margin: 0;
   padding: 0 30px;
 }
-
 .clientArea .oneHistory .productsList .cartItem .price span {
   font-size: 24px;
   line-height: 1.6;
   display: block;
   text-align: center;
 }
-
 .clientArea .oneHistory .productsList .cartItem .price span:last-child {
   font-size: 18px;
 }
-
 .clientArea .oneHistory .productsList .addToCart {
   width: 58px;
   height: 58px;
@@ -5435,89 +4332,63 @@ footer.footerJewerly .networks #Shape-Copy {
   background: #fff1d7;
   border: 1px solid #42261D;
 }
-
 .clientArea .oneHistory .productsList .addToCart svg {
   width: 33px;
-  -webkit-transition: width .5s ease;
-  transition: width .5s ease;
+  transition: width 0.5s ease;
 }
-
 .clientArea .oneHistory .productsList .addToCart svg path:last-child {
   fill: #5C591A;
 }
-
 .clientArea .oneHistory .productsList .remove {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
   cursor: pointer;
   padding: 0;
   margin-right: 15px;
 }
-
 .clientArea .oneHistory .productsList .remove:active svg {
   width: 80%;
 }
-
 .clientArea .oneHistory .productsList .remove svg {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   width: 90%;
 }
-
 .clientArea .promocodes > div {
   padding: 5px;
   margin-bottom: 40px;
   position: relative;
 }
-
 .clientArea .promocodes .promoItem {
   padding: 15px;
   padding-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   background: #afaaaa;
   background-size: 100%;
-  -webkit-box-shadow: inset 0 -2px 3px 0 rgba(92, 89, 26, 0.65);
-          box-shadow: inset 0 -2px 3px 0 rgba(92, 89, 26, 0.65);
+  box-shadow: inset 0 -2px 3px 0 rgba(92, 89, 26, 0.65);
   border-radius: 19px;
 }
-
 .clientArea .promocodes .promoItem .log p {
   font-size: 14px;
   text-align: center;
   color: #42261D;
   margin-bottom: 10px;
 }
-
 .clientArea .promocodes .promoItem .log img {
   width: 90%;
 }
-
 .clientArea .promocodes .promoItem img {
   width: 96px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
 .clientArea .promocodes .discount {
   margin: 20px 0;
 }
-
 .clientArea .promocodes .discount p {
   background: #fff1d7 no-repeat 0 center;
   background-size: cover;
@@ -5530,11 +4401,9 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: uppercase;
   line-height: 1;
 }
-
 .clientArea .promocodes .discount p:last-child {
   font-size: 70px;
 }
-
 .clientArea .promocodes .validity p {
   opacity: 0.74;
   font-family: "GillSans-Light";
@@ -5545,11 +4414,9 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 18px;
   margin: 10px 0;
 }
-
 .clientArea .promocodes .validity p:last-child {
   opacity: 1;
 }
-
 .clientArea .promocodes .usedFor p {
   opacity: 0.69;
   font-family: "GillSans-Light";
@@ -5561,7 +4428,6 @@ footer.footerJewerly .networks #Shape-Copy {
   margin: 10px 0;
   margin-bottom: 20px;
 }
-
 .clientArea .promocodes .code {
   font-family: "GillSans-Light";
   font-size: 14px;
@@ -5573,15 +4439,12 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 2.5;
   margin-bottom: 20px;
 }
-
 .clientArea .promocodes .promoItem.usedNow {
-  opacity: .7;
+  opacity: 0.7;
 }
-
 .clientArea .promocodes .promoItem.expired {
-  opacity: .4;
+  opacity: 0.4;
 }
-
 .clientArea .rangeStatus {
   opacity: 0.63;
   background: #FFE9C9;
@@ -5590,18 +4453,15 @@ footer.footerJewerly .networks #Shape-Copy {
   height: 17px;
   margin-bottom: 40px;
 }
-
 .clientArea .rangeStatus .progress {
   position: absolute;
   left: 0;
   top: 0;
   width: 75%;
   height: 17px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#B33004), to(#454306));
   background-image: linear-gradient(90deg, #B33004 0%, #454306 100%);
   border-radius: 9px;
 }
-
 .clientArea .status {
   color: #ffffff;
   line-height: 1.6;
@@ -5610,19 +4470,15 @@ footer.footerJewerly .networks #Shape-Copy {
   text-align: center;
   margin-left: 15px;
 }
-
 .clientArea .delivered {
   background-color: #8D8F53;
 }
-
 .clientArea .indelivering {
   background-color: #2D456E;
 }
-
 .clientArea .notRespond {
   background-color: #D44016;
 }
-
 .clientArea .productsList {
   margin-bottom: 40px;
 }
@@ -5631,12 +4487,10 @@ footer.footerJewerly .networks #Shape-Copy {
   border-radius: 0;
   background: transparent;
 }
-
 .modal .modal-dialog {
   margin-top: 10rem;
   max-width: 490px;
 }
-
 .modal .modalContent {
   padding: 100px 80px;
   padding-bottom: 50px;
@@ -5645,7 +4499,6 @@ footer.footerJewerly .networks #Shape-Copy {
   background-size: cover;
   border: 1px solid #42261D;
 }
-
 .modal .modalTitle {
   font-family: "GillSans-Light";
   font-size: 18px;
@@ -5656,16 +4509,13 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-
 .modal .selectContainer select {
   line-height: 40px;
   height: 40px;
 }
-
 .modal .selectContainer span {
   top: 8px;
 }
-
 .modal label,
 .modal input {
   font-family: "GillSans-Light";
@@ -5674,7 +4524,6 @@ footer.footerJewerly .networks #Shape-Copy {
   letter-spacing: 0;
   margin-bottom: 0;
 }
-
 .modal input {
   line-height: 40px;
   height: 40px;
@@ -5683,33 +4532,25 @@ footer.footerJewerly .networks #Shape-Copy {
   width: 100%;
   padding-left: 15px;
 }
-
 .modal input:focus {
   background-color: #fff;
   border-color: #42261D;
 }
-
 .modal .inputGroup {
   margin-bottom: 20px;
 }
-
 .modal .phoneContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border: 1px solid #42261D;
 }
-
 .modal .phoneContainer #codSelected {
   width: 100px;
   padding-left: 15px;
   background: #eddcd5;
 }
-
 .modal .phoneContainer #codSelected span {
   line-height: 40px;
 }
-
 .modal .phoneContainer select {
   width: 90px;
   border-radius: 0;
@@ -5717,30 +4558,24 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 40px;
   height: 40px;
 }
-
 .modal .phoneContainer span {
   top: 8px;
 }
-
 .modal .phoneContainer .selectContainer {
   border: 0;
   margin: 0;
 }
-
 .modal .phoneContainer input {
   border: 0;
 }
-
 .modal .phoneContainer img {
   width: 25px;
   margin-right: 10px;
 }
-
 .modal .phoneContainer svg {
   margin-left: 10px;
 }
-
-.modal input[type="submit"] {
+.modal input[type=submit] {
   font-family: "GillSans-Light";
   font-size: 24px;
   color: #B22D00;
@@ -5753,15 +4588,12 @@ footer.footerJewerly .networks #Shape-Copy {
   background-size: 100% 100%;
   border: 1px solid #42261D;
   text-transform: uppercase;
-  -webkit-transition: font-size .5s ease;
-  transition: font-size .5s ease;
+  transition: font-size 0.5s ease;
   height: 50px;
 }
-
-.modal input[type="submit"]:active {
+.modal input[type=submit]:active {
   font-size: 16px;
 }
-
 .modal .closeModal {
   width: 30px;
   height: 30px;
@@ -5773,21 +4605,15 @@ footer.footerJewerly .networks #Shape-Copy {
   position: relative;
   right: -70px;
 }
-
 .modal .closeModal img {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   width: 25px;
   margin: auto;
 }
-
 .modal .modalTabs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 30px;
 }
-
 .modal .modalTabs div {
   width: 100%;
   font-family: "GillSans-Light";
@@ -5798,24 +4624,19 @@ footer.footerJewerly .networks #Shape-Copy {
   padding-top: 3px;
   cursor: pointer;
 }
-
 .modal .modalTabs .active {
   outline: 1px solid #42261D;
   font-family: "GillSans";
 }
-
 .modal .checkContainer {
   margin: 20px 0;
 }
-
 .modal .checkContainer .check {
   top: 0;
 }
-
 .modal .loginBy {
   margin-top: 40px;
 }
-
 .modal .loginBy p {
   font-family: "GillSans-Light";
   font-size: 16px;
@@ -5824,34 +4645,21 @@ footer.footerJewerly .networks #Shape-Copy {
   text-align: center;
   margin-bottom: 10px;
 }
-
 .modal .loginBy .dflex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .modal .loginBy .dflex div {
   float: left;
   border: 1px solid #42261D;
   border-radius: 26px;
   height: 40px;
   width: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
-
 .modal .forg {
   font-family: "GillSans-Light";
   font-size: 14px;
@@ -5861,12 +4669,10 @@ footer.footerJewerly .networks #Shape-Copy {
   margin-top: 30px;
   cursor: pointer;
 }
-
 .modal #registerContent,
 .modal #loginContent {
   display: none;
 }
-
 .modal #registerContent.active,
 .modal #loginContent.active {
   display: block;
@@ -5875,13 +4681,11 @@ footer.footerJewerly .networks #Shape-Copy {
 #modalSize.modal .modal-dialog {
   max-width: 700px;
 }
-
 #modalSize.modal table {
   width: 100%;
   max-width: 300px;
   margin-bottom: 30px;
 }
-
 #modalSize.modal td {
   padding: 5px;
 }
@@ -5891,19 +4695,14 @@ footer.footerJewerly .networks #Shape-Copy {
 }
 
 .lngwItem {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   padding: 0 15px;
   margin-bottom: 20px;
 }
-
 .lngwItem img {
   width: 120px;
-  -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
 }
-
 .lngwItem a,
 .lngwItem .params {
   font-family: "GillSans-Light";
@@ -5913,33 +4712,22 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.2;
   margin-bottom: 10px;
 }
-
 .lngwItem .description {
   padding-left: 20px;
 }
-
 .lngwItem .params {
   font-size: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .lngwItem .params span:last-child {
   margin-left: 20px;
 }
-
 .lngwItem .methods {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-top: 20px;
   position: relative;
 }
-
 .lngwItem .methods > div {
   font-family: "GillSans-Light";
   font-size: 18px;
@@ -5947,70 +4735,56 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.2;
   cursor: pointer;
 }
-
 .lngwItem .price {
   margin-bottom: 10px;
   margin-top: 5px;
 }
-
 .lngwItem .price span {
   font-size: 24px;
   line-height: 1.2;
   text-align: center;
 }
-
 .lngwItem .price span:last-child {
   font-size: 18px;
 }
-
 .lngwItem .edit.viewSet {
   color: #B22D00;
   text-decoration: underline;
 }
-
 .lngwItem .setOpen {
   position: relative;
   margin-bottom: 30px;
   display: none;
 }
-
 .lngwItem .setOpen a,
 .lngwItem .setOpen .params {
   font-size: 18px;
   line-height: 1.2;
 }
-
 .lngwItem .setOpen a {
   padding-left: 0;
 }
-
 .lngwItem .setOpen img {
   width: 100px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 .lngwItem .setOpen .price {
   padding: 0;
   font-size: 25px;
   margin-bottom: 10px;
   margin-top: 5px;
 }
-
 .lngwItem .setOpen .price span {
   font-size: 20px;
 }
-
 .lngwItem .setOpen .price span:first-child {
   padding-right: 15px;
 }
-
 .lngwItem .setOpen .addToCart {
   position: absolute;
   bottom: 0px;
   left: 150px;
 }
-
 .lngwItem .addToCart {
   width: 220px;
   background-color: #fff;
@@ -6025,37 +4799,28 @@ footer.footerJewerly .networks #Shape-Copy {
   height: 37px !important;
   color: #B22D00 !important;
 }
-
 .lngwItem .addToCart svg {
   width: 23px;
   height: 20px;
   margin-top: 5px;
 }
-
 .lngwItem .remove {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
   cursor: pointer;
   padding: 0;
   margin-right: 15px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   background-image: url(/fronts/img/icons/plusIconBlack.svg);
   background-size: 20px 20px;
   background-position: center center;
   background-repeat: no-repeat;
 }
-
 .lngwItem .remove:active {
   background-size: 15px;
 }
-
 .lngwItem .closeSet {
   background: #FFF2DE;
   background-image: url(/fronts/img/backgrounds/closeSet.png);
@@ -6070,16 +4835,13 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: uppercase;
   cursor: pointer;
 }
-
 .lngwItem .sizeContainer {
   min-width: 170px;
   margin-bottom: 0;
 }
-
 .lngwItem .sizeContainer div:first-child {
   display: none;
 }
-
 .lngwItem .sizeContainer .chooseSize span {
   width: 35px;
   height: 35px;
@@ -6117,7 +4879,6 @@ footer.footerJewerly .networks #Shape-Copy {
   background-size: 100%;
   background-repeat: repeat;
 }
-
 .thanksContent h3 {
   font-family: "GillSans-Light";
   font-size: 40px;
@@ -6127,11 +4888,9 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: uppercase;
   line-height: 3;
 }
-
 .thanksContent img {
   margin-top: -30px;
 }
-
 .thanksContent h5 {
   font-family: "GillSans-Light";
   font-size: 30px;
@@ -6142,12 +4901,10 @@ footer.footerJewerly .networks #Shape-Copy {
   margin: 20px 0;
   margin-bottom: 30px;
 }
-
 .thanksContent .productsList .cartItem:first-child {
   border-top: 1px solid #8C8C8C;
   padding-top: 20px;
 }
-
 .thanksContent .thanks p,
 .thanksContent .thanks a {
   font-size: 20px;
@@ -6157,67 +4914,46 @@ footer.footerJewerly .networks #Shape-Copy {
   text-align: center;
   color: #42261D;
 }
-
 .thanksContent .thanks .code {
   text-decoration: underline;
 }
-
 .thanksContent .thanks p.continue {
   font-size: 25px;
 }
-
 .thanksContent .thanks .buttGroups {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-
 .thanksContent .thanks .buttGroups a.butt:first-child {
   background-image: #fff1d7;
 }
-
 .thanksContent .thanks a.butt {
   font-size: 18px;
   width: 45%;
   max-width: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 5px;
   text-transform: uppercase;
   font-family: "GillSans-Light";
   line-height: 40px;
   height: 40px;
 }
-
 .thanksContent .cartItem {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   padding: 0 15px;
   margin-bottom: 20px;
 }
-
 .thanksContent .cartItem .selectContainer {
   margin-bottom: 20px;
   width: 130px;
 }
-
 .thanksContent .cartItem img {
   width: 120px;
-  -webkit-box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
   margin-top: 0;
 }
-
 .thanksContent .cartItem a,
 .thanksContent .cartItem .params {
   font-family: "GillSans-Light";
@@ -6227,31 +4963,22 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.2;
   margin-bottom: 10px;
 }
-
 .thanksContent .cartItem .description {
   padding-left: 20px;
 }
-
 .thanksContent .cartItem .params {
   font-size: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 5px;
 }
-
 .thanksContent .cartItem .params span:nth-child(2) {
   margin-left: 20px;
 }
-
 .thanksContent .cartItem .methods {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 20px;
   position: relative;
 }
-
 .thanksContent .cartItem .methods > div {
   font-family: "GillSans-Light";
   font-size: 18px;
@@ -6259,28 +4986,23 @@ footer.footerJewerly .networks #Shape-Copy {
   line-height: 1.2;
   cursor: pointer;
 }
-
 .thanksContent .cartItem .price {
   margin: 0;
   padding: 0 30px;
 }
-
 .thanksContent .cartItem .price span {
   font-size: 24px;
   line-height: 1.6;
   display: block;
   text-align: center;
 }
-
 .thanksContent .cartItem .price span:last-child {
   font-size: 18px;
 }
-
 .thanksContent .cartItem .edit.viewSet {
   color: #B22D00;
   text-decoration: underline;
 }
-
 .thanksContent .setOpen {
   position: relative;
   margin-right: -200px;
@@ -6288,41 +5010,33 @@ footer.footerJewerly .networks #Shape-Copy {
   display: none;
   top: -30px;
 }
-
 .thanksContent .setOpen a,
 .thanksContent .setOpen .params {
   font-size: 18px;
   line-height: 1.2;
 }
-
 .thanksContent .setOpen a {
   padding-left: 0;
 }
-
 .thanksContent .setOpen img {
   width: 100px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 .thanksContent .setOpen .price {
   padding: 0;
   font-size: 25px;
   margin-bottom: 10px;
   margin-top: 5px;
 }
-
 .thanksContent .setOpen .price span {
   display: inline;
   font-size: 20px;
   line-height: 1.2;
   padding: 0;
 }
-
 .thanksContent .setOpen .price span:first-child {
   padding-right: 15px;
 }
-
 .thanksContent .addToWish {
   width: auto;
   background: none;
@@ -6333,36 +5047,27 @@ footer.footerJewerly .networks #Shape-Copy {
   text-transform: initial;
   margin-left: 20px;
 }
-
 .thanksContent .addToWish svg {
   width: 23px;
   height: 20px;
 }
-
 .thanksContent .remove {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
   cursor: pointer;
   padding: 0;
   margin-right: 15px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   background-image: url(/fronts/img/icons/plusIconBlack.svg);
   background-size: 20px 20px;
   background-position: center center;
   background-repeat: no-repeat;
 }
-
 .thanksContent .remove:active {
   background-size: 15px;
 }
-
 .thanksContent .closeSet {
   background: #FFF2DE;
   background-image: url(/frots/img/backgrounds/closeSet.png);
@@ -6379,37 +5084,25 @@ footer.footerJewerly .networks #Shape-Copy {
   cursor: pointer;
 }
 
-.wishContent.politiques *,
-.wishContent.politiques div,
-.wishContent.politiques p,
-.wishContent.politiques strong,
-.wishContent.politiques span,
-.wishContent.politiques li {
+.wishContent.politiques *, .wishContent.politiques div, .wishContent.politiques p, .wishContent.politiques strong, .wishContent.politiques span, .wishContent.politiques li {
   color: #42261D;
   font-family: "GillSans-Light";
   font-size: 20px;
 }
-
-.wishContent.politiques h4,
-.wishContent.politiques h4 strong {
+.wishContent.politiques h4, .wishContent.politiques h4 strong {
   font-size: 30px;
   line-height: 1;
   padding: 20px 0;
 }
-
-.wishContent.politiques p,
-.wishContent.politiques ul {
+.wishContent.politiques p, .wishContent.politiques ul {
   margin-bottom: 20px;
   display: block;
 }
-
 .wishContent.politiques li {
   list-style-type: disc;
   list-style-position: inside;
 }
-
-.wishContent.politiques td,
-.wishContent.politiques th {
+.wishContent.politiques td, .wishContent.politiques th {
   padding: 5px;
 }
 
@@ -6422,57 +5115,46 @@ footer.footerJewerly .networks #Shape-Copy {
   z-index: 10;
   cursor: pointer !important;
 }
-
 #zoomModal .closeZoom svg {
   width: 100%;
 }
-
 #zoomModal .modal-dialog {
   max-width: 100vw;
   max-height: 100vh;
   margin: 0;
 }
-
 #zoomModal .modalContainer {
   position: relative;
 }
-
 #zoomModal .zoomSlider {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   background: transparent;
 }
-
 #zoomModal .zoomSlider .slick-slide {
   position: relative;
 }
-
 #zoomModal .modal-content {
   background: transparent;
 }
-
 #zoomModal .zoomNav {
   width: 70px;
   position: fixed;
   left: calc((100vw - 1200px) / 4 - 50px);
   top: 40px;
 }
-
 #zoomModal .zoomNav .slick-track {
   top: 0 !important;
 }
-
 #zoomModal .zoomNav .slick-slide {
   margin-bottom: 10px;
-  opacity: .5;
+  opacity: 0.5;
   cursor: pointer;
 }
-
 #zoomModal .zoomNav .slick-slide:last-child > div {
   position: relative;
 }
-
 #zoomModal .zoomNav .slick-slide:last-child > div:after {
   content: "";
   position: absolute;
@@ -6486,11 +5168,9 @@ footer.footerJewerly .networks #Shape-Copy {
   background-repeat: no-repeat;
   background-position: center center;
 }
-
 #zoomModal .zoomNav .slick-slide.slick-current {
   opacity: 1;
 }
-
 #zoomModal .videoContainer {
   position: absolute;
   width: 100%;
@@ -6498,7 +5178,6 @@ footer.footerJewerly .networks #Shape-Copy {
   right: 0;
   z-index: 1;
 }
-
 #zoomModal .videoContainer .soundButton {
   width: 30px;
   height: 30px;
@@ -6512,15 +5191,12 @@ footer.footerJewerly .networks #Shape-Copy {
   cursor: pointer;
   z-index: 3;
 }
-
 #zoomModal .videoContainer .soundButton.soundEnabled {
   background-image: url(/fronts/img/icons/soundEnable.svg);
 }
-
 #zoomModal .videoContainer img {
   opacity: 0;
 }
-
 #zoomModal .videoContainer video {
   width: 100%;
   height: 100%;
@@ -6538,75 +5214,50 @@ footer.footerJewerly .networks #Shape-Copy {
 
 .paymentMethodsFooter {
   display: -ms-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
-.paymentMethodsFooter svg,
-.paymentMethodsFooter img {
+.paymentMethodsFooter svg, .paymentMethodsFooter img {
   height: 30px;
   width: auto;
   margin: 0 15px;
 }
-
 .paymentMethodsFooter .mastercard img {
   height: 45px;
 }
-
 .paymentMethodsFooter .paypal svg {
   height: 50px;
 }
-
 .paymentMethodsFooter .g2p img {
   height: 50px;
 }
 
-div[itemscope="itemscope"] {
+div[itemscope=itemscope] {
   position: absolute;
   opacity: 0;
 }
 
 .bigContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
-
 .bigContainer .textBanner {
   width: 50vw;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 center;
 }
-
 .bigContainer .textBanner img.logoDesk {
   width: 100px;
 }
-
 .bigContainer .textBanner h1 {
   font-size: 70px;
   text-align: center;
@@ -6618,7 +5269,6 @@ div[itemscope="itemscope"] {
   border-bottom: 1px solid #fff;
   margin-bottom: 20px;
 }
-
 .bigContainer .textBanner h4 {
   font-size: 25px;
   text-align: center;
@@ -6628,7 +5278,6 @@ div[itemscope="itemscope"] {
   font-family: "GillSans-Light";
   margin-bottom: 30px;
 }
-
 .bigContainer .textBanner p {
   font-size: 20px;
   line-height: 1.5;
@@ -6641,47 +5290,31 @@ div[itemscope="itemscope"] {
 .startScreen {
   height: 100vh;
   width: 50vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
 }
-
 .startScreen img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .startScreen .bijContainer {
   background-color: #F8F9F8;
   width: 50vw;
   height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   position: relative;
 }
-
 .startScreen .bijContainer:nth-child(1) a {
   left: 60px;
 }
-
 .startScreen .bijContainer:nth-child(2) a {
   right: 60px;
 }
-
 .startScreen a {
   color: #fff;
   border: 2px solid #fff;
@@ -6692,7 +5325,6 @@ div[itemscope="itemscope"] {
   text-transform: uppercase;
   position: absolute;
 }
-
 .startScreen a:after {
   content: "";
   position: absolute;
@@ -6715,7 +5347,6 @@ div[itemscope="itemscope"] {
   margin: auto;
   margin-bottom: 40px;
 }
-
 .workSchedule p:first-child {
   font-size: 24px;
   font-family: "GillSans";
@@ -6766,12 +5397,8 @@ div[itemscope="itemscope"] {
 }
 
 .map-contact .hours-plan li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid rgba(249, 247, 239, 0.55);
 }
@@ -6829,8 +5456,6 @@ div[itemscope="itemscope"] {
   top: 20%;
   width: 30%;
 }
-
 .gift-box img {
   width: 100% !important;
 }
-

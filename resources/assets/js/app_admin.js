@@ -1,6 +1,7 @@
 require('./bootstrap');
+require('alpinejs');
 
-window.Vue = require('vue');
+import Vue from 'vue';
 Vue.prototype.$lang = document.documentElement.getAttribute('lang');
 Vue.prototype.$currency = document.documentElement.getAttribute('currency');
 Vue.prototype.$currencyRate = document.documentElement.getAttribute('currency-rate');
@@ -9,74 +10,64 @@ Vue.prototype.$device = document.documentElement.getAttribute('device');
 
 export const bus = new Vue();
 import VeeValidate from 'vee-validate';
-import BootstrapVue from 'bootstrap-vue';
 import VueNestable from 'vue-nestable';
-import Fragment from 'vue-fragment';
+import vSelect from 'vue-select';
 
 Vue.use(VueNestable)
 
-import Slick from 'vue-slick';
 Vue.prototype.trans = trans;
 
-import vSelect from 'vue-select';
-Vue.component('v-select', vSelect)
+// Vue.component('v-select', vSelect)
 
 // admin Components - CRM
 // CRMAddProductsToSet
-Vue.component('crm-payment', require('./components/admin/CRM/CRMPayment.vue'));
-Vue.component('crm-shipping', require('./components/admin/CRM/CRMShipping.vue'));
-Vue.component('order-search', require('./components/admin/CRM/OrderSearch.vue'));
-Vue.component('crm-cart', require('./components/admin/CRM/CRMCart.vue'));
+Vue.component('crm-payment', require('./components/admin/CRM/CRMPayment.vue').default);
+Vue.component('crm-shipping', require('./components/admin/CRM/CRMShipping.vue').default);
+Vue.component('order-search', require('./components/admin/CRM/OrderSearch.vue').default);
+Vue.component('crm-cart', require('./components/admin/CRM/CRMCart.vue').default);
 
 // admin Components - Collections
-Vue.component('collections', require('./components/admin/collections/Collections.vue'));
-Vue.component('sets', require('./components/admin/collections/Sets.vue'));
-Vue.component('products-depth', require('./components/admin/collections/Products.vue'));
+Vue.component('collections', require('./components/admin/collections/Collections.vue').default);
+Vue.component('sets', require('./components/admin/collections/Sets.vue').default);
+Vue.component('products-depth', require('./components/admin/collections/Products.vue').default);
 
 // admin Components - Categories
-Vue.component('categories', require('./components/admin/Categories.vue'));
-Vue.component('categories-add-new', require('./components/admin/CategoriesAddNew.vue'));
+Vue.component('categories', require('./components/admin/Categories.vue').default);
+Vue.component('categories-add-new', require('./components/admin/CategoriesAddNew.vue').default);
 
 // admin Components - Blog Categories
-Vue.component('blog-categories', require('./components/admin/blogCategories/Categories.vue'));
-Vue.component('blog-categories-add-new', require('./components/admin/blogCategories/CategoriesAddNew.vue'));
+Vue.component('blog-categories', require('./components/admin/blogCategories/Categories.vue').default);
+Vue.component('blog-categories-add-new', require('./components/admin/blogCategories/CategoriesAddNew.vue').default);
 
 // admin Components - Autoupload
-Vue.component('autoupload', require('./components/admin/Autoupload.vue'));
-Vue.component('top-bar-autoupload', require('./components/admin/AutouploadTopBar.vue'));
-Vue.component('edit-autoupload', require('./components/admin/AutouploadEdit.vue'));
-Vue.component('create-autoupload', require('./components/admin/AutouploadCreate.vue'));
+Vue.component('autoupload', require('./components/admin/Autoupload.vue').default);
+Vue.component('top-bar-autoupload', require('./components/admin/AutouploadTopBar.vue').default);
+Vue.component('edit-autoupload', require('./components/admin/AutouploadEdit.vue').default);
+Vue.component('create-autoupload', require('./components/admin/AutouploadCreate.vue').default);
 
 // admin Components - Parameters
-Vue.component('create-parameter', require('./components/admin/ParameterCreate.vue'));
-Vue.component('edit-parameter', require('./components/admin/ParameterEdit.vue'));
+Vue.component('create-parameter', require('./components/admin/ParameterCreate.vue').default);
+Vue.component('edit-parameter', require('./components/admin/ParameterEdit.vue').default);
 
 // admin Components - Orders
-Vue.component('order-filter', require('./components/admin/OrderFilter.vue'));
-Vue.component('orders', require('./components/admin/Orders.vue'));
-Vue.component('order-admin', require('./components/admin/Order.vue'));
-Vue.component('order-create', require('./components/admin/OrderCreate.vue'));
-Vue.component('order-edit', require('./components/admin/OrderEdit.vue'));
+Vue.component('order-filter', require('./components/admin/OrderFilter.vue').default);
+Vue.component('orders', require('./components/admin/Orders.vue').default);
+Vue.component('order-admin', require('./components/admin/Order.vue').default);
+Vue.component('order-create', require('./components/admin/OrderCreate.vue').default);
+Vue.component('order-edit', require('./components/admin/OrderEdit.vue').default);
 
 // admin Components - Returns
-Vue.component('return-filter', require('./components/admin/ReturnFilter.vue'));
+Vue.component('return-filter', require('./components/admin/ReturnFilter.vue').default);
 Vue.component('returns', require('./components/admin/Returns.vue'));
-Vue.component('return-create', require('./components/admin/ReturnCreate.vue'));
-Vue.component('return-edit', require('./components/admin/ReturnEdit.vue'));
-Vue.component('return', require('./components/admin/Return.vue'));
+Vue.component('return-create', require('./components/admin/ReturnCreate.vue').default);
+Vue.component('return-edit', require('./components/admin/ReturnEdit.vue').default);
+Vue.component('return', require('./components/admin/Return.vue').default);
 
 // admin Components - Translations
-Vue.component('top-bar-translations', require('./components/admin/TranslationTopBar.vue'));
-Vue.component('group-translations', require('./components/admin/TranslationGroup.vue'));
-Vue.component('item-translations', require('./components/admin/TranslationItem.vue'));
+Vue.component('top-bar-translations', require('./components/admin/TranslationTopBar.vue').default);
+Vue.component('group-translations', require('./components/admin/TranslationGroup.vue').default);
+Vue.component('item-translations', require('./components/admin/TranslationItem.vue').default);
 
-Vue.use(VeeValidate, {
-  classes: true,
-  classNames: {
-    valid: "is-valid",
-    invalid: "is-invalid"
-  }
-});
 
 Vue.directive('select2', {
     inserted(el) {

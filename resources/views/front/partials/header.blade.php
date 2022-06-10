@@ -104,10 +104,9 @@
                             <li><a href="{{ url('/ru'.$url) }}">RU</a></li>
                         </ul>
                     </div>
-                    <div id="profile" data-toggle="modal" data-target="#register" data-toggle="tooltip"
-                         data-placement="top" title="Near Login">
+                    <section id="profile" data-toggle="tooltip" data-placement="top" title="Near Login">
                         <near-log-in></near-log-in>
-                    </div>
+                    </section>
                     <div id="search" data-toggle="modal" data-target="#search-modal">
                         <span>Search</span>
                         <svg
