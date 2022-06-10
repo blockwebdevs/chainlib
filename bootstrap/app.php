@@ -42,7 +42,7 @@ $app->singleton(
 
 
 
- require_once '../storage/app/public/cache.php';
+// require_once '../storage/app/public/cache.php';
 
 /*
 |--------------------------------------------------------------------------
