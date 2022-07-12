@@ -30,14 +30,3 @@ export function getMessages(): PostedMessage[] {
   }
   return result;
 }
-
-
-/**
- * Returns a message by id.
- */
-export function getMessage(id: number): PostedMessage {
-  const numMessages = min(MESSAGE_LIMIT, messages.length);
-  const startIndex = messages.length - numMessages;
-
-  return messages[id];
-}
