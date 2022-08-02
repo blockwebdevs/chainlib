@@ -7,7 +7,7 @@ export default ({store, app}, inject) => {
             const banner = banners.find(banner => banner.key === key)
 
             if (!banner) {
-                return '/logo-docrom4.png'
+                return '/logo.png'
             }
 
             if (!isMobile) {
