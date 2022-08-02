@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const backURL = 'https://back.chainlib.xyz'
+const backURL = `${process.env.API}`
 
 export default {
 
