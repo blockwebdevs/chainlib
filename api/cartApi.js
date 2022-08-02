@@ -2,10 +2,6 @@ import axios from 'axios'
 
 const backURL = 'https://back.chainlib.xyz'
 
-const token = 'SVQzSaN7QoRtGd6bAk8MeWoE8U1YhAmTvZNMEHUP'
-
-const headers = {"X-Requested-With":"XMLHttpRequest","X-CSRF-TOKEN":token}
-
 export default {
 
     async appendToCart(data, cb) {
