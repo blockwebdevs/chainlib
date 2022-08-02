@@ -1,4 +1,4 @@
-import getConfig from '@/src/config.js';
+import getConfig from '~/config.js';
 import * as nearAPI from 'near-api-js';
 
 export const state = () => ({
