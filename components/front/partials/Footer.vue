@@ -2,11 +2,6 @@
   <footer class="footer pt-15">
     <v-container>
       <v-row>
-        <v-col class="col-12">
-          <nuxt-link to="/" class="footer__logo">
-            <v-img src="/logo.png" alt="logo" width="150"/>
-          </nuxt-link>
-        </v-col>
         <v-col class="col-12 footer__mobile">
           <v-expansion-panels>
             <v-row>
@@ -69,28 +64,20 @@
         </v-col>
         <v-col class="col-12 footer__desktop">
           <v-row>
-            <v-col class="col-lg-4 col-12">
-              <div class="footer__subtitle">
-                {{ $trans('PagesNames', 'pageAboutAnne') }}
-              </div>
-              <div class="footer__list">
-                <nuxt-link :to="`/${language.lang}/about`">
-                  {{ $trans('PagesNames', 'pageAbout') }}
-                </nuxt-link>
-                <nuxt-link :to="`/${language.lang}/contacts`">
-                  {{ $trans('PagesNames', 'pageNameContacts') }}
-                </nuxt-link>
-                <nuxt-link :to="`/${language.lang}/livrare-achitare-retur`">
-                  {{ $trans('PagesNames', 'pageDelivery') }}
-                </nuxt-link>
-                <nuxt-link :to="`/${language.lang}/designers`">
-                  {{ $trans('PagesNames', 'pageNameDesigners') }}
-                </nuxt-link>
-              </div>
+
+            <v-col class="col-lg-6 col-12">
+              <nuxt-link to="/" class="footer__logo">
+                <v-img src="/logo.png" alt="logo" width="150"/>
+              </nuxt-link>
+
+                <p class="my-3">
+                  ChainLib - digital space created for authors that provides a "shelf space" and visibility to their readers,
+                  with copyright protection ensured by blockchain technology
+                </p>
             </v-col>
-            <v-col class="col-lg-4 col-12">
+            <v-col class="col-lg-3 col-12">
               <div class="footer__subtitle">
-                {{ $trans('HeaderFooter', 'ourProducts') }}:
+                Catalog:
               </div>
               <div class="footer__list">
                 <nuxt-link :to="`/${language.lang}/categories/all`">
@@ -107,16 +94,32 @@
                 </nuxt-link>
               </div>
             </v-col>
-            <v-col class="col-lg-4 col-12">
+            <v-col class="col-lg-3 col-12">
               <div class="footer__subtitle">
-                {{ $trans('HeaderFooter', 'usefulInfo') }}:
+                About:
               </div>
               <div class="footer__list">
-                <nuxt-link :to="`/${language.lang}/${page.alias}`" v-for="(page, index) in pages" :key="index">
-                  {{ page.translation.name }}
+                <nuxt-link :to="`/${language.lang}/about`">
+                  {{ $trans('PagesNames', 'pageAbout') }}
+                </nuxt-link>
+                <nuxt-link :to="`/${language.lang}/contacts`">
+                  {{ $trans('PagesNames', 'pageNameContacts') }}
+                </nuxt-link>
+                <nuxt-link :to="`/${language.lang}/livrare-achitare-retur`">
+                  {{ $trans('PagesNames', 'pageDelivery') }}
                 </nuxt-link>
               </div>
             </v-col>
+<!--            <v-col class="col-lg-3 col-12">-->
+<!--              <div class="footer__subtitle">-->
+<!--                About:-->
+<!--              </div>-->
+<!--              <div class="footer__list">-->
+<!--                <nuxt-link :to="`/${language.lang}/${page.alias}`" v-for="(page, index) in pages" :key="index">-->
+<!--                  {{ page.translation.name }}-->
+<!--                </nuxt-link>-->
+<!--              </div>-->
+<!--            </v-col>-->
           </v-row>
         </v-col>
         <v-col class="col-12">
@@ -124,14 +127,7 @@
             <div class="footer__payments-img">
               <v-img width="60" src="https://back.soledy.com/images/mc_symbol.svg"/>
             </div>
-
           </div>
-        </v-col>
-        <v-col class="col-12">
-          <p class="my-3">
-            ChainLib - digital space created for authors that provides a "shelf space" and visibility to their readers,
-            with copyright protection ensured by blockchain technology
-          </p>
         </v-col>
       </v-row>
     </v-container>
@@ -180,6 +176,7 @@ export default {
 <style lang="scss" scoped>
 .footer {
   background: #363636;
+  padding-bottom: 60px;
 
   .v-expansion-panel {
     box-shadow: none !important;
@@ -214,8 +211,8 @@ export default {
 
   p {
     font-family: $font-roboto, sans-serif;
-    font-size: 20px;
-    color: #e9642d;
+    font-size: 18px;
+    color: #FFF;
     letter-spacing: 0;
     line-height: 1.5;
     margin-bottom: 10px;
