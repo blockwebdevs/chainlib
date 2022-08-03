@@ -7,7 +7,7 @@ module.exports = {
     */
     head: {
         titleTemplate: '%s',
-        title: 'chainlib',
+        title: 'CHAINLIB - Digital NFT library on blockchain',
         meta: [
             {charset: 'utf-8'},
             {name: 'viewport', content: 'width=device-width, initial-scale=1'},
