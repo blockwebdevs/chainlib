@@ -4,7 +4,7 @@
       <v-row>
         <v-col class="col-12">
           <nuxt-link to="/" class="footer__logo">
-            <v-img src="/images/logo.png" alt="logo" width="150"/>
+            <v-img src="/logo.png" alt="logo" width="150"/>
           </nuxt-link>
         </v-col>
         <v-col class="col-12 footer__mobile">
@@ -129,18 +129,8 @@
         </v-col>
         <v-col class="col-12">
           <p class="my-3">
-            {{ $trans('HeaderFooter', 'followUs') }}:
-            <a class="footer-social-link" :href="`${$trans('ContactsAndForms', 'companyInstagram')}`">
-              <v-icon color="title">mdi-instagram</v-icon>
-            </a>
-          </p>
-        </v-col>
-        <v-col class="col-12">
-          <p class="my-3">
-            {{ $trans('HeaderFooter', 'concept') }}
-          </p>
-          <p class="ma-0 py-3">
-            {{ $trans('HeaderFooter', 'copyright') }}
+            ChainLib - digital space created for authors that provides a "shelf space" and visibility to their readers,
+            with copyright protection ensured by blockchain technology
           </p>
         </v-col>
       </v-row>
@@ -189,7 +179,7 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  background: $bcg-header;
+  background: #363636;
 
   .v-expansion-panel {
     box-shadow: none !important;
@@ -215,7 +205,7 @@ export default {
 
   a {
     font-size: 18px;
-    color: $main-color;
+    color: #FFF;
     display: block;
     line-height: 1.8;
     font-weight: 300;
@@ -225,7 +215,7 @@ export default {
   p {
     font-family: $font-roboto, sans-serif;
     font-size: 20px;
-    color: $main-color;
+    color: #e9642d;
     letter-spacing: 0;
     line-height: 1.5;
     margin-bottom: 10px;
@@ -255,7 +245,7 @@ export default {
     &__subtitle {
       font-family: $font-roboto, sans-serif;
       font-size: 20px;
-      color: $main-color;
+      color: #e9642d;
       letter-spacing: 0;
       line-height: 20px;
       font-weight: 400;
