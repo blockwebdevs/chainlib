@@ -53,6 +53,6 @@ a {
 
 body,
 .theme--light.v-application {
-  background: $bcg-body !important;
+  //background: $bcg-body !important;
 }
 </style>

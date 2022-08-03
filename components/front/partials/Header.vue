@@ -5,7 +5,7 @@
       <v-app-bar-nav-icon color="primary" @click.stop="drawerOne = !drawerOne"/>
       <v-spacer/>
       <NuxtLink to="/">
-        <v-img src="/images/logo.png" alt="logo" width="100"/>
+        <v-img src="/logo.png" alt="logo" width="180px"/>
       </NuxtLink>
       <v-spacer/>
 

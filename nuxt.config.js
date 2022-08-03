@@ -83,7 +83,7 @@ module.exports = {
                     primary: "#734030",
                     title: "#B22D00",
                     textgreen: "#5C591A",
-                    body: '#eddcd5',
+                    body: '#FFF',
                     accent: colors.grey.darken3,
                     secondary: colors.amber.darken3,
                     info: colors.teal.lighten1,

@@ -1,7 +1,12 @@
 <template>
   <div class="h-content">
 
-    <home-banner-carousel/>
+    <v-img src="/Main-banner.jpeg" class="banner-search">
+      <div class="banner-search-wrapper">
+        <input type="text" class="search-input">
+        <button></button>
+      </div>
+    </v-img>
 
     <div class="h-sections">
 
@@ -11,9 +16,9 @@
           {{ item.view.translation.name }}
         </h3>
 
-        <home-carousel-sets :sets="item.view.sets" :collection="item.view" v-if="item.type === 'collection'"/>
+<!--        <home-carousel-sets :sets="item.view.sets" :collection="item.view" v-if="item.type === 'collection'"/>-->
 
-        <home-carousel-products :products="item.view.products" :category="item.view" v-else/>
+        <home-carousel-products :products="item.view.products" :category="item.view"/>
 
         <div class="h-section__button">
           <v-btn nuxt :to="`/${language.lang}/collections/${item.view.alias}`" outlined color="primary"
@@ -67,3 +72,40 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.banner-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .banner-search-wrapper {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    input {
+      border: 1px solid #363636;
+      background-color: #FFF;
+      display: block;
+      border-radius: 5px;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      text-transform: uppercase;
+      outline: none;
+      width: 100%;
+      height: 50px;
+      padding: 10px;
+    }
+    button {
+      width: 80px;
+      height: 50px;
+      background: #ED6D5E url() no-repeat 50%;
+      border-bottom-right-radius: 9px;
+      border-top-right-radius: 9px;
+      padding: 0;
+      bottom: 0;
+    }
+  }
+}
+</style>

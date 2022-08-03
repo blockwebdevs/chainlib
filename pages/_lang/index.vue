@@ -1,7 +1,7 @@
 <template>
   <div class="h-content">
 
-    <home-banner-carousel/>
+<!--    <home-banner-carousel/>-->
 
     <div class="h-sections">
 
