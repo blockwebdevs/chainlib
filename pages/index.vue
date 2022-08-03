@@ -16,17 +16,11 @@
           {{ item.view.translation.name }}
         </h3>
 
-<!--        <home-carousel-sets :sets="item.view.sets" :collection="item.view" v-if="item.type === 'collection'"/>-->
-
         <home-carousel-products :products="item.view.products" :category="item.view"/>
 
         <div class="h-section__button">
-          <v-btn nuxt :to="`/${language.lang}/collections/${item.view.alias}`" outlined color="primary"
-                 v-if="item.type === 'collection'">
-            {{ $trans('DetailsProductSet', 'viewItemsFromSet') }}
-          </v-btn>
-          <v-btn nuxt :to="`/${language.lang}/categories/${item.view.alias}`" outlined color="primary" v-else>
-            {{ $trans('DetailsProductSet', 'viewProducts') }}
+          <v-btn nuxt :to="`/${language.lang}/categories/${item.view.alias}`" outlined color="primary">
+            View books
           </v-btn>
         </div>
 
@@ -61,11 +55,6 @@ export default {
     this.categories.forEach((category, i) => {
       if (category.on_home === 1) {
         items.push({type: 'category', view: category})
-      }
-      if (typeof this.collections[i] !== 'undefined') {
-        if (this.collections[i].on_home === 1) {
-          items.push({type: 'collection', view: this.collections[i]})
-        }
       }
     })
     this.items = items
@@ -107,5 +96,8 @@ export default {
       bottom: 0;
     }
   }
+}
+.h-section__title {
+  color: #ED6D5E;
 }
 </style>

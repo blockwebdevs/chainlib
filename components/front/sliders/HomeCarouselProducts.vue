@@ -12,7 +12,7 @@
           </div>
           <div class="h-slider__actions">
             <v-btn color="primary" outlined>
-              Vezi produsele
+              View books
             </v-btn>
           </div>
         </nuxt-link>
