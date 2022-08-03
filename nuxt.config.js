@@ -14,7 +14,7 @@ module.exports = {
             {hid: 'description', name: 'description', content: 'chainlib'},
         ],
         link: [
-            {rel: 'icon', type: 'image/x-icon', href: 'https://chainlib.xyz//images/favicon.png'},
+            {rel: 'icon', type: 'image/x-icon', href: '/logo.png'},
             {
                 rel: "stylesheet",
                 href: "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
