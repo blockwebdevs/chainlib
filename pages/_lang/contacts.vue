@@ -1,153 +1,18 @@
 <template>
   <div class="contacts">
-
-    <div class="banner">
-      <div class="banner__image">
-        <img :src="$banner('Contacts_Banner', $mobileDetect.mobile())" alt="banner"/>
-      </div>
-      <div class="banner__text">
-        <div class="banner__title">{{ $trans('ContactsAndForms', 'contactPagesTitle') }}</div>
-        <p class="banner__paragraph">{{ $trans('ContactsAndForms', 'contactPagesContactSubtitle') }}</p>
-      </div>
-    </div>
-
     <v-container>
-      <v-row class="justify-space-around">
-        <v-col class="col-12">
+
+      <v-row id="contactsForm" class=" contacts__form">
+        <v-col class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
           <h3 class="c-title my-3">{{ $trans('ContactsAndForms', 'contactPagesTitle') }}</h3>
-        </v-col>
-        <v-col class="col-xl-3 col-lg-3 col-md-6 col-12">
-          <div class="contacts__item">
-            <img src="/images/rm1.png" alt="">
-            <p class="contacts__country">Romania</p>
-            <p>{{ $trans('ContactsAndForms', 'companyMainName') }}</p>
-            <p>
-              <v-icon color="primary">mdi-map-marker</v-icon>
-              {{ $trans('ContactsAndForms', 'companyMainAdres') }}
-            </p>
-            <a href="tel:+37379666626">
-              <v-icon color="primary">mdi-phone</v-icon>
-              {{ $trans('ContactsAndForms', 'labelPhoneViberWhatsapp') }}
-              <a :href="`tel:${$trans('ContactsAndForms', 'companyMainPhone1')}`">
-                {{ $trans('ContactsAndForms', 'companyMainPhone1') }}
-              </a>
-            </a>
-            <a href="mailto:info@soledy.com">
-              <v-icon color="primary">mdi-mail</v-icon>
-              {{ $trans('ContactsAndForms', 'labelCommunicationMethodOptionEmail') }}:
-              <a :href="`mailto:${$trans('ContactsAndForms', 'companyMainEmail1')}`">
-                {{ $trans('ContactsAndForms', 'companyMainEmail1') }}
-              </a>
-            </a>
-            <div class="social">
-              <a :href="$trans('ContactsAndForms', 'companyInstagram')">
-                <v-icon color="primary">mdi-instagram</v-icon>
-              </a>
-              <a :href="$trans('ContactsAndForms', 'companyFacebook')">
-                <v-icon color="primary">mdi-facebook</v-icon>
-              </a>
-            </div>
-            <a class="butt" href="#contactsForm">
-              {{ $trans('Contacts', 'sendUsMessage') }}
-            </a>
-          </div>
-        </v-col>
-
-        <v-col class="col-xl-3 col-lg-3 col-md-6 col-12">
-          <div class="contacts__item">
-            <p class="text-center">
-              <img width="100" src="https://terradigital.ro/md2.png" class="map-country-img"/>
-            </p>
-            <p class="text-center">{{ $trans('ContactsAndForms', 'companyMainNameMD') }}</p>
-            <p class="text-center">
-              <v-icon>mdi-marker</v-icon>
-              {{ $trans('ContactsAndForms', 'companyMainAdresMD') }}
-            </p>
-            <p class="text-center">
-              <v-icon>mdi-phone</v-icon>
-              {{ $trans('ContactsAndForms', 'labelPhoneViberWhatsapp') }}
-              <a :href="`tel:${trans.ContactsAndForms.companyMainPhone1MD}`">
-                {{ $trans('ContactsAndForms', 'companyMainPhone1MD') }}
-              </a>
-            </p>
-            <p class="text-center">
-              <v-icon>mdi-email</v-icon>
-              {{ $trans('ContactsAndForms', 'labelCommunicationMethodOptionEmail') }}:
-              <a :href="`mailto:${trans.ContactsAndForms.companyMainEmail1MD}`">
-                {{ $trans('ContactsAndForms', 'companyMainEmail1MD') }}
-              </a>
-            </p>
-            <p class="text-center">
-              <a :href="`https://${trans.ContactsAndForms.companyMainWebsiteMD}`">
-                {{ $trans('ContactsAndForms', 'companyMainWebsiteMD') }}
-              </a>
-            </p>
-            <div class="social">
-              <a :href="$trans('ContactsAndForms', 'companyInstagram')">
-                <v-icon color="primary">mdi-instagram</v-icon>
-              </a>
-              <a :href="$trans('ContactsAndForms', 'companyFacebook')">
-                <v-icon color="primary">mdi-facebook</v-icon>
-              </a>
-            </div>
-            <a class="butt" href="#contactsForm">
-              {{ $trans('Contacts', 'sendUsMessage') }}
-            </a>
-          </div>
-        </v-col>
-
-        <v-col class="col-xl-3 col-lg-3 col-md-6 col-12">
-          <div class="contacts__item">
-            <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Flag-map_of_Estonia.svg/1280px-Flag-map_of_Estonia.svg.png"
-                alt="">
-            <p class="contacts__country">Estonia</p>
-            <p>{{ $trans('ContactsAndForms', 'companyMainNameEE') }}</p>
-            <p>
-              <v-icon color="primary">mdi-map-marker</v-icon>
-              {{ $trans('ContactsAndForms', 'companyMainAdresEE') }}
-            </p>
-            <a href="tel:+37379666626">
-              <v-icon color="primary">mdi-phone</v-icon>
-              {{ $trans('ContactsAndForms', 'labelPhoneViberWhatsapp') }}
-              <a :href="`tel:${$trans('ContactsAndForms', 'companyMainPhone1EE')}`">
-                {{ $trans('ContactsAndForms', 'companyMainPhone1EE') }}
-              </a>
-            </a>
-            <a href="mailto:info@soledy.com">
-              <v-icon color="primary">mdi-mail</v-icon>
-              {{ $trans('ContactsAndForms', 'labelCommunicationMethodOptionEmail') }}:
-              <a :href="`mailto:${$trans('ContactsAndForms', 'companyMainEmail1EE')}`">
-                {{ $trans('ContactsAndForms', 'companyMainEmail1EE') }}
-              </a>
-            </a>
-            <div class="social">
-              <a :href="$trans('ContactsAndForms', 'companyInstagram')">
-                <v-icon color="primary">mdi-instagram</v-icon>
-              </a>
-              <a :href="$trans('ContactsAndForms', 'companyFacebook')">
-                <v-icon color="primary">mdi-facebook</v-icon>
-              </a>
-            </div>
-            <a class="butt" href="#contactsForm">
-              {{ $trans('Contacts', 'sendUsMessage') }}
-            </a>
-          </div>
-        </v-col>
-      </v-row>
-
-      <v-row id="contactsForm" class="justify-center contacts__form">
-        <v-col class="col-xl-3 col-lg-5 col-md-6 col-sm-6 col-12">
           <p class="form___title">
-            {{ $trans('ContactsAndForms', 'graficLucruTitle') }}
+            Website: www.chainlib.xyz
           </p>
           <p>
-            {{ $trans('ContactsAndForms', 'mondayFriday') }}
-            {{ $trans('ContactsAndForms', 'mondayFridayHours') }}
+            Email: chainlibdigital@gmail.com
           </p>
-          <p>
-            {{ $trans('ContactsAndForms', 'weekEnd') }}: {{ $trans('ContactsAndForms', 'closed') }}
-          </p>
+        </v-col>
+        <v-col class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
           <h3 class="c-title my-3">
             {{ $trans('Contacts', 'getInTouch') }}
           </h3>
@@ -283,3 +148,10 @@ export default {
   }
 }
 </script>
+
+<style>
+.c-title {
+  font-size: 18px;
+  padding-top: 30px;
+}
+</style>
