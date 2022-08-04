@@ -5,24 +5,21 @@
                       :variableWidth="true"
                       :arrows="false"
                       :settings="localSettings">
-      <div class="h-slider__item">
-        <nuxt-link :to="`/ro/categories/${category.alias}`" class="h-slider__item-inner">
-          <div class="h-slider__image">
-            <img :src="`https://back.soledynft.shop/images/categories/sm/${category.banner_mobile}`" alt="">
-          </div>
-          <div class="h-slider__actions">
-            <v-btn color="primary" outlined>
-              View books
-            </v-btn>
-          </div>
-        </nuxt-link>
-      </div>
       <div class="h-slider__item" v-for="(product, i) in products" :key="i" v-if="product.main_image && i < 5">
         <nuxt-link :to="`/ro/categories/${category.alias}/${product.alias}`" class="h-slider__item-inner">
           <div class="h-slider__image">
             <img :src="`https://back.soledynft.shop/images/products/sm/${product.main_image.src}`">
           </div>
         </nuxt-link>
+        <nuxt-link :to="`/ro/categories/${category.alias}/${product.alias}`" class="h-slider__item-inner">
+          <div class="product-description">
+            <h3>{{product.translation.name}}</h3>
+            <p>
+              {{product.translation.body.substring(0,130)+"..."}}
+            </p>
+          </div>
+        </nuxt-link>
+
       </div>
     </VueSlickCarousel>
     <div class="custom-arrow next-slide" @click="nextSlide">
@@ -53,6 +50,7 @@ export default {
   },
   data() {
     return {
+      hover: true,
       localSettings: {
         dots: false,
         slidesToScroll: 1,
@@ -75,17 +73,26 @@ export default {
 
 <style lang="scss" scoped>
 .h-slider {
+  .product-description{
+    h3{
+      margin-bottom: 20px;
+      color: #e96535;
+    }
+  }
   &__item {
     position: relative;
     display: block;
     padding: 25px 16px;
 
     &-inner {
-      -webkit-box-shadow: 0 11px 20px 0 rgba(111, 111, 111, 0.51);
-      box-shadow: 0 11px 20px 0 rgba(111, 111, 111, 0.51);
+      //-webkit-box-shadow: 0 11px 20px 0 rgba(111, 111, 111, 0.51);
+      //box-shadow: 0 11px 20px 0 rgba(111, 111, 111, 0.51);
       display: flex;
       align-items: flex-end;
       justify-content: center;
+      background-color: #686868;
+      color: #FFF;
+      padding: 25px;
     }
 
     .v-btn {
@@ -116,5 +123,13 @@ export default {
       display: none;
     }
   }
+}
+.v-card--reveal {
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  opacity: .5;
+  position: absolute;
+  width: 100%;
 }
 </style>
