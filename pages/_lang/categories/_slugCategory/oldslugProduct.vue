@@ -1,23 +1,17 @@
 <template>
   <v-container class="oneProduct-content" v-if="product">
-
-    <v-img src="/Main-banner.jpeg" class="banner-search">
-      <div class="banner-search-wrapper">
-        <input type="text" class="search-input">
-        <button></button>
-      </div>
-    </v-img>
-
     <v-row>
+
       <v-col class="col-12">
         <div class="productOne mt-6">
           <v-row class="justify-space-between">
-            <v-col class="col-lg-4 col-12">
+            <v-col class="col-lg-6 col-12">
               <slider-one-product :images="product.images"
+                                  @openZoom="openZoom"
                                   :productImages="product.images"
                                   path="products"/>
             </v-col>
-            <v-col class="col-lg-8 col-12">
+            <v-col class="col-lg-6 col-12">
               <p class="productOne__name">{{ product.translation.name }}</p>
               <p class="productOne__by" v-if="product.brand">by {{ product.brand.translation.name }}</p>
               <p class="productOne__price">
@@ -32,7 +26,7 @@
               <sizes :product="product" v-if="product.subproducts.length"/>
 
               <div class="mt-4" v-else>
-<!--                <near-buy-sub-product-btn :product="product" ></near-buy-sub-product-btn>-->
+                <near-buy-sub-product-btn :product="product" ></near-buy-sub-product-btn>
               </div>
 
               <div class="guaranty">

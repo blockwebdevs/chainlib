@@ -48,7 +48,7 @@
 
                   <v-col class="col-lg-9 col-9 mb-2">
                     <h2 class="mb-4 product-name">
-                      <nuxt-link :to="`/ro/marketplace/${item.product.alias}`" class="product">
+                      <nuxt-link :to="`/ro/categories/${category.alias}/${item.product.alias}`" class="product">
                         {{ item.product.translation.name }}
                       </nuxt-link>
                     </h2>
@@ -82,9 +82,9 @@
                   </v-col>
 
                   <v-col class="col-lg-3 col-3 mb-2">
-                    <nuxt-link :to="`/ro/marketplace/${item.product.alias}`" class="product">
-                    <v-img
-                        :src="`https://back.soledynft.shop/images/products/sm/${item.product.main_image.src}`"></v-img>
+                    <nuxt-link :to="`/ro/categories/${category.alias}/${item.product.alias}`" class="product">
+                      <v-img
+                          :src="`https://back.soledynft.shop/images/products/sm/${item.product.main_image.src}`"></v-img>
                     </nuxt-link>
                   </v-col>
 
