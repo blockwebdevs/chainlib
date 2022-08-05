@@ -11,7 +11,7 @@
                                   path="products"/>
             </v-col>
             <v-col class="col-lg-6 col-12">
-              <p class="productOne__name">{{ product.translation.name }}</p>
+              <h2 class="productOne__name">{{ product.translation.name }}</h2>
               <v-row class="product-option">
                 <v-col class="col-lg-4 col-12">
                   <v-row>
@@ -308,7 +308,7 @@ export default {
 .productOne {
   &__name {
     font-family: $font-titles;
-    font-size: 25px;
+    font-size: 30px;
     color: $olive-color;
     letter-spacing: 0;
     text-align: left;

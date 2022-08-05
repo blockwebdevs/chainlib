@@ -1343,16 +1343,12 @@ button.v-expansion-panel-header {
 }
 
 .properties-area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 30px;
 
   .properties-area-item {
-    width: 26%;
-    margin: 1%;
-    background-color: #eddcd5;
-    padding: 5px 15px;
-    color: #5C591A;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 5px;
 
     p {
       display: block;
@@ -1360,7 +1356,15 @@ button.v-expansion-panel-header {
     }
 
     .properties-area-item-name {
-      font-size: 12px;
+      font-size: 18px;
+      text-transform: uppercase;
+      width: 150px;
+      float: left;
+    }
+
+    .properties-area-item-value{
+      float: left;
+      width: 200px;
     }
   }
 }
@@ -1385,6 +1389,7 @@ button.v-expansion-panel-header {
     .details-area-item-name {
       font-size: 12px;
     }
+
     .details-area-item-value {
       font-size: 13px;
       color: #734030;
@@ -1397,9 +1402,10 @@ button.v-expansion-panel-header {
     background-color: #eddcd5;
     color: #734030;
   }
+
   margin: 1%;
 }
 
 .about-area {
-  margin: 1%;
+  //margin: 1%;
 }

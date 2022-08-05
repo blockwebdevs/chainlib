@@ -8,135 +8,57 @@
       </div>
     </v-img>
 
-    <v-row>
-      <v-col class="col-12">
-        <div class="productOne mt-6">
-          <v-row class="justify-space-between">
-            <v-col class="col-lg-4 col-12">
-              <slider-one-product :images="product.images"
-                                  @openZoom="openZoom"
-                                  :productImages="product.images"
-                                  path="products"/>
-            </v-col>
-            <v-col class="col-lg-8 col-12">
-              <p class="productOne__name">{{ product.translation.name }}</p>
-              <p class="productOne__by" v-if="product.brand">by {{ product.brand.translation.name }}</p>
-              <p class="productOne__price">
-                {{ product.personal_price.price }}
-                <span v-if="product.personal_price.old_price > product.personal_price.price">/</span>
-                <span class="price__discount" v-if="product.personal_price.old_price > product.personal_price.price">
+    <v-container>
+      <v-row>
+        <v-col class="col-12">
+          <div class="productOne mt-6">
+            <v-row class="justify-space-between">
+              <v-col class="col-lg-4 col-12">
+                <slider-one-product :images="product.images"
+                                    @openZoom="openZoom"
+                                    :productImages="product.images"
+                                    path="products"/>
+              </v-col>
+              <v-col class="col-lg-8 col-12">
+                <h2 class="productOne__name">{{ product.translation.name }}</h2>
+                <p class="productOne__price mb-4">
+                  {{ product.personal_price.price }}
+                  <span v-if="product.personal_price.old_price > product.personal_price.price">/</span>
+                  <span class="price__discount" v-if="product.personal_price.old_price > product.personal_price.price">
                   {{ product.personal_price.old_price }}
                 </span>
-                {{ currency.abbr }}
-              </p>
+                  {{ currency.abbr }}
+                </p>
 
-              <sizes :product="product" v-if="product.subproducts.length"/>
+<!--                <sizes :product="product" v-if="product.subproducts.length"/>-->
 
-              <div class="mt-4" v-else>
-                <near-buy-sub-product-btn :product="product" ></near-buy-sub-product-btn>
-              </div>
+<!--                <div class="mt-4" v-else>-->
+                  <!--                  <near-buy-sub-product-btn :product="product"></near-buy-sub-product-btn>-->
+<!--                </div>-->
 
-              <div class="guaranty">
-                <div class="guaranty__header">
-                  {{ $trans('DetailsProductSet', 'GuaranteesSustainability') }}
-                </div>
-                <div class="guaranty__content">
-                  <div class="guaranty__item">
-                    <img src="/images/IMG_1070.PNG" alt="">
-                    <span>happy worker</span>
-                  </div>
-                  <div class="guaranty__item">
-                    <img src="/images/IMG_1071.PNG" alt="">
-                    <span>non-toxic dyes</span>
-                  </div>
-                  <div class="guaranty__item">
-                    <img src="/images/IMG_1072.PNG" alt="">
-                    <span>happy worid</span>
-                  </div>
-                  <div class="guaranty__item">
-                    <img src="/images/IMG_1073.PNG" alt="">
-                    <span>co-product</span>
-                  </div>
-                </div>
-              </div>
+                <properties-area :properties="properties"></properties-area>
 
-              <v-expansion-panels accordion>
-                <v-expansion-panel aria-expanded="true" class="productOne__exp">
-                  <v-expansion-panel-header class="productOne__exp-header">
-                    {{ $trans('DetailsProductSet', 'productDescr') }}
-                  </v-expansion-panel-header>
-                  <v-expansion-panel-content>
-                    <p class="productOne__bloc-text" v-html="product.translation.body"></p>
-                  </v-expansion-panel-content>
-                </v-expansion-panel>
-                <v-expansion-panel class="productOne__exp" v-if="product.translation.info">
-                  <v-expansion-panel-header class="productOne__exp-header">
-                    {{ $trans('DetailsProductSet', 'careAndInfo') }}
-                  </v-expansion-panel-header>
-                  <v-expansion-panel-content>
-                    <p class="productOne__bloc-text" v-html="product.translation.info"></p>
-                  </v-expansion-panel-content>
-                </v-expansion-panel>
-                <v-expansion-panel class="productOne__exp">
-                  <v-expansion-panel-header class="productOne__exp-header">
-                    <!-- Deliveries & Returns -->
-                    {{ $trans('DetailsProductSet', 'deliveriesAndReturnsTitle') }}
-                  </v-expansion-panel-header>
-                  <v-expansion-panel-content>
-                    <div class="exp__point">
-                      {{ $trans('DetailsProductSet', 'deliveriesAndReturnsSubitle1') }}
-                    </div>
-                    <p class="productOne__bloc-text">
-                      {{ $trans('DetailsProductSet', 'deliveriesAndReturnsList1.1') }}
-                      <br>
-                      <br>
-                      {{ $trans('DetailsProductSet', 'deliveriesAndReturnsList1.2') }}
-                      <br>
-                      <br>
-                      {{ $trans('DetailsProductSet', 'deliveriesAndReturnsList1.3') }}
-                      <br>
-                      <br>
-                      {{ $trans('DetailsProductSet', 'deliveriesAndReturnsList1.4') }}
-                    </p>
-                    <div class="exp__point">
-                      {{ $trans('DetailsProductSet', 'deliveriesAndReturnsSubtitle2') }}
-                    </div>
-                    <p class="productOne__bloc-text">
-                      {{ $trans('DetailsProductSet', 'deliveriesAndReturnsList2.1') }}
-                    </p>
-                    <div class="exp__point">
-                      {{ $trans('DetailsProductSet', 'deliveriesAndReturnsSubtitle3') }}
-                    </div>
-                    <p class="productOne__bloc-text">
-                      {{ $trans('DetailsProductSet', 'deliveriesAndReturnsList3.1') }}
-                    </p>
-                  </v-expansion-panel-content>
-                </v-expansion-panel>
-              </v-expansion-panels>
-              <div class="productOne__bloc" v-if="product.brand">
-                <div class="productOne__bloc-title">
-                  {{ $trans('DetailsProductSet', 'meetTheDesignerTitle') }}
-                </div>
-                <p class="productOne__bloc-text" v-html="product.brand.translation.description"></p>
-              </div>
+                <about-area :text="product.translation.body"
+                            :brandText="product.brand.translation.description"></about-area>
+
+              </v-col>
+            </v-row>
+          </div>
+        </v-col>
+        <v-col class="col-12"></v-col>
+
+        <v-col class="col-12 mt-lg-8">
+          <v-row>
+            <v-col class="col-12 mt-lg-8" v-if="similars">
+              <h3 class="additional-title">{{ $trans('DetailsProductSet', 'similarProducts') }}</h3>
+              <similar-slider :similars="similars"/>
             </v-col>
           </v-row>
-        </div>
-      </v-col>
-      <v-col class="col-12"></v-col>
+        </v-col>
 
-      <v-col class="col-12 mt-lg-8">
-        <v-row>
-          <v-col class="col-12 mt-lg-8" v-if="similars">
-            <h3 class="additional-title">{{ $trans('DetailsProductSet', 'similarProducts') }}</h3>
-            <similar-slider :similars="similars"/>
-          </v-col>
-        </v-row>
-      </v-col>
-
-    </v-row>
-
-    <zoom v-if="zoom" @closeZoom="zoom = false" :mainImage="mainImage" :productImages="productImages" path="products"/>
+      </v-row>
+    </v-container>
+    <!--    <zoom v-if="zoom" @closeZoom="zoom = false" :mainImage="mainImage" :productImages="productImages" path="products"/>-->
 
   </v-container>
 </template>
@@ -145,6 +67,7 @@
 
 import {mapGetters} from 'vuex'
 import contentApi from '@/api/contentApi'
+import userApi from "~/api/userApi";
 import SliderOneProduct from '@/components/front/sliders/SliderOneProduct.vue'
 import SimilarSlider from '@/components/front/sliders/SimilarCarousel.vue'
 import CartBtn from '~/components/front/cart/CartBtn.vue'
@@ -152,12 +75,31 @@ import Sizes from '@/components/front/productWidgets/Sizes.vue'
 import Zoom from '@/components/front/productWidgets/Zoom.vue'
 import NearBuyProductBtn from "~/components/front/near/NearBuyProductBtn"
 import NearBuySubProductBtn from "~/components/front/near/NearBuySubProductBtn";
+import PropertiesArea from "@/components/front/productWidgets/marketplace/PropertiesArea";
+import OffersArea from "~/components/front/productWidgets/marketplace/OffersArea";
+import AboutArea from "~/components/front/productWidgets/marketplace/AboutArea";
+import DetailsArea from "~/components/front/productWidgets/marketplace/DetailsArea";
 
 export default {
-  components: {NearBuySubProductBtn, SliderOneProduct, SimilarSlider, Sizes, Zoom, CartBtn, NearBuyProductBtn},
+  components: {
+    NearBuySubProductBtn,
+    SliderOneProduct,
+    SimilarSlider,
+    Sizes,
+    Zoom,
+    CartBtn,
+    NearBuyProductBtn,
+    PropertiesArea,
+    OffersArea,
+    AboutArea,
+    DetailsArea
+  },
   async asyncData({app, params, store}) {
     let prod = null
     let similars1 = null
+    let properties = null
+    let offers = null
+
     await contentApi.getProduct({
       lang: store.state.lang.lang,
       alias: params.slugProduct,
@@ -165,11 +107,15 @@ export default {
     }, data => {
       prod = data.product
       similars1 = data.similars
+      properties = data.properties
+      offers = data.offers
     })
     return {
       similars: similars1,
       product: prod,
-      productImages: prod.images
+      productImages: prod.images,
+      properties: properties,
+      offers: offers
     }
   },
   watch: {
@@ -181,6 +127,8 @@ export default {
       }, data => {
         this.product = data.product
         this.similars = data.similars
+        this.offers = data.offers
+        this.properties = data.properties
         this.productImages = this.product.images
       })
     },
@@ -196,12 +144,28 @@ export default {
       product: null,
       productImages: [],
       zoom: false,
-      mainImage: null
+      mainImage: null,
+      panel: [0, 1, 2, 3],
+      readonly: false
     }
   },
+  mounted() {
+    this.$nuxt.$on('update-product-offers', data => {
+      this.updateOffers();
+    });
+  },
   methods: {
+    updateOffers() {
+      const data = {
+        productId: this.product.id,
+        lang: this.language.lang,
+        currency: this.currency.id
+      };
+      userApi.getOffers(data, async response => {
+        this.offers = response.data
+      })
+    },
     openZoom(image) {
-      console.log(image);
       this.mainImage = image
       this.zoom = true
     }
@@ -215,59 +179,72 @@ export default {
     width: auto !important;
   }
 }
+
 .productOne__bloc {
   .v-application p {
     padding: 0;
   }
 }
+
 .oneProduct-content {
   max-width: 1500px;
 }
+
 .moreProducts {
   border: 2px solid $main-color;
   padding: 15px;
   margin-bottom: 20px;
+
   span {
     color: $main-color;
   }
+
   .v-btn {
     width: 100%
   }
+
   .row {
     align-items: center;
   }
 }
+
 .help {
   align-items: center;
   color: $main-color;
   font-size: 12px;
   margin-top: 20px;
+
   .col {
     padding: 0 10px;
   }
+
   span {
     padding-bottom: 15px;
   }
+
   .v-btn {
     display: flex;
     margin-bottom: 0 !important;
   }
+
   .v-icon {
     margin-right: 5px;
   }
 }
+
 .productOne {
   &__name {
     font-family: $font-titles;
-    font-size: 25px;
+    font-size: 30px;
     color: $olive-color;
     letter-spacing: 0;
     line-height: 17px;
     text-align: left;
     text-transform: uppercase;
-    margin-top: 20px;
+    margin-top: 0px;
     line-height: 1.5;
   }
+
   &__price {
     margin-top: 10px;
     text-transform: uppercase;
@@ -276,6 +253,7 @@ export default {
     font-weight: 400;
     color: $main-color;
   }
+
   &__discount {
     position: absolute;
     top: -40px;
@@ -308,40 +286,50 @@ export default {
     flex-direction: column;
     padding-top: 20px;
   }
+
   &__by {
     color: $main-color;
     font-size: 12px;
   }
+
   &__exp {
     padding: 0;
+
     &::before {
       box-shadow: none;
     }
+
     div {
       padding: 0 !important;
     }
   }
+
   .v-expansion-panel,
   .v-expansion-panel__header {
     background-color: $bcg-body !important;
   }
+
   .v-expansion-panel-content__wrap {
-    padding: 0  30px !important;
+    padding: 0 30px !important;
   }
+
   &__exp &__bloc-text {
     padding: 0;
   }
+
   &__exp-header {
     color: $olive-color;
     padding: 0;
     text-transform: uppercase;
   }
+
   &__bloc {
     padding-top: 10px;
     margin-bottom: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.12);
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   }
+
   &__bloc-text {
     font-family: $font-roboto;
     font-size: 13px;
@@ -350,10 +338,12 @@ export default {
     color: $main-color;
     font-weight: 300;
     padding: 0 24px 0;
+
     a {
       text-decoration: underline;
     }
   }
+
   &__bloc-title {
     color: $olive-color;
     padding: 0;
@@ -364,11 +354,14 @@ export default {
     align-items: center;
     text-transform: uppercase;
   }
+
   .v-btn.body {
     color: $main-color !important;
   }
+
   .v-btn {
     margin-bottom: 15px;
+
     .cart-icon {
       width: 15px;
       margin-left: 10px;
@@ -376,6 +369,7 @@ export default {
     }
   }
 }
+
 .p-title {
   text-align: left;
   color: $main-color;
@@ -386,6 +380,7 @@ export default {
   text-transform: uppercase;
   line-height: 1.3;
 }
+
 .p-subtitle {
   text-align: center;
   font-size: 20px;
@@ -393,32 +388,40 @@ export default {
   letter-spacing: -0.11px;
   font-family: $font-titles;
 }
+
 .prof {
   padding-bottom: 15px;
+
   &__iamge {
     position: relative;
   }
+
   &__indicator {
     position: absolute;
     top: 35px;
     left: 35px;
   }
+
   .v-card__actions {
     display: flex;
     justify-content: center;
   }
+
   .v-btn {
     border-radius: 9px !important;
   }
 }
+
 .v-input--selection-controls {
   margin-top: 5px;
 }
+
 .productOne .exp__point {
   color: $main-color;
   margin-bottom: 10px;
   position: relative;
   margin-left: 10px !important;
+
   &:after {
     content: "";
     width: 10px;
@@ -431,80 +434,98 @@ export default {
     top: 6px;
   }
 }
+
 .buyOn {
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
   &__header {
     color: $olive-color;
     text-transform: uppercase;
     margin-bottom: 10px;
   }
+
   img {
     width: auto;
     height: 50px;
   }
+
   .v-btn {
     width: auto;
     height: auto;
     margin-right: 10px;
+
     &:last-child {
       img {
         height: 40px;
       }
     }
   }
+
   span {
     width: 100% !important
   }
 }
+
 .ozon-icon img {
   height: 30px !important;
 }
+
 .guaranty {
   padding-bottom: 20px;
   padding-top: 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
   &__header {
     color: $olive-color;
     text-transform: uppercase;
   }
+
   &__content {
     display: flex;
     align-items: center;
     margin-top: 10px;
   }
+
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-right: 10px;
+
     span {
       font-size: 10px;
       color: $main-color;
       text-transform: uppercase;
     }
   }
+
   img {
     width: 60px
   }
 }
+
 .color {
   margin-top: 15px;
   margin-bottom: 40px;
 }
+
 @media (min-width: 1200px) {
   .additional-title {
     font-size: 30px;
   }
 }
+
 .exp__point {
   padding-left: 30px !important;
 }
+
 .productOne__bloc-text {
   padding: 0 0px !important;
 }
+
 .v-expansion-panel-header {
   max-width: 100% !important;
 }
