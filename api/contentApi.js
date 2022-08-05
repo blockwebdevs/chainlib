@@ -41,7 +41,7 @@ export default {
     },
 
     async getMarketplaceCategory(data, cb){
-        await axios.get(`${backURL}/api/marketplace/category?lang=${data.lang}&alias=${data.alias}&currency=${data.currency}`)
+        await axios.get(`${backURL}/api/marketplace?lang=${data.lang}&alias=${data.alias}&currency=${data.currency}`)
             .then(response => cb(response.data))
             .catch(err => console.log(err))
     },

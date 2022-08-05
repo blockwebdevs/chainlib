@@ -63,20 +63,20 @@
 
                     <v-row>
                       <v-col>
-                        <div class="collectionOne__price price">
-                          <span>{{ item.product.personal_price.price }}</span>
-                          <span
-                              v-if="item.product.personal_price.old_price > item.product.personal_price.price">/</span>
-                          <span class="price__discount"
-                                v-if="item.product.personal_price.old_price > item.product.personal_price.price">
-                              {{ item.product.personal_price.old_price }}
-                        </span>
-                          <span>{{ currency.abbr }}</span>
-                        </div>
+<!--                        <div class="collectionOne__price price">-->
+<!--                          <span>{{ item.product.personal_price.price }}</span>-->
+<!--                          <span-->
+<!--                              v-if="item.product.personal_price.old_price > item.product.personal_price.price">/</span>-->
+<!--                          <span class="price__discount"-->
+<!--                                v-if="item.product.personal_price.old_price > item.product.personal_price.price">-->
+<!--                              {{ item.product.personal_price.old_price }}-->
+<!--                        </span>-->
+<!--                          <span>{{ currency.abbr }}</span>-->
+<!--                        </div>-->
                       </v-col>
-                      <v-col>
-                        <near-buy-sub-product-btn :product="item.product"></near-buy-sub-product-btn>
-                      </v-col>
+<!--                      <v-col>-->
+<!--                        <near-buy-sub-product-btn :product="item.product"></near-buy-sub-product-btn>-->
+<!--                      </v-col>-->
                     </v-row>
 
                   </v-col>
