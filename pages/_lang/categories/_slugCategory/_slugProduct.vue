@@ -14,6 +14,7 @@
           <v-row class="justify-space-between">
             <v-col class="col-lg-4 col-12">
               <slider-one-product :images="product.images"
+                                  @openZoom="openZoom"
                                   :productImages="product.images"
                                   path="products"/>
             </v-col>
@@ -32,7 +33,7 @@
               <sizes :product="product" v-if="product.subproducts.length"/>
 
               <div class="mt-4" v-else>
-<!--                <near-buy-sub-product-btn :product="product" ></near-buy-sub-product-btn>-->
+                <near-buy-sub-product-btn :product="product" ></near-buy-sub-product-btn>
               </div>
 
               <div class="guaranty">
