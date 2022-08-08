@@ -84,7 +84,7 @@
       </v-list-item-content>
     </v-list-item>
 
-    <v-list-item nuxt :to="`/${language.lang}/contacts`">
+    <v-list-item nuxt :to="`/${language.lang}/faq`">
       <v-list-item-content>
         <v-list-item-title>
           FAQ
