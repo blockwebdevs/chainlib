@@ -95,12 +95,12 @@
     <v-list-item nuxt :to="`/${language.lang}/contacts`">
       <v-list-item-content>
         <v-list-item-title>
-          {{ $trans('PagesNames', 'pageNameContacts') }}
+         Contacts
         </v-list-item-title>
       </v-list-item-content>
     </v-list-item>
 
-    <v-list-item nuxt :to="`/${language.lang}/contacts`">
+    <v-list-item nuxt :to="`/${language.lang}/propose-book`">
       <v-list-item-content>
         <v-list-item-title>
           Submit a Book Proposal

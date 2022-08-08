@@ -1,6 +1,5 @@
 <template>
   <div class="contacts">
-
     <v-img src="/Main-banner.jpeg" class="banner-search">
       <div class="banner-search-wrapper">
         <input type="text" class="search-input">
@@ -9,28 +8,22 @@
     </v-img>
 
     <v-container>
-
       <v-col class="col-md-12">
-        <h1 class="text-center">{{ $trans('ContactsAndForms', 'contactPagesTitle') }}</h1>
+        <h1 class="text-center">SUBMIT A BOOK PROPOSAL</h1>
       </v-col>
 
       <v-row id="contactsForm" class=" contacts__form">
         <v-col class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
           <p class="form___title mt-15">
-            Website: www.chainlib.xyz
-          </p>
-          <p>
-            Email: chainlibdigital@gmail.com
+            The service offers the facility to propose for purchase - the books, which are necessary for your activity,
+            found by you in the advertisements in the media, bookstores, etc. Your request will be reviewed by us
+            immediately for further completion of the library's holdings.
           </p>
         </v-col>
         <v-col class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
           <h3 class="c-title my-3">
-            {{ $trans('Contacts', 'getInTouch') }}
+            Submit a Book Proposal
           </h3>
-          <p>
-            {{ $trans('Contacts', 'fillTheForm') }}
-          </p>
-
           <v-form
               class="contactForm text-center"
               ref="form"
@@ -38,6 +31,13 @@
               lazy-validation
               v-if="!formSended"
           >
+            <v-text-field
+                v-model="form.name"
+                dense outlined
+                :rules="nameRules"
+                label="Title and the author"
+                required
+            ></v-text-field>
             <v-text-field
                 v-model="form.name"
                 dense outlined
@@ -63,7 +63,7 @@
                 dense outlined
                 v-model="form.message"
                 name="input-7-4"
-                :label="trans.ContactsAndForms.labelMessage"
+                label="Description"
                 hint="Hint text"
             ></v-textarea>
             <v-btn

@@ -40,7 +40,7 @@ body {
     overflow: hidden;
   }
   li {
-    border: 2px solid $olive-color;
+    border: 2px solid #e96535;
     border-radius: 50%;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
@@ -54,7 +54,7 @@ body {
   span {
     font-family: $font-text, Georgia, "Times New Roman", Times, serif;
     font-size: 18px;
-    color: $olive-color;
+    color: #e96535;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
@@ -62,7 +62,7 @@ body {
 .c-title {
   font-family: $font-titles;
   font-size: 30px;
-  color: $olive-color;
+  color: #e96535;
   letter-spacing: -0.11px;
   text-align: center;
   text-transform: uppercase;
