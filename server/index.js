@@ -22,11 +22,11 @@ async function start() {
     const {host, port} = nuxt.options.server
 
     try {
-        await mongoose.connect('mongodb://127.0.0.1:27017/soledy', {
-            useNewUrlParser: true,
-            useFindAndModify: false,
-            useUnifiedTopology: true
-        })
+        // await mongoose.connect('mongodb://127.0.0.1:27017/chanlib', {
+        //     useNewUrlParser: true,
+        //     useFindAndModify: false,
+        //     useUnifiedTopology: true
+        // })
 
         if (config.dev) {
             const builder = new Builder(nuxt)
