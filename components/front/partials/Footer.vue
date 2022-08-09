@@ -2,67 +2,7 @@
   <footer class="footer pt-15">
     <v-container>
       <v-row>
-        <v-col class="col-12 footer__mobile">
-          <v-expansion-panels>
-            <v-row>
-              <v-col class="col-lg-4 col-12">
-                <v-expansion-panel>
-                  <v-expansion-panel-header>
-                    {{ $trans('PagesNames', 'pageAboutAnne') }}
-                  </v-expansion-panel-header>
-                  <v-expansion-panel-content>
-                    <nuxt-link :to="`/${language.lang}/about`">
-                      {{ $trans('PagesNames', 'pageAbout') }}
-                    </nuxt-link>
-                    <nuxt-link :to="`/${language.lang}/contacts`">
-                      {{ $trans('PagesNames', 'pageNameContacts') }}
-                    </nuxt-link>
-                    <nuxt-link :to="`/${language.lang}/livrare-achitare-retur`">
-                      {{ $trans('PagesNames', 'pageDelivery') }}
-                    </nuxt-link>
-                    <nuxt-link :to="`/${language.lang}/designers`">
-                      {{ $trans('PagesNames', 'pageNameDesigners') }}
-                    </nuxt-link>
-                  </v-expansion-panel-content>
-                </v-expansion-panel>
-              </v-col>
-              <v-col class="col-lg-4 col-12">
-                <v-expansion-panel>
-                  <v-expansion-panel-header>
-                    {{ $trans('HeaderFooter', 'ourProducts') }}:
-                  </v-expansion-panel-header>
-                  <v-expansion-panel-content>
-                    <nuxt-link :to="`/${language.lang}/categories/all`">
-                      {{ $trans('PagesNames', 'pageNameAllProducts') }}
-                    </nuxt-link>
-                    <nuxt-link :to="`/${language.lang}/collections/authentic`">
-                      {{ $trans('PagesNames', 'pageNameCollections') }}
-                    </nuxt-link>
-                    <nuxt-link :to="`/${language.lang}/outlet`">
-                      {{ $trans('PagesNames', 'pageNameOutletTitle') }}
-                    </nuxt-link>
-                    <nuxt-link :to="`/${language.lang}/new`">
-                      {{ $trans('PagesNames', 'pageNameNewTitle') }}
-                    </nuxt-link>
-                  </v-expansion-panel-content>
-                </v-expansion-panel>
-              </v-col>
-              <v-col class="col-lg-4 col-12">
-                <v-expansion-panel elevation="0">
-                  <v-expansion-panel-header>
-                    {{ $trans('HeaderFooter', 'usefulInfo') }}:
-                  </v-expansion-panel-header>
-                  <v-expansion-panel-content>
-                    <nuxt-link :to="`/${language.lang}/${page.alias}`" v-for="(page, index) in pages" :key="index">
-                      {{ page.translation.name }}
-                    </nuxt-link>
-                  </v-expansion-panel-content>
-                </v-expansion-panel>
-              </v-col>
-            </v-row>
-          </v-expansion-panels>
-        </v-col>
-        <v-col class="col-12 footer__desktop">
+        <v-col class="col-12">
           <v-row>
             <v-col class="col-lg-6 col-12">
               <nuxt-link to="/" class="footer__logo">
@@ -208,40 +148,31 @@ export default {
   }
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .footer {
-    &__payments {
-      max-width: 600px;
-    }
-
-    &__mobile {
-      display: none;
-    }
-
-    &__desktop {
-      display: block;
-      margin-top: 30px;
-    }
-
-    &__subtitle {
-      font-family: $font-roboto, sans-serif;
-      font-size: 20px;
-      color: #e9642d;
-      letter-spacing: 0;
-      line-height: 20px;
-      font-weight: 400;
-      margin-bottom: 20px;
-    }
-
-    a {
-      font-family: $font-roboto;
-      text-transform: capitalize;
+    padding: 15px !important;
+  }
+  .footer__logo {
+    .v-image {
+      width: 90% !important;
     }
   }
 }
 
 .footer-social-link {
   display: inline-block !important;
-
+}
+.footer__subtitle {
+  font-family: $font-roboto, sans-serif;
+  font-size: 20px;
+  color: #e9642d;
+  letter-spacing: 0;
+  line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+a {
+  font-family: $font-roboto;
+  text-transform: capitalize;
 }
 </style>
