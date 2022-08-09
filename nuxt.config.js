@@ -79,7 +79,7 @@ module.exports = {
             light: true,
             themes: {
                 light: {
-                    primary: "#734030",
+                    primary: "#e96535",
                     title: "#B22D00",
                     textgreen: "#5C591A",
                     body: '#FFF',

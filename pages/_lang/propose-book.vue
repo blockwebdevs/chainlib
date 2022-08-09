@@ -1,10 +1,7 @@
 <template>
   <div class="contacts">
     <v-img src="/Main-banner.jpeg" class="banner-search">
-      <div class="banner-search-wrapper">
-        <input type="text" class="search-input">
-        <button></button>
-      </div>
+      <search/>
     </v-img>
 
     <v-container>
@@ -93,9 +90,11 @@
 
 import {mapGetters} from 'vuex'
 import userApi from '@/api/userApi'
+import Search from "~/components/front/partials/Search";
 
 export default {
   layout: "default",
+  components: {Search},
   head() {
     return {
       title: this.title,
@@ -164,5 +163,6 @@ export default {
 .c-title {
   font-size: 18px;
   padding-top: 30px;
+  color: #ed6d5e !important;
 }
 </style>

@@ -1,19 +1,16 @@
 <template>
   <div class="faq">
     <v-img src="/Main-banner.jpeg" class="banner-search">
-      <div class="banner-search-wrapper">
-        <input type="text" class="search-input">
-        <button></button>
-      </div>
+      <search/>
     </v-img>
 
     <v-container>
       <v-row>
-        <v-col class="col-md-12">
+        <v-col class="col-md-12 col-12">
           <h1>FAQ</h1>
         </v-col>
 
-        <v-col class="col-md-12">
+        <v-col class="col-md-12 col-12">
           <p>
             1. Ask The Librarian is a free remote information support service that provides answers to the user's
             questions, pointing / directing him / her to the information resources in the library collection and the
@@ -33,7 +30,7 @@
         </v-col>
 
         <v-row justify="center" align="center">
-          <v-col class="col-md-9">
+          <v-col class="col-md-9 col-10">
             <form class="text-center mt-8">
               <v-text-field
                   dense outlined
@@ -154,8 +151,10 @@
 <script>
 import {validationMixin} from 'vuelidate'
 import {required, maxLength, email} from 'vuelidate/lib/validators'
+import Search from "~/components/front/partials/Search";
 
 export default {
+  components: {Search},
   mixins: [validationMixin],
 
   validations: {

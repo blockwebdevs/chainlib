@@ -154,7 +154,7 @@ export default {
   }
   .footer__logo {
     .v-image {
-      width: 90% !important;
+      width: 80% !important;
     }
   }
 }

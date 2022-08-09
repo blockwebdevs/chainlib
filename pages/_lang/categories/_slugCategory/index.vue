@@ -46,12 +46,16 @@
 
                 <v-row class="product-item-wrapper">
 
-                  <v-col class="col-lg-9 col-9 mb-2">
+                  <v-col class="col-lg-9 col-12 mb-2">
                     <h2 class="mb-4 product-name">
                       <nuxt-link :to="`/ro/categories/${category.alias}/${item.product.alias}`" class="product">
                         {{ item.product.translation.name }}
                       </nuxt-link>
                     </h2>
+                    <nuxt-link :to="`/ro/categories/${category.alias}/${item.product.alias}`" class="product mobile-only mb-4">
+                      <v-img
+                          :src="`https://back.soledynft.shop/images/products/sm/${item.product.main_image.src}`"></v-img>
+                    </nuxt-link>
                     <p class="product-description" v-html="item.product.translation.body"></p>
                     <div class="product-properties-list">
                       <div class="product-properties-item"
@@ -63,25 +67,25 @@
 
                     <v-row>
                       <v-col>
-<!--                        <div class="collectionOne__price price">-->
-<!--                          <span>{{ item.product.personal_price.price }}</span>-->
-<!--                          <span-->
-<!--                              v-if="item.product.personal_price.old_price > item.product.personal_price.price">/</span>-->
-<!--                          <span class="price__discount"-->
-<!--                                v-if="item.product.personal_price.old_price > item.product.personal_price.price">-->
-<!--                              {{ item.product.personal_price.old_price }}-->
-<!--                        </span>-->
-<!--                          <span>{{ currency.abbr }}</span>-->
-<!--                        </div>-->
+                        <!--                        <div class="collectionOne__price price">-->
+                        <!--                          <span>{{ item.product.personal_price.price }}</span>-->
+                        <!--                          <span-->
+                        <!--                              v-if="item.product.personal_price.old_price > item.product.personal_price.price">/</span>-->
+                        <!--                          <span class="price__discount"-->
+                        <!--                                v-if="item.product.personal_price.old_price > item.product.personal_price.price">-->
+                        <!--                              {{ item.product.personal_price.old_price }}-->
+                        <!--                        </span>-->
+                        <!--                          <span>{{ currency.abbr }}</span>-->
+                        <!--                        </div>-->
                       </v-col>
-<!--                      <v-col>-->
-<!--                        <near-buy-sub-product-btn :product="item.product"></near-buy-sub-product-btn>-->
-<!--                      </v-col>-->
+                      <!--                      <v-col>-->
+                      <!--                        <near-buy-sub-product-btn :product="item.product"></near-buy-sub-product-btn>-->
+                      <!--                      </v-col>-->
                     </v-row>
 
                   </v-col>
 
-                  <v-col class="col-lg-3 col-3 mb-2">
+                  <v-col class="col-lg-3 col-12 mb-2 desktop-only">
                     <nuxt-link :to="`/ro/categories/${category.alias}/${item.product.alias}`" class="product">
                       <v-img
                           :src="`https://back.soledynft.shop/images/products/sm/${item.product.main_image.src}`"></v-img>

@@ -15,7 +15,7 @@
           <div class="product-description">
             <h3>{{product.translation.name}}</h3>
             <p>
-              {{product.translation.body.substring(0,130)+"..."}}
+              {{product.translation.body.substring(0,125)+"..."}}
             </p>
           </div>
         </nuxt-link>

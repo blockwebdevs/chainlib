@@ -3,7 +3,7 @@
 
     <v-container>
       <div class="about-headings">
-        <h2>CHAINLIB STORY</h2>
+        <h1>CHAINLIB STORY</h1>
         <h3>DIGITAL "SHELF SPACE" FOR AUTHORS WITH COPYRIGHT PROTECTION ENSURED BY BLOCKCHAIN TECHNOLOGY</h3>
       </div>
 

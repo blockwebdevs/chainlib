@@ -4,7 +4,7 @@
   .custom-arrow {
     position: absolute;
     z-index: 2;
-    top: -30px;
+    top: -50px;
   }
 
   .prev-slide {
@@ -1321,7 +1321,7 @@ button.v-expansion-panel-header {
   }
 
   .product-option-value {
-    color: #734030;
+    color: #e96535;
     font-size: 13px;
   }
 }
@@ -1332,7 +1332,7 @@ button.v-expansion-panel-header {
 
 .productOne__exp {
   .v-icon {
-    color: #734030 !important;
+    color: #e96535 !important;
     margin-right: 15px;
     font-size: 18px !important;
   }
@@ -1392,7 +1392,7 @@ button.v-expansion-panel-header {
 
     .details-area-item-value {
       font-size: 13px;
-      color: #734030;
+      color: #e96535;
     }
   }
 }
@@ -1400,12 +1400,33 @@ button.v-expansion-panel-header {
 .offers-area {
   table {
     background-color: #eddcd5;
-    color: #734030;
+    color: #e96535;
   }
 
   margin: 1%;
 }
 
-.about-area {
-  //margin: 1%;
+.mobile-only {
+  display: none;
+}
+.desktop-only {
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none;
+  }
+  .product-name {
+    text-align: center;
+  }
+}
+
+h1 {
+  color: #ed6d5e;
+  line-height: 1;
+  margin-top: 30px;
 }
