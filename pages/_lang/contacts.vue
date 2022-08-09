@@ -11,7 +11,7 @@
     <v-container>
 
       <v-col class="col-md-12">
-        <h1 class="text-center">{{ $trans('ContactsAndForms', 'contactPagesTitle') }}</h1>
+        <h1 class="text-center">CONTACTS</h1>
       </v-col>
 
       <v-row id="contactsForm" class=" contacts__form">

@@ -20,7 +20,7 @@
 
       <v-row>
         <v-col cols="12">
-          <h3 class="c-title title-olive mt-3">{{ category.translation.name }}</h3>
+          <h1 class="text-center mt-3">{{ category.translation.name }}</h1>
         </v-col>
 
         <v-col class="col-12">
