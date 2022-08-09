@@ -8,14 +8,6 @@
         <v-list-item-title>back</v-list-item-title>
       </v-list-item-content>
     </v-list-item>
-<!--    <v-list-item v-if="items && type === 'category'" nuxt :to="`/ro/categories/all`" :class="'pl-8'">-->
-<!--      <v-list-item-content>-->
-<!--        <v-list-item-title>-->
-<!--          {{ $trans('PagesNames', 'pageNameAllProducts') }}-->
-<!--        </v-list-item-title>-->
-<!--      </v-list-item-content>-->
-<!--    </v-list-item>-->
-
     <v-list-item v-if="items && type === 'category'"
                  v-for="item in items"
                  :key="item.id"

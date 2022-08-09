@@ -64,33 +64,23 @@
         </v-col>
         <v-col class="col-12 footer__desktop">
           <v-row>
-
             <v-col class="col-lg-6 col-12">
               <nuxt-link to="/" class="footer__logo">
                 <v-img src="/logo.png" alt="logo" width="150"/>
               </nuxt-link>
-
-                <p class="my-3">
-                  ChainLib - digital space created for authors that provides a "shelf space" and visibility to their readers,
-                  with copyright protection ensured by blockchain technology
-                </p>
+              <p class="my-3">
+                ChainLib - digital space created for authors that provides a "shelf space" and visibility to their
+                readers,
+                with copyright protection ensured by blockchain technology
+              </p>
             </v-col>
             <v-col class="col-lg-3 col-12">
               <div class="footer__subtitle">
-                Catalog:
+                Books Catalog:
               </div>
               <div class="footer__list">
-                <nuxt-link :to="`/${language.lang}/categories/all`">
-                  {{ $trans('PagesNames', 'pageNameAllProducts') }}
-                </nuxt-link>
-                <nuxt-link :to="`/${language.lang}/collections/authentic`">
-                  {{ $trans('PagesNames', 'pageNameCollections') }}
-                </nuxt-link>
-                <nuxt-link :to="`/${language.lang}/outlet`">
-                  {{ $trans('PagesNames', 'pageNameOutletTitle') }}
-                </nuxt-link>
-                <nuxt-link :to="`/${language.lang}/new`">
-                  {{ $trans('PagesNames', 'pageNameNewTitle') }}
+                <nuxt-link :to="`/${language.lang}/categories/${category.alias}`" v-for="(category, key) in categories">
+                  {{ category.translation.name }}
                 </nuxt-link>
               </div>
             </v-col>
@@ -102,24 +92,17 @@
                 <nuxt-link :to="`/${language.lang}/about`">
                   {{ $trans('PagesNames', 'pageAbout') }}
                 </nuxt-link>
+                <nuxt-link :to="`/${language.lang}/faq`">
+                  FAQ
+                </nuxt-link>
+                <nuxt-link :to="`/${language.lang}/propose-book`">
+                  Submit a Book Proposal
+                </nuxt-link>
                 <nuxt-link :to="`/${language.lang}/contacts`">
                   {{ $trans('PagesNames', 'pageNameContacts') }}
                 </nuxt-link>
-                <nuxt-link :to="`/${language.lang}/livrare-achitare-retur`">
-                  {{ $trans('PagesNames', 'pageDelivery') }}
-                </nuxt-link>
               </div>
             </v-col>
-<!--            <v-col class="col-lg-3 col-12">-->
-<!--              <div class="footer__subtitle">-->
-<!--                About:-->
-<!--              </div>-->
-<!--              <div class="footer__list">-->
-<!--                <nuxt-link :to="`/${language.lang}/${page.alias}`" v-for="(page, index) in pages" :key="index">-->
-<!--                  {{ page.translation.name }}-->
-<!--                </nuxt-link>-->
-<!--              </div>-->
-<!--            </v-col>-->
           </v-row>
         </v-col>
         <v-col class="col-12">
@@ -157,6 +140,7 @@ export default {
     language: 'getLanguage',
     trans: 'getTranslations',
     services: 'getServices',
+    categories: 'getCategories',
   }),
   mounted() {
     this.splitToChunks(this.services, 2)

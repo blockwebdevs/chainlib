@@ -38,48 +38,10 @@
         <v-icon color="primary">mdi-chevron-right</v-icon>
       </v-list-item-icon>
     </v-list-item>
-<!--    <v-list-item @click="openDrawerTwoCollections">-->
-<!--      <v-list-item-content>-->
-<!--        <v-list-item-title>-->
-<!--          {{ $trans('PagesNames', 'pageNameCollections') }}-->
-<!--        </v-list-item-title>-->
-<!--      </v-list-item-content>-->
-<!--      <v-list-item-icon>-->
-<!--        <v-icon color="primary">mdi-chevron-right</v-icon>-->
-<!--      </v-list-item-icon>-->
-<!--    </v-list-item>-->
-<!--    <v-list-item to="/ro/marketplace" nuxt>-->
-<!--      <v-list-item-content>-->
-<!--        <v-list-item-title>-->
-<!--          NFT Marketplace-->
-<!--        </v-list-item-title>-->
-<!--      </v-list-item-content>-->
-<!--    </v-list-item>-->
-<!--    <v-list-item to="/ro/designers" nuxt>-->
-<!--      <v-list-item-content>-->
-<!--        <v-list-item-title>-->
-<!--          {{ $trans('PagesNames', 'pageNameDesigners') }}-->
-<!--        </v-list-item-title>-->
-<!--      </v-list-item-content>-->
-<!--    </v-list-item>-->
-<!--    <v-list-item to="/ro/new" nuxt>-->
-<!--      <v-list-item-content>-->
-<!--        <v-list-item-title>-->
-<!--          {{ $trans('PagesNames', 'pageNameNewTitle') }}-->
-<!--        </v-list-item-title>-->
-<!--      </v-list-item-content>-->
-<!--    </v-list-item>-->
-<!--    <v-list-item to="/ro/outlet" nuxt>-->
-<!--      <v-list-item-content>-->
-<!--        <v-list-item-title>-->
-<!--          {{ $trans('PagesNames', 'pageNameOutletTitle') }}-->
-<!--        </v-list-item-title>-->
-<!--      </v-list-item-content>-->
-<!--    </v-list-item>-->
     <v-list-item to="/ro/about" nuxt>
       <v-list-item-content>
         <v-list-item-title>
-          {{ $trans('PagesNames', 'pageAbout') }}
+          About
         </v-list-item-title>
       </v-list-item-content>
     </v-list-item>
@@ -103,7 +65,7 @@
     <v-list-item nuxt :to="`/${language.lang}/contacts`">
       <v-list-item-content>
         <v-list-item-title>
-         Contacts
+          Contacts
         </v-list-item-title>
       </v-list-item-content>
     </v-list-item>
@@ -111,50 +73,10 @@
     <v-list-item>
 
       <v-list-item-content>
-<!--        <NearAuth :title="'Sign In'"/>-->
+        <!--        <NearAuth :title="'Sign In'"/>-->
       </v-list-item-content>
 
     </v-list-item>
-<!--    <v-list-group :value="false">-->
-<!--      <template v-slot:activator>-->
-<!--        <v-list-item-title>-->
-<!--          {{ $trans('General', 'helpInformation') }}-->
-<!--        </v-list-item-title>-->
-<!--      </template>-->
-<!--      <v-list-item dense class="pl-8" nuxt :to="`/${language.lang}/about`">-->
-<!--        <v-list-item-content>-->
-<!--          <v-list-item-title>-->
-<!--            {{ $trans('PagesNames', 'pageAbout') }}-->
-<!--          </v-list-item-title>-->
-<!--        </v-list-item-content>-->
-<!--      </v-list-item>-->
-<!--      <v-list-item dense class="pl-8" nuxt :to="`/${language.lang}/livrare-achitare-retur`">-->
-<!--        <v-list-item-content>-->
-<!--          <v-list-item-title>-->
-<!--            {{ $trans('PagesNames', 'pageDelivery') }}-->
-<!--          </v-list-item-title>-->
-<!--        </v-list-item-content>-->
-<!--      </v-list-item>-->
-<!--      <v-list-item dense class="pl-8" nuxt :to="`/${language.lang}/contacts`">-->
-<!--        <v-list-item-content>-->
-<!--          <v-list-item-title>-->
-<!--            {{ $trans('PagesNames', 'pageNameContacts') }}-->
-<!--          </v-list-item-title>-->
-<!--        </v-list-item-content>-->
-<!--      </v-list-item>-->
-<!--    </v-list-group>-->
-<!--    <v-list-item>-->
-<!--      <v-list-item-content>-->
-<!--        <v-list-item-title>-->
-<!--          {{ $trans('HeaderFooter', 'followUs') }}-->
-<!--        </v-list-item-title>-->
-<!--      </v-list-item-content>-->
-<!--      <v-list-item-action class="d-flex flex-row">-->
-<!--        <v-btn :href="`${$trans('ContactsAndForms', 'companyInstagram')}`" target="_blank" icon color="title">-->
-<!--          <v-icon>mdi-instagram</v-icon>-->
-<!--        </v-btn>-->
-<!--      </v-list-item-action>-->
-<!--    </v-list-item>-->
   </v-list>
 </template>
 
