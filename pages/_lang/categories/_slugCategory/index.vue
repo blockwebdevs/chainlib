@@ -41,8 +41,7 @@
 
               <v-col class="col-lg-12 col-12 mb-2"
                      v-for="(item, key) in products"
-                     :key="key"
-                     v-if="item.product.main_image">
+                     :key="key">
 
                 <v-row class="product-item-wrapper">
 
@@ -53,8 +52,8 @@
                       </nuxt-link>
                     </h2>
                     <nuxt-link :to="`/ro/categories/${category.alias}/${item.product.alias}`" class="product mobile-only mb-4">
-                      <v-img
-                          :src="`https://back.soledynft.shop/images/products/sm/${item.product.main_image.src}`"></v-img>
+                      <v-img v-if="item.product.main_image"
+                          :src="`https://back.chainlib.xyz/images/products/sm/${item.product.main_image.src}`"></v-img>
                     </nuxt-link>
                     <p class="product-description" v-html="item.product.translation.body"></p>
                     <div class="product-properties-list">
@@ -87,8 +86,8 @@
 
                   <v-col class="col-lg-3 col-12 mb-2 desktop-only">
                     <nuxt-link :to="`/ro/categories/${category.alias}/${item.product.alias}`" class="product">
-                      <v-img
-                          :src="`https://back.soledynft.shop/images/products/sm/${item.product.main_image.src}`"></v-img>
+                      <v-img v-if="item.product.main_image"
+                          :src="`https://back.chainlib.xyz/images/products/sm/${item.product.main_image.src}`"></v-img>
                     </nuxt-link>
                   </v-col>
 
@@ -121,7 +120,7 @@ export default {
     let products = null;
     await contentApi.getMarketplaceCategory({
       lang: store.state.lang.lang,
-      alias: 'nfts',
+      alias: params.slugCategory,
       currency: store.state.currency.id
     }, data => {
       categ = data.category
@@ -180,7 +179,7 @@ export default {
       return Object.assign(
           ...Object
               .keys(properties)
-              .slice(0, 2)
+              .slice(0, 4)
               .map(k => ({[k]: properties[k]}))
       );
     },

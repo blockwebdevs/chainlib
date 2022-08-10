@@ -157,17 +157,17 @@ export const actions = {
             }
         }
         await contentApi.getInitSettings(data => commit('SET_SETTINGS', data))
-        await contentApi.getCartItems(state.cart.userCartId, data => commit('cart/SET_CART_ITEMS', data))
+        // await contentApi.getCartItems(state.cart.userCartId, data => commit('cart/SET_CART_ITEMS', data))
         await contentApi.getCategories(state.lang.lang, data => commit('SET_CATEGORIES', data))
-        await contentApi.getCollections(state.lang.lang, data => commit('SET_COLLECTIONS', data))
-        await contentApi.getPromotions({
-            lang: state.lang.lang,
-            currency: state.currency.id
-        }, data => commit('SET_PROMOTIONS', data))
+        // await contentApi.getCollections(state.lang.lang, data => commit('SET_COLLECTIONS', data))
+        // await contentApi.getPromotions({
+        //     lang: state.lang.lang,
+        //     currency: state.currency.id
+        // }, data => commit('SET_PROMOTIONS', data))
 
         await contentApi.getTranslations(state.lang.lang, data => commit('SET_TRANSALATIONS', data))
-        await contentApi.getBanners(state.lang.lang, response => commit('SET_BANNERS', response))
-        await contentApi.getStaticPages(state.lang.lang, response => commit('SET_STATIC_PAGES', response))
+        // await contentApi.getBanners(state.lang.lang, response => commit('SET_BANNERS', response))
+        // await contentApi.getStaticPages(state.lang.lang, response => commit('SET_STATIC_PAGES', response))
 
         commit('SET_ENV_API', process.env.API)
     },
@@ -176,15 +176,15 @@ export const actions = {
         commit('SET_DEFAULT_LANG', data.lang)
 
         await contentApi.getCategories(state.lang.lang, data => commit('SET_CATEGORIES', data))
-        await contentApi.getCollections(state.lang.lang, data => commit('SET_COLLECTIONS', data))
-        await contentApi.getPromotions({
-            lang: state.lang.lang,
-            currency: data.currency
-        }, data => commit('SET_PROMOTIONS', data))
+        // await contentApi.getCollections(state.lang.lang, data => commit('SET_COLLECTIONS', data))
+        // await contentApi.getPromotions({
+        //     lang: state.lang.lang,
+        //     currency: data.currency
+        // }, data => commit('SET_PROMOTIONS', data))
 
         await contentApi.getTranslations(state.lang.lang, (response) => commit('SET_TRANSALATIONS', response))
-        await contentApi.getBanners(state.lang.lang, (response) => commit('SET_BANNERS', response))
-        await contentApi.getStaticPages(state.lang.lang, (response) => commit('SET_STATIC_PAGES', response))
+        // await contentApi.getBanners(state.lang.lang, (response) => commit('SET_BANNERS', response))
+        // await contentApi.getStaticPages(state.lang.lang, (response) => commit('SET_STATIC_PAGES', response))
 
         commit('SET_DEFAULT_CURRENCY', data.currency)
         commit('SET_DEFAULT_COUNTRY', data.country)

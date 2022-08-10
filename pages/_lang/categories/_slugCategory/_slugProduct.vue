@@ -1,5 +1,5 @@
 <template>
-  <v-container class="oneProduct-content" v-if="product">
+  <div class="oneProduct-content" v-if="product">
 
     <v-img src="/Main-banner.jpeg" class="banner-search">
       <div class="banner-search-wrapper">
@@ -30,37 +30,36 @@
                   {{ currency.abbr }}
                 </p>
 
-<!--                <sizes :product="product" v-if="product.subproducts.length"/>-->
+                <!--                <sizes :product="product" v-if="product.subproducts.length"/>-->
 
-<!--                <div class="mt-4" v-else>-->
-                  <!--                  <near-buy-sub-product-btn :product="product"></near-buy-sub-product-btn>-->
-<!--                </div>-->
+                <!--                <div class="mt-4" v-else>-->
+                <!--                  <near-buy-sub-product-btn :product="product"></near-buy-sub-product-btn>-->
+                <!--                </div>-->
 
                 <properties-area :properties="properties"></properties-area>
 
-                <about-area :text="product.translation.body"
-                            :brandText="product.brand.translation.description"></about-area>
 
+              </v-col>
+              <v-col class="col-lg-12 col-12">
+                <about-area :text="product.translation.body"></about-area>
               </v-col>
             </v-row>
           </div>
         </v-col>
-        <v-col class="col-12"></v-col>
 
         <v-col class="col-12 mt-lg-8">
-          <v-row>
-            <v-col class="col-12 mt-lg-8" v-if="similars">
-              <h3 class="additional-title">{{ $trans('DetailsProductSet', 'similarProducts') }}</h3>
-              <similar-slider :similars="similars"/>
-            </v-col>
-          </v-row>
+                    <v-row>
+                      <v-col class="col-12 mt-lg-8" v-if="similars.length">
+                        <h3 class="additional-title">{{ $trans('DetailsProductSet', 'similarProducts') }}</h3>
+                        <similar-slider :similars="similars"/>
+                      </v-col>
+                    </v-row>
         </v-col>
 
       </v-row>
     </v-container>
-    <!--    <zoom v-if="zoom" @closeZoom="zoom = false" :mainImage="mainImage" :productImages="productImages" path="products"/>-->
 
-  </v-container>
+  </div>
 </template>
 
 <script>

@@ -7,7 +7,7 @@
 
     <div class="h-sections">
 
-      <section class="h-section" v-for="(item, index) in items" :key="index">
+      <section class="h-section" v-for="(item, index) in items" :key="index" v-if="item.view.products.length">
 
         <h3 class="h-section__title">
           {{ item.view.translation.name }}

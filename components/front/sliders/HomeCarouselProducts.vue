@@ -8,7 +8,7 @@
       <div class="h-slider__item" v-for="(product, i) in products" :key="i" v-if="product.main_image && i < 5">
         <nuxt-link :to="`/ro/categories/${category.alias}/${product.alias}`" class="h-slider__item-inner">
           <div class="h-slider__image">
-            <img :src="`https://back.soledynft.shop/images/products/sm/${product.main_image.src}`">
+            <img :src="`https://back.chainlib.xyz/images/products/sm/${product.main_image.src}`">
           </div>
         </nuxt-link>
         <nuxt-link :to="`/ro/categories/${category.alias}/${product.alias}`" class="h-slider__item-inner">
@@ -59,6 +59,9 @@ export default {
         infinite: true
       }
     }
+  },
+  mounted() {
+    console.log(this.products)
   },
   methods: {
     nextSlide() {

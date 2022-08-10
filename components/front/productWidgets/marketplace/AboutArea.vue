@@ -2,14 +2,13 @@
   <div class="about-area">
     <h3 class="about-title">Description:</h3>
     <p class="productOne__bloc-text" v-html="text"></p>
-<!--    <p class="productOne__bloc-text" v-html="brandText"></p>-->
   </div>
 </template>
 
 <script>
 export default {
   name: "AboutArea",
-  props: ['text', 'brandText']
+  props: ['text']
 }
 </script>
 
