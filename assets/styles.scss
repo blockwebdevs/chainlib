@@ -1348,7 +1348,7 @@ button.v-expansion-panel-header {
   .properties-area-item {
     display: block;
     overflow: hidden;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
     p {
       display: block;
@@ -1356,13 +1356,14 @@ button.v-expansion-panel-header {
     }
 
     .properties-area-item-name {
-      font-size: 18px;
-      text-transform: uppercase;
+      //font-size: 18px;
+      //text-transform: uppercase;
       width: 200px;
       float: left;
     }
 
     .properties-area-item-value{
+      //font-size: 18px;
       float: left;
       width: 200px;
     }

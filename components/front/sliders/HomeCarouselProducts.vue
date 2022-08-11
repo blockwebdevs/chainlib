@@ -88,8 +88,6 @@ export default {
     padding: 25px 16px;
 
     &-inner {
-      //-webkit-box-shadow: 0 11px 20px 0 rgba(111, 111, 111, 0.51);
-      //box-shadow: 0 11px 20px 0 rgba(111, 111, 111, 0.51);
       display: flex;
       align-items: flex-end;
       justify-content: center;

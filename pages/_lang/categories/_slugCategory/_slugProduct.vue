@@ -19,7 +19,8 @@
                                     :productImages="product.images"
                                     path="products"/>
               </v-col>
-              <v-col class="col-lg-8 col-12">
+              <v-col class="col-lg-1 col-12"></v-col>
+              <v-col class="col-lg-7 col-12">
                 <h2 class="productOne__name">{{ product.translation.name }}</h2>
                 <p class="productOne__price mb-4">
                   {{ product.personal_price.price }}
@@ -48,12 +49,12 @@
         </v-col>
 
         <v-col class="col-12 mt-lg-8">
-                    <v-row>
-                      <v-col class="col-12 mt-lg-8" v-if="similars.length">
-                        <h3 class="additional-title">{{ $trans('DetailsProductSet', 'similarProducts') }}</h3>
-                        <similar-slider :similars="similars"/>
-                      </v-col>
-                    </v-row>
+          <v-row>
+            <v-col class="col-12 mt-lg-8" v-if="similars.length">
+              <h3 class="additional-title">Similar books:</h3>
+              <similar-slider :similars="similars"/>
+            </v-col>
+          </v-row>
         </v-col>
 
       </v-row>

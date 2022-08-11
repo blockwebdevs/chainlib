@@ -4,7 +4,15 @@
       <div class="a-slider__item" v-for="(similar, i) in similars" :key="i">
         <nuxt-link :to="`/ro/categories/${similar.category.alias}/${similar.alias}`" class="a-slider__item-inner">
           <div class="a-slider__image">
-            <v-img :src="`https://back.soledynft.shop/images/products/sm/${similar.main_image.src}`"></v-img>
+            <v-img :src="`https://back.chainlib.xyz/images/products/sm/${similar.main_image.src}`"></v-img>
+          </div>
+        </nuxt-link>
+        <nuxt-link :to="`/ro/categories/${similar.category.alias}/${similar.alias}`" class="h-slider__item-inner">
+          <div class="product-description">
+            <h3>{{ similar.translation.name }}</h3>
+            <p>
+              {{ similar.translation.body.substring(0, 145) + "..." }}
+            </p>
           </div>
         </nuxt-link>
       </div>
@@ -62,16 +70,26 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .a-slider {
+  .product-description {
+    background-color: #686868;
+    color: #FFF;
+    padding: 20px;
+  }
   &__item {
     position: relative;
     display: block;
     padding: 25px 16px;
-  }
 
-  &__inner {
-    display: block;
+    &__inner {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background-color: #686868;
+      color: #FFF;
+      padding: 25px;
+    }
   }
 
   &__image {
@@ -105,4 +123,10 @@ export default {
   }
 }
 
+.h-section__title {
+  color: #ED6D5E;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 30px;
+}
 </style>
