@@ -4,6 +4,12 @@ const backURL = `${process.env.API}`
 
 export default {
 
+    async submitBook(data, cb){
+        await axios.post(`${backURL}/en/api/book`, data)
+            .then(response => cb(response.data))
+            .catch(err => console.log(err) )
+    },
+
     async getInitSettings(cb){
         await axios.get(`${backURL}/api/settings`)
             .then(response => cb(response.data))

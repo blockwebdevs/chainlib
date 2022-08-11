@@ -17,6 +17,7 @@
             immediately for further completion of the library's holdings.
           </p>
         </v-col>
+
         <v-col class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
           <h3 class="c-title my-3">
             Submit a Book Proposal
@@ -26,49 +27,128 @@
               ref="form"
               v-model="valid"
               lazy-validation
-              v-if="!formSended"
-          >
+              v-if="!formSended">
+
+            <v-select
+                v-if="categories"
+                :items="categories"
+                item-text="translation.name"
+                item-value="id"
+                label="Category"
+                color="primary"
+                outlined
+                required
+                v-model="form.categorySelected"
+            >
+            </v-select>
             <v-text-field
-                v-model="form.name"
+                v-model="form.title"
                 dense outlined
-                :rules="nameRules"
-                label="Title and the author"
+                :rules="titleRules"
+                label="Title"
                 required
             ></v-text-field>
             <v-text-field
+                v-model="form.author"
+                dense outlined
+                :rules="authorRules"
+                label="Author"
+                required
+            ></v-text-field>
+            <v-text-field
+                v-model="form.secondAuthor"
+                dense outlined
+                :rules="secondAuthorRules"
+                label="Second Author"
+                required
+            ></v-text-field>
+            <v-text-field
+                v-model="form.illustrator"
+                dense outlined
+                :rules="illustratorRules"
+                label="Illustrator"
+                required
+            ></v-text-field>
+            <v-text-field
+                v-model="form.subject"
+                dense outlined
+                :rules="subjectRules"
+                label="Subject"
+                required
+            ></v-text-field>
+            <v-text-field
+                type="number"
+                v-model="form.publication"
+                dense outlined
+                :rules="publicationRules"
+                label="Publication"
+                required
+            ></v-text-field>
+            <v-text-field
+                v-model="form.language"
+                dense outlined
+                :rules="languageRules"
+                label="Language"
+                required
+            ></v-text-field>
+            <v-text-field
+                v-model="form.country"
+                dense outlined
+                :rules="countryRules"
+                label="Country"
+                required
+            ></v-text-field>
+            <v-text-field
+                v-model="form.isbn"
+                dense outlined
+                :rules="isbnRules"
+                label="ISBN"
+                required
+            ></v-text-field>
+            <v-textarea
+                dense outlined
+                v-model="form.description"
+                :rules="descriptionRules"
+                name="input-7-4"
+                label="Description"
+                hint="Hint text"
+            ></v-textarea>
+            <v-file-input
+                @change="previewImage($event)"
+                v-model="form.image"
+                :rules="imageRules"
+                label="Book Cover"
+            >
+            </v-file-input>
+            <v-img :src="form.url" v-if="form.url && form.image"></v-img>
+            <v-text-field
                 v-model="form.name"
                 dense outlined
                 :rules="nameRules"
-                :label="trans.ContactsAndForms.labelName"
+                label="Your Full Name"
                 required
             ></v-text-field>
             <v-text-field
                 dense outlined
                 v-model="form.email"
                 :rules="emailRules"
-                :label="$trans('ContactsAndForms', 'labelCommunicationMethodOptionEmail')"
+                label="Your Email"
                 required
             ></v-text-field>
             <v-text-field
                 dense outlined
                 v-model="form.phone"
                 :rules="phoneRules"
-                :label="trans.ContactsAndForms.labelPhone"
+                label="Your Phone"
                 required
             ></v-text-field>
-            <v-textarea
-                dense outlined
-                v-model="form.message"
-                name="input-7-4"
-                label="Description"
-                hint="Hint text"
-            ></v-textarea>
+
             <v-btn
                 @click="submitFeedback()"
                 color="accent text--white"
                 class="mr-4 btn-primary-text"
             >
-              {{ $trans('ContactsAndForms', 'sendButton') }}
+              Submit
             </v-btn>
           </v-form>
           <v-card-text v-else>
@@ -77,7 +157,7 @@
                 text
                 type="success"
             >
-              Datele au fost transmise cu succes!!!
+              Thank you, the book will appear online after moderation.
             </v-alert>
           </v-card-text>
         </v-col>
@@ -89,7 +169,7 @@
 <script>
 
 import {mapGetters} from 'vuex'
-import userApi from '@/api/userApi'
+import contentApi from '@/api/contentApi'
 import Search from "~/components/front/partials/Search";
 
 export default {
@@ -113,11 +193,57 @@ export default {
     description: '',
     valid: true,
     form: {
+      categorySelected: 1,
+      title: '',
+      author: '',
+      secondAuthor: '',
+      illustrator: '',
+      publication: '',
+      subject: '',
+      country: '',
+      language: '',
+      isbn: '',
+      description: '',
       name: '',
       email: '',
       phone: '',
-      message: '',
+      url: null,
+      image: null,
     },
+    titleRules: [
+      v => !!v || 'Title is required',
+      v => (v && v.length <= 10) || 'Title must be less than 10 characters',
+    ],
+    authorRules: [
+      v => !!v || 'Author is required',
+    ],
+    secondAuthorRules: [
+      v => !!v || 'Second Author is required',
+    ],
+    illustratorRules: [
+      v => !!v || 'Illustrator is required',
+    ],
+    publicationRules: [
+      v => !!v || 'Publication is required',
+    ],
+    subjectRules: [
+      v => !!v || 'Subject is required',
+    ],
+    countryRules: [
+      v => !!v || 'Country is required',
+    ],
+    languageRules: [
+      v => !!v || 'Language is required',
+    ],
+    isbnRules: [
+      v => !!v || 'ISBN is required',
+    ],
+    descriptionRules: [
+      v => !!v || 'Description is required',
+    ],
+    imageRules: [
+      v => !!v || 'Cover is required',
+    ],
     nameRules: [
       v => !!v || 'Name is required',
       v => (v && v.length <= 10) || 'Name must be less than 10 characters',
@@ -132,18 +258,31 @@ export default {
   }),
   computed: mapGetters({
     trans: 'getTranslations',
-    // user: 'chat/getUser',
+    categories: 'getCategories',
+    language: 'getLanguage',
+    currency: 'getCurrency'
   }),
   mounted() {
     this.title = this.$trans('PageNames', 'defaultPageSeoTitle')
     this.description = this.$trans('PageNames', 'defaultPageSeoDesc')
   },
   methods: {
+    previewImage(event) {
+      if (this.form.image) {
+        this.form.url = URL.createObjectURL(this.form.image)
+      }
+      // let data = new FormData();
+      // data.append('name', 'my-picture');
+      // data.append('file', event.target.files[0]);
+      // console.log(event.target)
+      // console.log(data)
+    },
     submitFeedback() {
       if (this.$refs.form.validate()) {
-        this.form.guestId = this.user._id
-        this.form.trigger = "Contact Form"
-        userApi.bookUser(this.form, async response => {
+        this.form.lang = this.language.lang
+        this.form.currency = this.currency.id
+
+        contentApi.submitBook(this.form, async response => {
           this.$refs.form.reset()
           this.formSended = true
         })
