@@ -1,7 +1,7 @@
 <template>
   <div class="h-slider">
     <VueSlickCarousel ref="homeCarousel"
-                      :infinite="true"
+                      :infinite="false"
                       :variableWidth="true"
                       :arrows="false"
                       :settings="localSettings">
