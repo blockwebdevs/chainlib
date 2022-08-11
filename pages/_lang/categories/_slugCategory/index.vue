@@ -46,7 +46,7 @@
                 <v-row class="product-item-wrapper">
 
                   <v-col class="col-lg-9 col-12 mb-2">
-                    <h2 class="mb-4 product-name">
+                    <h2 class="mb-8 product-name">
                       <nuxt-link :to="`/ro/categories/${category.alias}/${item.product.alias}`" class="product">
                         {{ item.product.translation.name }}
                       </nuxt-link>
@@ -55,7 +55,7 @@
                       <v-img v-if="item.product.main_image"
                           :src="`https://back.chainlib.xyz/images/products/sm/${item.product.main_image.src}`"></v-img>
                     </nuxt-link>
-                    <p class="product-description" v-html="item.product.translation.body"></p>
+                    <p class="product-description mb-8" v-html="item.product.translation.body"></p>
                     <div class="product-properties-list">
                       <div class="product-properties-item"
                            v-for="(property, key) in filterProperties(item.properties)"
@@ -257,5 +257,6 @@ export default {
   background-color: hsla(0, 0%, 91%, 0.8);
   padding: 30px;
   margin-bottom: 20px;
+  align-items: center;
 }
 </style>
