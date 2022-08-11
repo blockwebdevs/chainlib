@@ -73,7 +73,7 @@
     <v-list-item>
 
       <v-list-item-content>
-        <!--        <NearAuth :title="'Sign In'"/>-->
+                <NearAuth :title="'Sign In'"/>
       </v-list-item-content>
 
     </v-list-item>
