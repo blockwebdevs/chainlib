@@ -1,8 +1,8 @@
-const CONTRACT_NAME = process.env.CONTRACT_NAME || 'chainlib.near';
+const CONTRACT_NAME = process.env.CONTRACT_NAME || 'chainlib.testnet';
 
 function getConfig(env) {
 
-    const network = 'mainnet';
+    const network = 'testnet';
 
     switch (network) {
         case 'mainnet':
