@@ -113,14 +113,18 @@
                 label="Description"
                 hint="Hint text"
             ></v-textarea>
-            <v-file-input
-                @change="previewImage($event)"
-                v-model="form.image"
-                :rules="imageRules"
-                label="Book Cover"
-            >
-            </v-file-input>
-            <v-img :src="form.url" v-if="form.url && form.image"></v-img>
+            <div class="text-left mb-4">
+              <label for="image">Image</label> <br>
+              <input type="file" @change="uploadImage" name="image" id="image"  accept="image/*" >
+            </div>
+<!--            <v-file-input-->
+<!--                @change="previewImage($event)"-->
+<!--                v-model="form.image"-->
+<!--                :rules="imageRules"-->
+<!--                label="Book Cover"-->
+<!--            >-->
+<!--            </v-file-input>-->
+<!--            <v-img :src="form.url" v-if="form.url && form.image"></v-img>-->
             <v-text-field
                 v-model="form.name"
                 dense outlined
@@ -171,6 +175,7 @@
 import {mapGetters} from 'vuex'
 import contentApi from '@/api/contentApi'
 import Search from "~/components/front/partials/Search";
+import axios from "axios";
 
 export default {
   layout: "default",
@@ -192,6 +197,7 @@ export default {
     title: '',
     description: '',
     valid: true,
+    file: '',
     form: {
       categorySelected: 1,
       title: '',
@@ -267,25 +273,80 @@ export default {
     this.description = this.$trans('PageNames', 'defaultPageSeoDesc')
   },
   methods: {
+    uploadImage (e) {
+      this.file = e.target.files[0];
+    },
     previewImage(event) {
       if (this.form.image) {
         this.form.url = URL.createObjectURL(this.form.image)
+        const fd = new FormData()
+        fd.append('image', this.form.image)
+        this.form.image = fd
+        // console.log(fd)
       }
+      // let img = event.target.files[0]
+      // let fd= new FormData()
+      //
+      // fd.append('image', img)
+      //
+      // console.log(fd)
       // let data = new FormData();
       // data.append('name', 'my-picture');
       // data.append('file', event.target.files[0]);
       // console.log(event.target)
       // console.log(data)
     },
-    submitFeedback() {
+    async submitFeedback() {
       if (this.$refs.form.validate()) {
+        const config = {
+          headers: {
+            'content-type': 'multipart/form-data'
+          }
+        }
+
         this.form.lang = this.language.lang
         this.form.currency = this.currency.id
 
-        contentApi.submitBook(this.form, async response => {
-          this.$refs.form.reset()
-          this.formSended = true
-        })
+        const data = new FormData();
+        const backURL = `${process.env.API}`
+
+        data.append('file', this.file);
+        data.append('categorySelected', this.form.categorySelected);
+        data.append('title', this.form.title);
+        data.append('author', this.form.author);
+        data.append('secondAuthor', this.form.secondAuthor);
+        data.append('illustrator', this.form.illustrator);
+        data.append('publication', this.form.publication);
+        data.append('subject', this.form.subject);
+        data.append('country', this.form.country);
+        data.append('language', this.form.language);
+        data.append('description', this.form.description);
+        data.append('name', this.form.name);
+        data.append('email', this.form.email);
+        data.append('phone', this.form.phone);
+        data.append('url', this.form.url);
+        data.append('url', this.form.url);
+
+        let vm = this;
+
+        await axios.post(`${backURL}/en/api/book`, data, config)
+            .then(function (res) {
+              vm.formSended = true
+              // this.$refs.form.reset()
+            })
+            .catch(function (err) {
+              vm.formSended = true
+              // this.$refs.form.reset()
+            });
+
+        // this.form.lang = this.language.lang
+        // this.form.currency = this.currency.id
+        //
+        // console.log(this.form)
+        // contentApi.submitBook(this.form, async response => {
+        //   this.$refs.form.reset()
+        //   this.formSended = true
+        // })
       }
     },
     validate() {
