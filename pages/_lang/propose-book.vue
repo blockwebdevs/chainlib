@@ -115,21 +115,28 @@
             ></v-textarea>
             <div class="text-left mb-4">
               <label for="image">Image</label> <br>
-              <input type="file" @change="uploadImage" name="image" id="image"  accept="image/*" >
+              <input type="file" @change="uploadImage" name="image" id="image" accept="image/*">
             </div>
-<!--            <v-file-input-->
-<!--                @change="previewImage($event)"-->
-<!--                v-model="form.image"-->
-<!--                :rules="imageRules"-->
-<!--                label="Book Cover"-->
-<!--            >-->
-<!--            </v-file-input>-->
-<!--            <v-img :src="form.url" v-if="form.url && form.image"></v-img>-->
+            <!--            <v-file-input-->
+            <!--                @change="previewImage($event)"-->
+            <!--                v-model="form.image"-->
+            <!--                :rules="imageRules"-->
+            <!--                label="Book Cover"-->
+            <!--            >-->
+            <!--            </v-file-input>-->
+            <!--            <v-img :src="form.url" v-if="form.url && form.image"></v-img>-->
             <v-text-field
                 v-model="form.name"
                 dense outlined
                 :rules="nameRules"
                 label="Your Full Name"
+                required
+            ></v-text-field>
+            <v-text-field
+                v-model="form.nearAcc"
+                dense outlined
+                :rules="nearAccRules"
+                label="Your Near Account"
                 required
             ></v-text-field>
             <v-text-field
@@ -211,6 +218,7 @@ export default {
       isbn: '',
       description: '',
       name: '',
+      nearAcc: '',
       email: '',
       phone: '',
       url: null,
@@ -254,6 +262,10 @@ export default {
       v => !!v || 'Name is required',
       v => (v && v.length <= 10) || 'Name must be less than 10 characters',
     ],
+    nearAccRules: [
+      v => !!v || 'Near Account is required',
+      v => (v && v.length <= 10) || 'Near Account must be less than 10 characters',
+    ],
     emailRules: [
       v => !!v || 'E-mail is required',
       v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
@@ -273,28 +285,8 @@ export default {
     this.description = this.$trans('PageNames', 'defaultPageSeoDesc')
   },
   methods: {
-    uploadImage (e) {
+    uploadImage(e) {
       this.file = e.target.files[0];
-    },
-    previewImage(event) {
-      if (this.form.image) {
-        this.form.url = URL.createObjectURL(this.form.image)
-        const fd = new FormData()
-        fd.append('image', this.form.image)
-        this.form.image = fd
-        // console.log(fd)
-      }
-      // let img = event.target.files[0]
-      // let fd= new FormData()
-      //
-      // fd.append('image', img)
-      //
-      // console.log(fd)
-      // let data = new FormData();
-      // data.append('name', 'my-picture');
-      // data.append('file', event.target.files[0]);
-      // console.log(event.target)
-      // console.log(data)
     },
     async submitFeedback() {
       if (this.$refs.form.validate()) {
@@ -303,7 +295,6 @@ export default {
             'content-type': 'multipart/form-data'
           }
         }
-
         this.form.lang = this.language.lang
         this.form.currency = this.currency.id
 
@@ -322,6 +313,7 @@ export default {
         data.append('language', this.form.language);
         data.append('description', this.form.description);
         data.append('name', this.form.name);
+        data.append('nearAcc', this.form.nearAcc);
         data.append('email', this.form.email);
         data.append('phone', this.form.phone);
         data.append('url', this.form.url);
@@ -332,21 +324,10 @@ export default {
         await axios.post(`${backURL}/en/api/book`, data, config)
             .then(function (res) {
               vm.formSended = true
-              // this.$refs.form.reset()
             })
             .catch(function (err) {
               vm.formSended = true
-              // this.$refs.form.reset()
             });
-
-        // this.form.lang = this.language.lang
-        // this.form.currency = this.currency.id
-        //
-        // console.log(this.form)
-        // contentApi.submitBook(this.form, async response => {
-        //   this.$refs.form.reset()
-        //   this.formSended = true
-        // })
       }
     },
     validate() {
