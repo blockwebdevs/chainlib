@@ -13,7 +13,7 @@
         <v-col class="col-12">
           <div class="productOne mt-6">
             <v-row class="justify-space-between">
-              <v-col class="col-lg-4 col-12">
+              <v-col class="col-lg-4 col-12 slider-img-wrap">
                 <slider-one-product :images="product.images"
                                     @openZoom="openZoom"
                                     :productImages="product.images"
@@ -39,6 +39,7 @@
 
                 <properties-area :properties="properties"></properties-area>
 
+                <details-area></details-area>
 
               </v-col>
               <v-col class="col-lg-12 col-12">
@@ -50,9 +51,9 @@
 
         <v-col class="col-12 mt-lg-8">
           <v-row>
-            <v-col class="col-12 mt-lg-8" v-if="similars.length">
+            <v-col class="col-12 mt-lg-8" v-if="similar.length">
               <h3 class="additional-title">Similar books:</h3>
-              <similar-slider :similars="similars"/>
+              <similar-slider :similars="similar"/>
             </v-col>
           </v-row>
         </v-col>
@@ -69,7 +70,7 @@ import {mapGetters} from 'vuex'
 import contentApi from '@/api/contentApi'
 import userApi from "~/api/userApi";
 import SliderOneProduct from '@/components/front/sliders/SliderOneProduct.vue'
-import SimilarSlider from '@/components/front/sliders/SimilarCarousel.vue'
+import similarSlider from '@/components/front/sliders/SimilarCarousel.vue'
 import CartBtn from '~/components/front/cart/CartBtn.vue'
 import Sizes from '@/components/front/productWidgets/Sizes.vue'
 import Zoom from '@/components/front/productWidgets/Zoom.vue'
@@ -79,12 +80,38 @@ import PropertiesArea from "@/components/front/productWidgets/marketplace/Proper
 import OffersArea from "~/components/front/productWidgets/marketplace/OffersArea";
 import AboutArea from "~/components/front/productWidgets/marketplace/AboutArea";
 import DetailsArea from "~/components/front/productWidgets/marketplace/DetailsArea";
+import gql from 'graphql-tag'
+
+const THING_QUERY = gql`
+  query THING_QUERY($id: String!) {
+    thing (where: {id: {_eq: $id}}) {
+       id
+    metadata {
+      title
+      description
+      tags
+      media
+      category
+      external_url
+    }
+    tokens {
+      id
+      minter
+      list {
+        price
+        contractId
+        ownerId
+      }
+    }
+  }
+  }
+`;
 
 export default {
   components: {
     NearBuySubProductBtn,
     SliderOneProduct,
-    SimilarSlider,
+    similarSlider,
     Sizes,
     Zoom,
     CartBtn,
@@ -95,27 +122,40 @@ export default {
     DetailsArea
   },
   async asyncData({app, params, store}) {
+    const client = app.apolloProvider.defaultClient;
     let prod = null
-    let similars1 = null
-    let properties = null
-    let offers = null
+    let similar = []
+    let properties = []
+    let offers = []
 
     await contentApi.getProduct({
       lang: store.state.lang.lang,
       alias: params.slugProduct,
       currency: store.state.currency.id
     }, data => {
+      console.log(data)
       prod = data.product
-      similars1 = data.similars
+      similar = data.similars
       properties = data.properties
       offers = data.offers
     })
+
+    const id = 'eztziXSDJ0pdkIo7Zgk9X-YrisItu7GkC5BHS23iRl8:art.mintspace2.testnet';
+
+    const res = await client.query({
+      query: THING_QUERY,
+      variables: { id },
+    })
+
+    const { thing } = res.data;
+    
     return {
-      similars: similars1,
+      similar,
       product: prod,
       productImages: prod.images,
       properties: properties,
-      offers: offers
+      offers: offers,
+      thing
     }
   },
   watch: {
@@ -126,7 +166,7 @@ export default {
         currency: this.currency.id
       }, data => {
         this.product = data.product
-        this.similars = data.similars
+        this.similar = data.similar
         this.offers = data.offers
         this.properties = data.properties
         this.productImages = this.product.images
@@ -149,7 +189,7 @@ export default {
       readonly: false
     }
   },
-  mounted() {
+  async mounted() {
     this.$nuxt.$on('update-product-offers', data => {
       this.updateOffers();
     });

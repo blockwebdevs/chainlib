@@ -61,7 +61,16 @@ module.exports = {
         'nuxt-mobile',
         'cookie-universal-nuxt',
         '@nuxtjs/gtm',
+        '@nuxtjs/apollo',
     ],
+    // Apollo configuration
+    apollo: {
+        clientConfigs: {
+            default: {
+                httpEndpoint: 'https://mintbase-testnet.hasura.app/v1/graphql',
+            },
+        },
+    },
     gtm: {
         id: 'GTM-NSG9WZ3'
     },
