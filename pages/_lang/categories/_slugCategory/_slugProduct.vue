@@ -20,7 +20,9 @@
                                       :productImages="product.images"
                                       path="products"/>
                 </div>
-                <details-area :thing="thing"></details-area>
+<!--                {{ thing.length }}-->
+
+                <details-area :thing="thing" v-if="thing.length > 0"></details-area>
               </v-col>
               <v-col class="col-lg-8 col-12 book-property-area">
                 <h2 class="productOne__name">{{ product.translation.name }}</h2>
@@ -150,27 +152,35 @@ export default {
     let similar = []
     let properties = []
     let offers = []
+    let thingMB = [];
 
     await contentApi.getProduct({
       lang: store.state.lang.lang,
       alias: params.slugProduct,
       currency: store.state.currency.id
     }, data => {
-      console.log(data)
+      // console.log(data)
       prod = data.product
       similar = data.similars
       properties = data.properties
       offers = data.offers
     })
 
-    const id = 'eztziXSDJ0pdkIo7Zgk9X-YrisItu7GkC5BHS23iRl8:art.mintspace2.testnet';
+    // const id = 'eztziXSDJ0pdkIo7Zgk9X-YrisItu7GkC5BHS23iRl8:art.mintspace2.testnet';
 
-    const res = await client.query({
-      query: THING_QUERY,
-      variables: {id},
-    })
+    console.log(prod.translation.description, 'gere')
 
-    const {thing} = res.data;
+    if (prod.translation.description) {
+      const id = prod.translation.description;
+
+      const res = await client.query({
+        query: THING_QUERY,
+        variables: {id},
+      })
+
+      const {thing} = res.data;
+      thingMB = thing
+    }
 
     return {
       similar,
@@ -178,7 +188,7 @@ export default {
       productImages: prod.images,
       properties: properties,
       offers: offers,
-      thing
+      thing: thingMB
     }
   },
   watch: {

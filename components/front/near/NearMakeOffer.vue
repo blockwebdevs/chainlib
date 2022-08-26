@@ -6,7 +6,7 @@
         max-width="600"
     >
       <template v-slot:activator="{ on, attrs }">
-        <v-btn color="primary" width="200" v-bind="attrs" v-on="on">
+        <v-btn width="200" v-bind="attrs" v-on="on">
           <v-icon>mdi-label-multiple-outline</v-icon>
           Make Offer
         </v-btn>
@@ -47,7 +47,7 @@
             <h2 class="mt-4 text-center">Thank you, your offer is in process.</h2>
             <h3 class="mt-4 text-center"><i>{{ sent }}</i></h3>
             <v-btn
-                class="mr-4 mt-4"
+                class="mr-4 mt-4 primary"
                 @click="dialog.value = false" block
             >
               Close

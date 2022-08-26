@@ -38,7 +38,7 @@
     <span class="details-area-item">
       <p class="details-area-item-name">Thing ID</p>
       <p class="details-area-item-value">
-        {{ thing[0].id }}
+        <small>{{ thing[0].id }}</small>
       </p>
     </span>
 
