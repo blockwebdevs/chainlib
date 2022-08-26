@@ -47,7 +47,7 @@
             <h2 class="mt-4 text-center">Thank you, your offer is in process.</h2>
             <h3 class="mt-4 text-center"><i>{{ sent }}</i></h3>
             <v-btn
-                class="mr-4 mt-4 primary"
+                class="mr-4 mt-4"
                 @click="dialog.value = false" block
             >
               Close

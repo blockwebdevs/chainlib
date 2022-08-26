@@ -37,6 +37,9 @@
 export default {
   name: "OffersArea",
   props: ['offers'],
+  mounted() {
+    console.log(this.offers)
+  }
 }
 </script>
 

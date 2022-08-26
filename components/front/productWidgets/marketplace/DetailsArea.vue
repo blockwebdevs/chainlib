@@ -1,19 +1,44 @@
 <template>
   <div class="details-area">
-
     <span class="details-area-item">
-      <p class="details-area-item-name">Contract Address</p>
+      <p class="details-area-item-name">Store</p>
       <p class="details-area-item-value">
-        <a href="https://explorer.mainnet.near.org/accounts/soledy.near" target="_blank">
-          https://explorer.mainnet.near.org/accounts/soledy.near
-        </a>
+        {{ thing[0].storeId }}
       </p>
     </span>
 
     <span class="details-area-item">
-      <p class="details-area-item-name">Token ID</p>
-      <p class="details-area-item-value">soledy.near
-<!--        <small>8PhhyumpYC5EGoNtjQkZTEfgsw8xeicD9W5of2Hup3VS</small>-->
+      <p class="details-area-item-name">Minter</p>
+      <p class="details-area-item-value">
+        {{ thing[0].tokens[0].minter }}
+      </p>
+    </span>
+
+    <span class="details-area-item">
+      <p class="details-area-item-name">Owner</p>
+      <p class="details-area-item-value">
+         {{ thing[0].tokens[0].ownerId }}
+      </p>
+    </span>
+
+    <span class="details-area-item">
+      <p class="details-area-item-name">Storage Gateway</p>
+      <p class="details-area-item-value">
+        https://arweave.net
+      </p>
+    </span>
+
+    <span class="details-area-item">
+      <p class="details-area-item-name">Contract</p>
+      <p class="details-area-item-value">
+          {{ thing[0].tokens[0].list.contractId }}
+      </p>
+    </span>
+
+    <span class="details-area-item">
+      <p class="details-area-item-name">Thing ID</p>
+      <p class="details-area-item-value">
+        {{ thing[0].id }}
       </p>
     </span>
 
@@ -22,7 +47,11 @@
 
 <script>
 export default {
-  name: "DetailsArea"
+  name: "DetailsArea",
+  props: ['thing'],
+  mounted() {
+    console.log(this.thing)
+  }
 }
 </script>
 

@@ -1342,39 +1342,11 @@ button.v-expansion-panel-header {
   margin-left: 20px;
 }
 
-//.properties-area {
-//  margin-top: 30px;
-//
-//  .properties-area-item {
-//    display: block;
-//    overflow: hidden;
-//    margin-bottom: 10px;
-//
-//    p {
-//      display: block;
-//      margin-bottom: 0;
-//    }
-//
-//    .properties-area-item-name {
-//      //font-size: 18px;
-//      //text-transform: uppercase;
-//      width: 200px;
-//      float: left;
-//    }
-//
-//    .properties-area-item-value{
-//      //font-size: 18px;
-//      float: left;
-//      width: 200px;
-//    }
-//  }
-//}
 .slider-img-wrap {
   border: 1px solid rgba(237,109,94, 0.8);
 }
 
 .properties-area {
-  //display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -1382,8 +1354,8 @@ button.v-expansion-panel-header {
   .properties-area-item {
     width: 48%;
     margin: 1%;
-    background-color: rgba(237,109,94, 0.9);
-    padding: 8px 15px;
+    background-color: #e96535;
+    padding: 5px 15px;
     color: #5C591A;
     float: left;
     p {
@@ -1397,21 +1369,20 @@ button.v-expansion-panel-header {
     }
 
     .properties-area-item-value {
-      font-size: 18px;
+      font-size: 15px;
       color: #FFF;
     }
   }
 }
 
 .details-area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 
   .details-area-item {
-    width: 50%;
-    margin: 1%;
-    background-color: #eddcd5;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    background-color: rgba(239,123,110, .4);
     padding: 5px 15px;
     color: #5C591A;
 
@@ -1425,15 +1396,14 @@ button.v-expansion-panel-header {
     }
 
     .details-area-item-value {
-      font-size: 13px;
-      color: #e96535;
+      font-size: 15px;
     }
   }
 }
 
 .offers-area {
   table {
-    background-color: #eddcd5;
+    background-color: rgba(239,123,110, .4);
     color: #e96535;
   }
 
@@ -1463,4 +1433,9 @@ h1 {
   color: #ed6d5e;
   line-height: 1;
   margin-top: 30px;
+}
+
+.v-expansion-panel {
+  border-bottom: 1px solid #EEE;
+  border-radius: 0px !important;
 }

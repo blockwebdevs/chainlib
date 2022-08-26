@@ -13,14 +13,16 @@
         <v-col class="col-12">
           <div class="productOne mt-6">
             <v-row class="justify-space-between">
-              <v-col class="col-lg-4 col-12 slider-img-wrap">
-                <slider-one-product :images="product.images"
-                                    @openZoom="openZoom"
-                                    :productImages="product.images"
-                                    path="products"/>
+              <v-col class="col-lg-4 col-12">
+                <div class="slider-img-wrap">
+                  <slider-one-product :images="product.images"
+                                      @openZoom="openZoom"
+                                      :productImages="product.images"
+                                      path="products"/>
+                </div>
+                <details-area :thing="thing"></details-area>
               </v-col>
-              <v-col class="col-lg-1 col-12"></v-col>
-              <v-col class="col-lg-7 col-12">
+              <v-col class="col-lg-8 col-12 book-property-area">
                 <h2 class="productOne__name">{{ product.translation.name }}</h2>
                 <p class="productOne__price mb-4">
                   {{ product.personal_price.price }}
@@ -31,15 +33,33 @@
                   {{ currency.abbr }}
                 </p>
 
-                <!--                <sizes :product="product" v-if="product.subproducts.length"/>-->
+                <sizes :product="product" v-if="product.subproducts.length"/>
 
-                <!--                <div class="mt-4" v-else>-->
-                <!--                  <near-buy-sub-product-btn :product="product"></near-buy-sub-product-btn>-->
-                <!--                </div>-->
+                <div class="mt-4" v-else>
+                  <near-buy-sub-product-btn :product="product"></near-buy-sub-product-btn>
+                </div>
 
-                <properties-area :properties="properties"></properties-area>
+                <v-expansion-panels focusable
+                                    v-model="panel"
+                                    :readonly="readonly"
+                                    multiple>
+                  <v-expansion-panel>
 
-                <details-area></details-area>
+                    <v-expansion-panel-header>Properties</v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <properties-area :properties="properties"></properties-area>
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+
+                  <v-expansion-panel>
+                    <v-expansion-panel-header>Offers</v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <offers-area :offers="offers" v-if="offers.length"></offers-area>
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+
+                </v-expansion-panels>
+
 
               </v-col>
               <v-col class="col-lg-12 col-12">
@@ -86,6 +106,7 @@ const THING_QUERY = gql`
   query THING_QUERY($id: String!) {
     thing (where: {id: {_eq: $id}}) {
        id
+       storeId
     metadata {
       title
       description
@@ -97,7 +118,9 @@ const THING_QUERY = gql`
     tokens {
       id
       minter
+      ownerId
       list {
+        contractId
         price
         contractId
         ownerId
@@ -144,11 +167,11 @@ export default {
 
     const res = await client.query({
       query: THING_QUERY,
-      variables: { id },
+      variables: {id},
     })
 
-    const { thing } = res.data;
-    
+    const {thing} = res.data;
+
     return {
       similar,
       product: prod,
@@ -346,11 +369,11 @@ export default {
 
   .v-expansion-panel,
   .v-expansion-panel__header {
-    background-color: $bcg-body !important;
+    background-color: #FFF !important;
   }
 
   .v-expansion-panel-content__wrap {
-    padding: 0 30px !important;
+    padding: 0 15px !important;
   }
 
   &__exp &__bloc-text {
@@ -568,5 +591,19 @@ export default {
 
 .v-expansion-panel-header {
   max-width: 100% !important;
+  background-color: #FFF !important;
+  text-transform: uppercase;
+}
+
+.v-expansion-panel-header--active {
+  background-color: transparent !important;
+}
+
+.v-expansion-panel-header:before {
+  background-color: transparent !important;
+}
+
+.book-property-area {
+  padding: 0 30px;
 }
 </style>

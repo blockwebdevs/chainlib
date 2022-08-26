@@ -1,12 +1,12 @@
 <template>
   <div class="buy-btn-area">
 
-    <v-btn color="primary" @click="buy" width="200" v-if="currentUser">
-      <v-icon>mdi-cart</v-icon>
-      Buy with Near
-    </v-btn>
+<!--    <v-btn color="primary" @click="buy" width="200" v-if="currentUser">-->
+<!--      <v-icon>mdi-cart</v-icon>-->
+<!--      Buy with Near-->
+<!--    </v-btn>-->
 
-    <near-auth :title="'Buy with Near'" :icon="'mdi-cart'" v-else></near-auth>
+<!--    <near-auth :title="'Buy with Near'" :icon="'mdi-cart'" v-else></near-auth>-->
 
     <near-make-offer :item-id="product.id" type="'subProduct'"></near-make-offer>
 
