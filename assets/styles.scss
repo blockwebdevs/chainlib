@@ -1379,12 +1379,13 @@ button.v-expansion-panel-header {
   overflow: hidden;
 
   .details-area-item {
-    width: 100%;
+    width: 48%;
+    float: left;
+    margin: 1%;
     display: block;
-    margin-top: 10px;
-    background-color: rgba(239,123,110, .4);
+    background-color: #e96535;
     padding: 5px 15px;
-    color: #5C591A;
+    color: #FFF;
 
     p {
       display: block;
@@ -1403,8 +1404,11 @@ button.v-expansion-panel-header {
 
 .offers-area {
   table {
-    background-color: rgba(239,123,110, .4);
     color: #e96535;
+    tr:hover {
+      background-color: #e96535 !important;
+      color: #FFF;
+    }
   }
 
   margin: 1%;

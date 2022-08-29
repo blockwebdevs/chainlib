@@ -20,9 +20,6 @@
                                       :productImages="product.images"
                                       path="products"/>
                 </div>
-<!--                {{ thing.length }}-->
-
-                <details-area :thing="thing" v-if="thing.length > 0"></details-area>
               </v-col>
               <v-col class="col-lg-8 col-12 book-property-area">
                 <h2 class="productOne__name">{{ product.translation.name }}</h2>
@@ -45,11 +42,18 @@
                                     v-model="panel"
                                     :readonly="readonly"
                                     multiple>
-                  <v-expansion-panel>
 
+                  <v-expansion-panel>
                     <v-expansion-panel-header>Properties</v-expansion-panel-header>
                     <v-expansion-panel-content>
                       <properties-area :properties="properties"></properties-area>
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+
+                  <v-expansion-panel>
+                    <v-expansion-panel-header>Details</v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <details-area :thing="thing" v-if="thing.length > 0"></details-area>
                     </v-expansion-panel-content>
                   </v-expansion-panel>
 
