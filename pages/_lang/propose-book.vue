@@ -33,7 +33,7 @@
                 v-if="categories"
                 :items="categories"
                 item-text="translation.name"
-                item-value="id"
+                item-value="translation.name"
                 label="Category"
                 color="primary"
                 outlined
@@ -117,14 +117,6 @@
               <label for="image">Image</label> <br>
               <input type="file" @change="uploadImage" name="image" id="image" accept="image/*">
             </div>
-            <!--            <v-file-input-->
-            <!--                @change="previewImage($event)"-->
-            <!--                v-model="form.image"-->
-            <!--                :rules="imageRules"-->
-            <!--                label="Book Cover"-->
-            <!--            >-->
-            <!--            </v-file-input>-->
-            <!--            <v-img :src="form.url" v-if="form.url && form.image"></v-img>-->
             <v-text-field
                 v-model="form.name"
                 dense outlined
@@ -264,7 +256,7 @@ export default {
     ],
     nearAccRules: [
       v => !!v || 'Near Account is required',
-      v => (v && v.length <= 10) || 'Near Account must be less than 10 characters',
+      v => (v && v.length <= 30) || 'Near Account must be less than 10 characters',
     ],
     emailRules: [
       v => !!v || 'E-mail is required',
@@ -318,6 +310,7 @@ export default {
         data.append('phone', this.form.phone);
         data.append('url', this.form.url);
         data.append('url', this.form.url);
+        data.append('nearAcc', this.form.nearAcc);
 
         let vm = this;
 
