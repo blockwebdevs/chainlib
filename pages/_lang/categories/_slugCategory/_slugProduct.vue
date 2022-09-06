@@ -43,21 +43,21 @@
                                     :readonly="readonly"
                                     multiple>
 
-                  <v-expansion-panel>
+                  <v-expansion-panel v-if="properties">
                     <v-expansion-panel-header>Properties</v-expansion-panel-header>
                     <v-expansion-panel-content>
                       <properties-area :properties="properties"></properties-area>
                     </v-expansion-panel-content>
                   </v-expansion-panel>
 
-                  <v-expansion-panel>
+                  <v-expansion-panel v-if="thing.length">
                     <v-expansion-panel-header>Details</v-expansion-panel-header>
                     <v-expansion-panel-content>
                       <details-area :thing="thing" v-if="thing.length > 0"></details-area>
                     </v-expansion-panel-content>
                   </v-expansion-panel>
 
-                  <v-expansion-panel>
+                  <v-expansion-panel v-if="offers.length">
                     <v-expansion-panel-header>Offers</v-expansion-panel-header>
                     <v-expansion-panel-content>
                       <offers-area :offers="offers" v-if="offers.length"></offers-area>
@@ -66,9 +66,8 @@
 
                 </v-expansion-panels>
 
-
               </v-col>
-              <v-col class="col-lg-12 col-12">
+              <v-col class="col-lg-12 col-12" v-if="product.translation.body">
                 <about-area :text="product.translation.body"></about-area>
               </v-col>
             </v-row>

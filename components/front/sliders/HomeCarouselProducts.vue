@@ -5,7 +5,7 @@
                       :variableWidth="true"
                       :arrows="false"
                       :settings="localSettings">
-      <div class="h-slider__item" v-for="(product, i) in products" :key="i" v-if="product.main_image && i < 5">
+      <div class="h-slider__item" v-for="(product, i) in products" :key="i" v-if="product.main_image">
         <nuxt-link :to="`/ro/categories/${category.alias}/${product.alias}`" class="h-slider__item-inner">
           <div class="h-slider__image">
             <img :src="`https://back.chainlib.xyz/images/products/sm/${product.main_image.src}`">
@@ -14,7 +14,7 @@
         <nuxt-link :to="`/ro/categories/${category.alias}/${product.alias}`" class="h-slider__item-inner">
           <div class="product-description">
             <h3>{{product.translation.name}}</h3>
-            <p>
+            <p v-if="product.translation.body">
               {{product.translation.body.substring(0,125)+"..."}}
             </p>
           </div>

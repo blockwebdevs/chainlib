@@ -55,7 +55,7 @@
                       <v-img v-if="item.product.main_image"
                           :src="`https://back.chainlib.xyz/images/products/sm/${item.product.main_image.src}`"></v-img>
                     </nuxt-link>
-                    <p class="product-description mb-8" v-html="item.product.translation.body.substring(0,525)+'...'"></p>
+                    <p class="product-description mb-8" v-if="item.product.translation.body" v-html="item.product.translation.body.substring(0,525)+'...'"></p>
                     <div class="product-properties-list">
                       <div class="product-properties-item"
                            v-for="(property, key) in filterProperties(item.properties)"

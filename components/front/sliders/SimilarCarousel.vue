@@ -10,7 +10,7 @@
         <nuxt-link :to="`/ro/categories/${similar.category.alias}/${similar.alias}`" class="h-slider__item-inner">
           <div class="product-description">
             <h3>{{ similar.translation.name }}</h3>
-            <p>
+            <p v-if="similar.translation.body">
               {{ similar.translation.body.substring(0, 145) + "..." }}
             </p>
           </div>
