@@ -23,20 +23,44 @@
               </v-col>
               <v-col class="col-lg-8 col-12 book-property-area">
                 <h2 class="productOne__name">{{ product.translation.name }}</h2>
-                <p class="productOne__price mb-4">
-                  {{ product.personal_price.price }}
-                  <span v-if="product.personal_price.old_price > product.personal_price.price">/</span>
-                  <span class="price__discount" v-if="product.personal_price.old_price > product.personal_price.price">
-                  {{ product.personal_price.old_price }}
-                </span>
+                <p class="productOne__price mb-4" v-if="thing.length > 0">
+                  {{ parsePrice(thing) }}
+                  <!--                  {{ product.personal_price.price }}-->
+                  <!--                  <span v-if="product.personal_price.old_price > product.personal_price.price">/</span>-->
+                  <!--                  <span class="price__discount" v-if="product.personal_price.old_price > product.personal_price.price">-->
+                  <!--                  {{ product.personal_price.old_price }}-->
+                  <!--                </span>-->
                   {{ currency.abbr }}
                 </p>
 
-                <sizes :product="product" v-if="product.subproducts.length"/>
+                <v-btn outlined color="primary"
+                       :href="`https://testnet.mintbase.io/thing/${product.translation.description}/auction?tokenId=23:art.mintspace2.testnet`"
+                       target="_blank"
+                       class="mr-20">
+                  <v-icon>mdi-label</v-icon>
+                  Make Offer
+                </v-btn>
 
-                <div class="mt-4" v-else>
-                  <near-buy-sub-product-btn :product="product"></near-buy-sub-product-btn>
-                </div>
+                <v-btn outlined color="primary"
+                       :href="`https://testnet.mintbase.io/thing/${product.translation.description}`"
+                       target="_blank" class="ml-20">
+                  <v-icon>mdi-cart</v-icon>
+                  Buy with near
+                </v-btn>
+
+<!--                <a v-if="product.translation.description"-->
+<!--                   outlined color="primary"-->
+<!--                   :href="`https://testnet.mintbase.io/thing/${product.translation.description}/auction?tokenId=23:art.mintspace2.testnet`"-->
+<!--                   target="_blank">Make Offer</a>-->
+
+<!--                <a v-if="product.translation.description"-->
+<!--                   :href="`https://testnet.mintbase.io/thing/${product.translation.description}`"-->
+<!--                   target="_blank">Buy with near</a>-->
+
+                <!--                <sizes :product="product" v-if="product.subproducts.length"/>-->
+                <!--                <div class="mt-4" v-else>-->
+                <!--                  <near-buy-sub-product-btn :product="product"></near-buy-sub-product-btn>-->
+                <!--                </div>-->
 
                 <v-expansion-panels focusable
                                     v-model="panel"
@@ -57,12 +81,12 @@
                     </v-expansion-panel-content>
                   </v-expansion-panel>
 
-                  <v-expansion-panel v-if="offers.length">
-                    <v-expansion-panel-header>Offers</v-expansion-panel-header>
-                    <v-expansion-panel-content>
-                      <offers-area :offers="offers" v-if="offers.length"></offers-area>
-                    </v-expansion-panel-content>
-                  </v-expansion-panel>
+<!--                  <v-expansion-panel v-if="offers.length">-->
+<!--                    <v-expansion-panel-header>Offers</v-expansion-panel-header>-->
+<!--                    <v-expansion-panel-content>-->
+<!--                      <offers-area :offers="offers" v-if="offers.length"></offers-area>-->
+<!--                    </v-expansion-panel-content>-->
+<!--                  </v-expansion-panel>-->
 
                 </v-expansion-panels>
 
@@ -231,6 +255,34 @@ export default {
     });
   },
   methods: {
+    parsePrice(thing) {
+      if (thing.length > 0) {
+        if (thing[0].tokens.length > 0) {
+          if (thing[0].tokens[0].list) {
+            if (thing[0].tokens[0].list.price) {
+              let price = thing[0].tokens[0].list.price.toString()
+              let number = price.split('e')
+              let zeros = number[1].split('+')
+
+              zeros = zeros.filter(element => {
+                return element !== '';
+              });
+
+              zeros = zeros[0] - 24
+              number = number[0]
+
+              for (let index = 0; index < zeros; index++) {
+                number += '0'
+              }
+
+              return parseFloat(number)
+            }
+          }
+        }
+      }
+
+      return 0;
+    },
     updateOffers() {
       const data = {
         productId: this.product.id,
@@ -240,7 +292,8 @@ export default {
       userApi.getOffers(data, async response => {
         this.offers = response.data
       })
-    },
+    }
+    ,
     openZoom(image) {
       this.mainImage = image
       this.zoom = true

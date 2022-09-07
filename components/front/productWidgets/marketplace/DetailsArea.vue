@@ -28,7 +28,7 @@
       </p>
     </span>
 
-    <span class="details-area-item">
+    <span class="details-area-item" v-if="thing[0].tokens[0].list">
       <p class="details-area-item-name">Contract</p>
       <p class="details-area-item-value">
           {{ thing[0].tokens[0].list.contractId }}
