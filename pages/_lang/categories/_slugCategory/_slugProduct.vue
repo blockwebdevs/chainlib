@@ -14,7 +14,7 @@
           <div class="productOne mt-6">
             <v-row class="justify-space-between">
               <v-col class="col-lg-4 col-12">
-                <div class="slider-img-wrap">
+                <div>
                   <slider-one-product :images="product.images"
                                       @openZoom="openZoom"
                                       :productImages="product.images"
