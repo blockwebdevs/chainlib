@@ -261,19 +261,17 @@ export default {
           if (thing[0].tokens[0].list) {
             if (thing[0].tokens[0].list.price) {
               let price = thing[0].tokens[0].list.price.toString()
-              let number = price.split('e')
-              let zeros = number[1].split('+')
+              let x = price.split('e')
+              let y = x[1].split('+')
 
-              zeros = zeros.filter(element => {
+              y = y.filter(element => {
                 return element !== '';
               });
 
-              zeros = zeros[0] - 24
-              number = number[0]
+              y = y[0] - 24
+              x = x[0]
 
-              for (let index = 0; index < zeros; index++) {
-                number += '0'
-              }
+              const number = x * Math.pow(10, y)
 
               return parseFloat(number)
             }
