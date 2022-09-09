@@ -33,6 +33,8 @@
                   {{ currency.abbr }}
                 </p>
 
+<!--                <near-buy></near-buy>-->
+
                 <v-btn outlined color="primary"
                        :href="`https://testnet.mintbase.io/thing/${product.translation.description}/auction?tokenId=23:art.mintspace2.testnet`"
                        target="_blank"
@@ -129,6 +131,7 @@ import PropertiesArea from "@/components/front/productWidgets/marketplace/Proper
 import OffersArea from "~/components/front/productWidgets/marketplace/OffersArea";
 import AboutArea from "~/components/front/productWidgets/marketplace/AboutArea";
 import DetailsArea from "~/components/front/productWidgets/marketplace/DetailsArea";
+// import NearBuy from "~/components/front/near/NearBuy";
 import gql from 'graphql-tag'
 
 const THING_QUERY = gql`
@@ -171,7 +174,8 @@ export default {
     PropertiesArea,
     OffersArea,
     AboutArea,
-    DetailsArea
+    DetailsArea,
+    // NearBuy
   },
   async asyncData({app, params, store}) {
     const client = app.apolloProvider.defaultClient;
