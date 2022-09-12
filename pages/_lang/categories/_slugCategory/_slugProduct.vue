@@ -36,7 +36,7 @@
 <!--                <near-buy></near-buy>-->
 
                 <v-btn outlined color="primary"
-                       :href="`https://testnet.mintbase.io/thing/${product.translation.description}/auction?tokenId=23:art.mintspace2.testnet`"
+                       :href="`https://www.mintbase.io/meta/${product.translation.description}/auction?tokenId=21`"
                        target="_blank"
                        class="mr-20">
                   <v-icon>mdi-label</v-icon>
@@ -44,20 +44,11 @@
                 </v-btn>
 
                 <v-btn outlined color="primary"
-                       :href="`https://testnet.mintbase.io/thing/${product.translation.description}`"
+                       :href="`https://mintbase.io/thing/${product.translation.description}`"
                        target="_blank" class="ml-20">
                   <v-icon>mdi-cart</v-icon>
                   Buy with near
                 </v-btn>
-
-<!--                <a v-if="product.translation.description"-->
-<!--                   outlined color="primary"-->
-<!--                   :href="`https://testnet.mintbase.io/thing/${product.translation.description}/auction?tokenId=23:art.mintspace2.testnet`"-->
-<!--                   target="_blank">Make Offer</a>-->
-
-<!--                <a v-if="product.translation.description"-->
-<!--                   :href="`https://testnet.mintbase.io/thing/${product.translation.description}`"-->
-<!--                   target="_blank">Buy with near</a>-->
 
                 <!--                <sizes :product="product" v-if="product.subproducts.length"/>-->
                 <!--                <div class="mt-4" v-else>-->
@@ -190,16 +181,11 @@ export default {
       alias: params.slugProduct,
       currency: store.state.currency.id
     }, data => {
-      // console.log(data)
       prod = data.product
       similar = data.similars
       properties = data.properties
       offers = data.offers
     })
-
-    // const id = 'eztziXSDJ0pdkIo7Zgk9X-YrisItu7GkC5BHS23iRl8:art.mintspace2.testnet';
-
-    console.log(prod.translation.description, 'gere')
 
     if (prod.translation.description) {
       const id = prod.translation.description;
