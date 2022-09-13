@@ -35,16 +35,16 @@
 
 <!--                <near-buy></near-buy>-->
 
-                <v-btn outlined color="primary"
-                       :href="`https://www.mintbase.io/meta/${product.translation.description}/auction?tokenId=21`"
-                       target="_blank"
-                       class="mr-20">
-                  <v-icon>mdi-label</v-icon>
-                  Make Offer
-                </v-btn>
+<!--                <v-btn outlined color="primary"-->
+<!--                       :href="`https://www.mintbase.io/meta/${mainnnetId}/auction?tokenId=21`"-->
+<!--                       target="_blank"-->
+<!--                       class="mr-20">-->
+<!--                  <v-icon>mdi-label</v-icon>-->
+<!--                  Make Offer-->
+<!--                </v-btn>-->
 
                 <v-btn outlined color="primary"
-                       :href="`https://mintbase.io/thing/${product.translation.description}`"
+                       :href="`https://mintbase.io/thing/${mainnnetId}`"
                        target="_blank" class="ml-20">
                   <v-icon>mdi-cart</v-icon>
                   Buy with near
@@ -66,6 +66,7 @@
                       <properties-area :properties="properties"></properties-area>
                     </v-expansion-panel-content>
                   </v-expansion-panel>
+
 
                   <v-expansion-panel v-if="thing.length">
                     <v-expansion-panel-header>Details</v-expansion-panel-header>
@@ -153,6 +154,10 @@ const THING_QUERY = gql`
   }
 `;
 
+const getPropertyByKey = (properties) => {
+  return properties['NFT Mainnet ID']
+}
+
 export default {
   components: {
     NearBuySubProductBtn,
@@ -187,14 +192,15 @@ export default {
       offers = data.offers
     })
 
-    if (prod.translation.description) {
-      const id = prod.translation.description;
+    const mainnetId = getPropertyByKey(properties)
+
+    if (mainnetId) {
+      const id = mainnetId;
 
       const res = await client.query({
         query: THING_QUERY,
         variables: {id},
       })
-
       const {thing} = res.data;
       thingMB = thing
     }
@@ -205,7 +211,8 @@ export default {
       productImages: prod.images,
       properties: properties,
       offers: offers,
-      thing: thingMB
+      thing: thingMB,
+      mainnnetId: mainnetId
     }
   },
   watch: {
