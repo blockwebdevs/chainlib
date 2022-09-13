@@ -93,3 +93,9 @@ export default {
 
 }
 </script>
+
+<style>
+.cart-icon {
+  margin-right: 10px;
+}
+</style>

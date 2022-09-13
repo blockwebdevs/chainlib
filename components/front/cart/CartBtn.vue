@@ -23,14 +23,14 @@ export default {
       appendToCart: 'cart/appendToCart',
     }),
     addToCart() {
-      if (this.type === 'prod') {
+      // if (this.type === 'prod') {
         this.appendToCart({
           userId: this.userCartId,
           productId: this.product.id,
           lang: this.language.lang,
           currency: this.currency.id
         })
-      }
+      // }
     }
   }
 }

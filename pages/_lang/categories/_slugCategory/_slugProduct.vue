@@ -50,6 +50,8 @@
                   Buy with near
                 </v-btn>
 
+                <CartBtn :product="product"></CartBtn>
+
                 <!--                <sizes :product="product" v-if="product.subproducts.length"/>-->
                 <!--                <div class="mt-4" v-else>-->
                 <!--                  <near-buy-sub-product-btn :product="product"></near-buy-sub-product-btn>-->
