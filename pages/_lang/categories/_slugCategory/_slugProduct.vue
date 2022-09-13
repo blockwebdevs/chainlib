@@ -35,13 +35,13 @@
 
 <!--                <near-buy></near-buy>-->
 
-                <v-btn outlined color="primary"
-                       :href="`https://testnet.mintbase.io/thing/${product.translation.description}/auction?tokenId=23:art.mintspace2.testnet`"
-                       target="_blank"
-                       class="mr-20">
-                  <v-icon>mdi-label</v-icon>
-                  Make Offer
-                </v-btn>
+<!--                <v-btn outlined color="primary"-->
+<!--                       :href="`https://testnet.mintbase.io/thing/${product.translation.description}/auction?tokenId=23:art.mintspace2.testnet`"-->
+<!--                       target="_blank"-->
+<!--                       class="mr-20">-->
+<!--                  <v-icon>mdi-label</v-icon>-->
+<!--                  Make Offer-->
+<!--                </v-btn>-->
 
                 <v-btn outlined color="primary"
                        :href="`https://testnet.mintbase.io/thing/${product.translation.description}`"
@@ -190,7 +190,6 @@ export default {
       alias: params.slugProduct,
       currency: store.state.currency.id
     }, data => {
-      // console.log(data)
       prod = data.product
       similar = data.similars
       properties = data.properties
@@ -199,10 +198,9 @@ export default {
 
     // const id = 'eztziXSDJ0pdkIo7Zgk9X-YrisItu7GkC5BHS23iRl8:art.mintspace2.testnet';
 
-    console.log(prod.translation.description, 'gere')
-
     if (prod.translation.description) {
-      const id = prod.translation.description;
+      // const id = prod.translation.description;
+      const id = "sDUpuiTXhyfT64c2bNWybhX8n9G0Q7EjTSeGs7E9l8Q:art.mintspace2.testnet";
 
       const res = await client.query({
         query: THING_QUERY,
@@ -210,6 +208,7 @@ export default {
       })
 
       const {thing} = res.data;
+      console.log(res, id)
       thingMB = thing
     }
 
