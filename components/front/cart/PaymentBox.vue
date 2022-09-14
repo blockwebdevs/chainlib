@@ -153,7 +153,15 @@ export default {
         this.ready = true
       })
     },
-    codOrder() {
+    async codOrder() {
+      this.resetMethods()
+      this.resetOrder()
+      await this.clearCart({
+        userId: this.userCartId,
+        language: this.language.lang,
+        currency: this.currency.id,
+      }, res => {
+      })
       this.$router.push(`/${this.language.lang}/thank-you`)
       // if (!this.payment) {
       //   this.validateErrors = 'Change payment method'

@@ -155,7 +155,7 @@ export default {
     async validateForm(response) {
       if (this.$refs.formCheckOut) {
         this.form.userId = this.user
-        const backURL = "http://127.0.0.1:8000/"
+        const backURL = "https://back.chainlib.xyz/"
 
         const userInfo = this.form.name + " <br> " + this.form.email + " <br> " + this.form.phone + " <br> " + this.form.address + " <br> " + this.form.city + " <br> " + this.form.country + " <br> ";
         let products = ""
