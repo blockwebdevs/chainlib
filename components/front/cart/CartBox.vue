@@ -91,6 +91,10 @@ export default {
     userCartId: 'cart/getUserCartId',
     language: 'getLanguage',
     currency: 'getCurrency',
+    contract: 'near/getContract',
+    currentUser: 'near/getCurrentUser',
+    nearConfig: 'near/getNearConfig',
+    walletConnection: 'near/getWalletConnection',
   }),
   methods: {
     ...mapActions({

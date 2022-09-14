@@ -157,7 +157,7 @@ export const actions = {
             }
         }
         await contentApi.getInitSettings(data => commit('SET_SETTINGS', data))
-        // await contentApi.getCartItems(state.cart.userCartId, data => commit('cart/SET_CART_ITEMS', data))
+        await contentApi.getCartItems(state.cart.userCartId, data => commit('cart/SET_CART_ITEMS', data))
         await contentApi.getCategories(state.lang.lang, data => commit('SET_CATEGORIES', data))
         // await contentApi.getCollections(state.lang.lang, data => commit('SET_COLLECTIONS', data))
         // await contentApi.getPromotions({

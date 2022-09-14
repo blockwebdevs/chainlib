@@ -1,5 +1,8 @@
 <template>
-  <v-btn color="body" class="mt-4" block @click="addToCart()">
+  <v-btn outlined
+         color="primary"
+         @click="addToCart()"
+         class="ml-4">
     <v-icon>mdi-cart</v-icon>
     Add to cart
   </v-btn>
@@ -35,3 +38,7 @@ export default {
   }
 }
 </script>
+
+<style>
+
+</style>

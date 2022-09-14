@@ -33,24 +33,29 @@
                   {{ currency.abbr }}
                 </p>
 
-<!--                <near-buy></near-buy>-->
+                <!--                <near-buy></near-buy>-->
 
-<!--                <v-btn outlined color="primary"-->
-<!--                       :href="`https://www.mintbase.io/meta/${mainnnetId}/auction?tokenId=21`"-->
-<!--                       target="_blank"-->
-<!--                       class="mr-20">-->
-<!--                  <v-icon>mdi-label</v-icon>-->
-<!--                  Make Offer-->
-<!--                </v-btn>-->
+                <!--                <v-btn outlined color="primary"-->
+                <!--                       :href="`https://www.mintbase.io/meta/${mainnnetId}/auction?tokenId=21`"-->
+                <!--                       target="_blank"-->
+                <!--                       class="mr-20">-->
+                <!--                  <v-icon>mdi-label</v-icon>-->
+                <!--                  Make Offer-->
+                <!--                </v-btn>-->
 
                 <v-btn outlined color="primary"
                        :href="`https://mintbase.io/thing/${mainnnetId}`"
                        target="_blank" class="ml-20">
-                  <v-icon>mdi-cart</v-icon>
+                  <v-icon>mdi-cart-variant</v-icon>
                   Buy with near
                 </v-btn>
 
-                <CartBtn :product="product"></CartBtn>
+                <span v-if="thing.length">
+                  <span v-if="currentUser.accountId === thing[0].tokens[0].ownerId">
+                    <CartBtn :product="product" v-if="currentUser"></CartBtn>
+                  </span>
+                </span>
+
 
                 <!--                <sizes :product="product" v-if="product.subproducts.length"/>-->
                 <!--                <div class="mt-4" v-else>-->
@@ -77,12 +82,12 @@
                     </v-expansion-panel-content>
                   </v-expansion-panel>
 
-<!--                  <v-expansion-panel v-if="offers.length">-->
-<!--                    <v-expansion-panel-header>Offers</v-expansion-panel-header>-->
-<!--                    <v-expansion-panel-content>-->
-<!--                      <offers-area :offers="offers" v-if="offers.length"></offers-area>-->
-<!--                    </v-expansion-panel-content>-->
-<!--                  </v-expansion-panel>-->
+                  <!--                  <v-expansion-panel v-if="offers.length">-->
+                  <!--                    <v-expansion-panel-header>Offers</v-expansion-panel-header>-->
+                  <!--                    <v-expansion-panel-content>-->
+                  <!--                      <offers-area :offers="offers" v-if="offers.length"></offers-area>-->
+                  <!--                    </v-expansion-panel-content>-->
+                  <!--                  </v-expansion-panel>-->
 
                 </v-expansion-panels>
 
@@ -237,6 +242,10 @@ export default {
     language: 'getLanguage',
     currency: 'getCurrency',
     trans: 'getTranslations',
+    contract: 'near/getContract',
+    currentUser: 'near/getCurrentUser',
+    nearConfig: 'near/getNearConfig',
+    walletConnection: 'near/getWalletConnection',
   }),
   data() {
     return {
