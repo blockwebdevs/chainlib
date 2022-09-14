@@ -18,7 +18,7 @@
         <td class="cart-image">
           <nuxt-link
               :to="`/${language.lang}/categories/${cartsProduct.product.category.alias}/${cartsProduct.product.alias}`">
-            <img :src="`https://back.soledynft.shop/images/products/sm/${cartsProduct.product.main_image.src}`" alt="">
+            <img :src="`https://back.chainlib.xyz/images/products/md/${cartsProduct.product.main_image.src}`" alt="">
           </nuxt-link>
         </td>
         <td class="str-col" v-if="cartsProduct.product.translation">
@@ -32,6 +32,7 @@
           <span>{{ cartsProduct.qty }}</span>
           <v-icon class="qty-control" @click="changeQty(cartsProduct, 'plus')">mdi-plus</v-icon>
         </td>
+<!--        {{ cartsProduct.product.personal_price }}-->
         <td class="str-col">{{ cartsProduct.product.personal_price.price }} EUR</td>
         <td class="str-col">{{ cartsProduct.product.personal_price.price * cartsProduct.qty }} EUR</td>
         <td>
@@ -47,7 +48,7 @@
           <nuxt-link
               :to="`/${language.lang}/categories/${cartsSubproduct.subproduct.product.category.alias}/${cartsSubproduct.subproduct.product.alias}`">
             <img
-                :src="`https://back.soledynft.shop/images/products/sm/${cartsSubproduct.subproduct.product.main_image.src}`"
+                :src="`https://back.chanlib.xyz/images/products/sm/${cartsSubproduct.subproduct.product.main_image.src}`"
                 alt="">
           </nuxt-link>
         </td>
