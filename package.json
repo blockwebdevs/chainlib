@@ -2,7 +2,7 @@
   "name": "chainlib",
   "version": "1.0.0",
   "description": "https://chainlib.xyz",
-  "author": "Tudor Iovita",
+  "author": "Chainlib",
   "private": true,
   "scripts": {
     "dev": "PORT=3005 cross-env NODE_ENV=development nodemon server/index.js --watch server",
