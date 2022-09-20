@@ -2,10 +2,7 @@
 
   <div class="h-content">
     <v-img src="/Main-banner.jpeg" class="banner-search">
-      <div class="banner-search-wrapper">
-        <input type="text" class="search-input">
-        <button></button>
-      </div>
+      <search/>
     </v-img>
 
     <v-container v-if="category">
@@ -112,9 +109,10 @@ import contentApi from '@/api/contentApi'
 import FilterModal from '@/components/front/productWidgets/FilterModal.vue'
 import SortModal from '@/components/front/productWidgets/SortModal.vue'
 import NearBuyProductBtn from "~/components/front/near/NearBuyProductBtn"
+import Search from "~/components/front/partials/Search";
 
 export default {
-  components: {FilterModal, SortModal, NearBuyProductBtn},
+  components: {FilterModal, SortModal, NearBuyProductBtn, Search},
   async asyncData({app, params, store}) {
     let categ = null;
     let products = null;

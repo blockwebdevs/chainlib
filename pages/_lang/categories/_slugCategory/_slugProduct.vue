@@ -2,10 +2,7 @@
   <div class="oneProduct-content" v-if="product">
 
     <v-img src="/Main-banner.jpeg" class="banner-search">
-      <div class="banner-search-wrapper">
-        <input type="text" class="search-input">
-        <button></button>
-      </div>
+      <search/>
     </v-img>
 
     <v-container>
@@ -130,6 +127,8 @@ import PropertiesArea from "@/components/front/productWidgets/marketplace/Proper
 import OffersArea from "~/components/front/productWidgets/marketplace/OffersArea";
 import AboutArea from "~/components/front/productWidgets/marketplace/AboutArea";
 import DetailsArea from "~/components/front/productWidgets/marketplace/DetailsArea";
+import Search from "~/components/front/partials/Search";
+
 // import NearBuy from "~/components/front/near/NearBuy";
 import gql from 'graphql-tag'
 
@@ -178,6 +177,7 @@ export default {
     OffersArea,
     AboutArea,
     DetailsArea,
+    Search
     // NearBuy
   },
   async asyncData({app, params, store}) {

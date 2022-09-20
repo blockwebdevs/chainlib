@@ -14,6 +14,12 @@ export default {
             .catch(err => console.log(err))
     },
 
+    async search(data, cb) {
+        await axios.get(`${backURL}/en/api/search?lang=${data.lang}&currency=${data.currency}&search=${data.search}`)
+            .then(response => cb(response.data))
+            .catch(err => console.log(err))
+    },
+
     async getInitSettings(cb) {
         await axios.get(`${backURL}/api/settings`)
             .then(response => cb(response.data))
