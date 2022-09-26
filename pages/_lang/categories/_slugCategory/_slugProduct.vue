@@ -2,10 +2,7 @@
   <div class="oneProduct-content" v-if="product">
 
     <v-img src="/Main-banner.jpeg" class="banner-search">
-      <div class="banner-search-wrapper">
-        <input type="text" class="search-input">
-        <button></button>
-      </div>
+      <search/>
     </v-img>
 
     <v-container>
@@ -33,31 +30,29 @@
                   {{ currency.abbr }}
                 </p>
 
-<!--                <near-buy></near-buy>-->
+                <!--                <near-buy></near-buy>-->
+
+                <!--                <v-btn outlined color="primary"-->
+                <!--                       :href="`https://www.mintbase.io/meta/${mainnnetId}/auction?tokenId=21`"-->
+                <!--                       target="_blank"-->
+                <!--                       class="mr-20">-->
+                <!--                  <v-icon>mdi-label</v-icon>-->
+                <!--                  Make Offer-->
+                <!--                </v-btn>-->
 
                 <v-btn outlined color="primary"
-                       :href="`https://testnet.mintbase.io/thing/${product.translation.description}/auction?tokenId=23:art.mintspace2.testnet`"
-                       target="_blank"
-                       class="mr-20">
-                  <v-icon>mdi-label</v-icon>
-                  Make Offer
-                </v-btn>
-
-                <v-btn outlined color="primary"
-                       :href="`https://testnet.mintbase.io/thing/${product.translation.description}`"
+                       :href="`https://mintbase.io/thing/${mainnnetId}`"
                        target="_blank" class="ml-20">
-                  <v-icon>mdi-cart</v-icon>
+                  <v-icon>mdi-cart-variant</v-icon>
                   Buy with near
                 </v-btn>
 
-<!--                <a v-if="product.translation.description"-->
-<!--                   outlined color="primary"-->
-<!--                   :href="`https://testnet.mintbase.io/thing/${product.translation.description}/auction?tokenId=23:art.mintspace2.testnet`"-->
-<!--                   target="_blank">Make Offer</a>-->
+                <span v-if="thing.length">
+                  <span v-if="currentUser.accountId === thing[0].tokens[0].ownerId">
+                    <CartBtn :product="product" v-if="currentUser"></CartBtn>
+                  </span>
+                </span>
 
-<!--                <a v-if="product.translation.description"-->
-<!--                   :href="`https://testnet.mintbase.io/thing/${product.translation.description}`"-->
-<!--                   target="_blank">Buy with near</a>-->
 
                 <!--                <sizes :product="product" v-if="product.subproducts.length"/>-->
                 <!--                <div class="mt-4" v-else>-->
@@ -76,6 +71,7 @@
                     </v-expansion-panel-content>
                   </v-expansion-panel>
 
+
                   <v-expansion-panel v-if="thing.length">
                     <v-expansion-panel-header>Details</v-expansion-panel-header>
                     <v-expansion-panel-content>
@@ -83,12 +79,12 @@
                     </v-expansion-panel-content>
                   </v-expansion-panel>
 
-<!--                  <v-expansion-panel v-if="offers.length">-->
-<!--                    <v-expansion-panel-header>Offers</v-expansion-panel-header>-->
-<!--                    <v-expansion-panel-content>-->
-<!--                      <offers-area :offers="offers" v-if="offers.length"></offers-area>-->
-<!--                    </v-expansion-panel-content>-->
-<!--                  </v-expansion-panel>-->
+                  <!--                  <v-expansion-panel v-if="offers.length">-->
+                  <!--                    <v-expansion-panel-header>Offers</v-expansion-panel-header>-->
+                  <!--                    <v-expansion-panel-content>-->
+                  <!--                      <offers-area :offers="offers" v-if="offers.length"></offers-area>-->
+                  <!--                    </v-expansion-panel-content>-->
+                  <!--                  </v-expansion-panel>-->
 
                 </v-expansion-panels>
 
@@ -131,6 +127,8 @@ import PropertiesArea from "@/components/front/productWidgets/marketplace/Proper
 import OffersArea from "~/components/front/productWidgets/marketplace/OffersArea";
 import AboutArea from "~/components/front/productWidgets/marketplace/AboutArea";
 import DetailsArea from "~/components/front/productWidgets/marketplace/DetailsArea";
+import Search from "~/components/front/partials/Search";
+
 // import NearBuy from "~/components/front/near/NearBuy";
 import gql from 'graphql-tag'
 
@@ -162,6 +160,10 @@ const THING_QUERY = gql`
   }
 `;
 
+const getPropertyByKey = (properties) => {
+  return properties['NFT Mainnet ID']
+}
+
 export default {
   components: {
     NearBuySubProductBtn,
@@ -175,6 +177,7 @@ export default {
     OffersArea,
     AboutArea,
     DetailsArea,
+    Search
     // NearBuy
   },
   async asyncData({app, params, store}) {
@@ -190,25 +193,21 @@ export default {
       alias: params.slugProduct,
       currency: store.state.currency.id
     }, data => {
-      // console.log(data)
       prod = data.product
       similar = data.similars
       properties = data.properties
       offers = data.offers
     })
 
-    // const id = 'eztziXSDJ0pdkIo7Zgk9X-YrisItu7GkC5BHS23iRl8:art.mintspace2.testnet';
+    const mainnetId = getPropertyByKey(properties)
 
-    console.log(prod.translation.description, 'gere')
-
-    if (prod.translation.description) {
-      const id = prod.translation.description;
+    if (mainnetId) {
+      const id = mainnetId;
 
       const res = await client.query({
         query: THING_QUERY,
         variables: {id},
       })
-
       const {thing} = res.data;
       thingMB = thing
     }
@@ -219,7 +218,8 @@ export default {
       productImages: prod.images,
       properties: properties,
       offers: offers,
-      thing: thingMB
+      thing: thingMB,
+      mainnnetId: mainnetId
     }
   },
   watch: {
@@ -242,6 +242,10 @@ export default {
     language: 'getLanguage',
     currency: 'getCurrency',
     trans: 'getTranslations',
+    contract: 'near/getContract',
+    currentUser: 'near/getCurrentUser',
+    nearConfig: 'near/getNearConfig',
+    walletConnection: 'near/getWalletConnection',
   }),
   data() {
     return {

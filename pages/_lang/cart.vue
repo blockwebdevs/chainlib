@@ -61,8 +61,6 @@
                 <cartSummary step="1" btnTitle="Continue to checkout"/>
               </v-col>
               <v-col><br>
-                <p><b>We accept:</b></p>
-                <img class="cards-img" src="/cards-img.png" alt="">
               </v-col>
             </v-row>
 
@@ -79,8 +77,6 @@
                 <cartSummary step="2" btnTitle="Continue to payment"/>
               </v-col>
               <v-col><br>
-                <p><b>We accept:</b></p>
-                <img class="cards-img" src="/cards-img.png" alt="">
               </v-col>
             </v-row>
           </v-container>
@@ -92,8 +88,6 @@
               <v-col class="col-md-8 cart-box">
                 <paymentBox/>
                 <br>
-                <p><b>We accept:</b></p>
-                <img class="cards-img" src="/cards-img.png" alt="">
               </v-col>
               <v-col class="col-md-4 cart-summary">
                 <cartSummary step="3" btnTitle="Pay"/>

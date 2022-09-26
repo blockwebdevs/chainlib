@@ -78,7 +78,7 @@
 <script>
 
 import {mapGetters, mapActions} from 'vuex'
-// import crmApi from '@/api/crmApi'
+import axios from "axios";
 
 export default {
   data() {
@@ -116,6 +116,7 @@ export default {
     // user: 'chat/getUser',
     countries: 'getCountries',
     country: 'getCountry',
+    total: 'cart/getTotal',
   }),
   mounted() {
     this.form.country = this.country.name
@@ -151,25 +152,52 @@ export default {
         this.form.postalCode = this.order.userDetails.postalCode
       }
     },
-    validateForm(response) {
+    async validateForm(response) {
       if (this.$refs.formCheckOut) {
         this.form.userId = this.user
-        if (this.order) {
-          this.form.orderId = this.order._id
-          this.updateCheckOutInfo(this.form).then(res => {
-            this.nextStep = true
-            if (this.$refs.formCheckOut.validate() && this.nextStep) {
-              response.done()
-            }
-          })
-        } else {
-          this.addCheckOutInfo(this.form).then(res => {
-            this.nextStep = true
-            if (this.$refs.formCheckOut.validate() && this.nextStep) {
-              response.done()
-            }
-          })
+        const backURL = "https://back.chainlib.xyz/"
+
+        const userInfo = this.form.name + " <br> " + this.form.email + " <br> " + this.form.phone + " <br> " + this.form.address + " <br> " + this.form.city + " <br> " + this.form.country + " <br> ";
+        let products = ""
+
+        for (let i = 0; i < this.cart.products.length; i++){
+          products += i+1 + ' | ' + this.cart.products[i].product.translation.name + ' | ' + this.cart.products[i].qty + this.cart.products[i].product.personal_price.price + ' Eur </br>'
         }
+
+        const amount = this.total
+
+        const data = {
+          userId: this.user,
+          userInfo,
+          products,
+          amount
+        }
+        let res = response
+
+        await axios.post(`${backURL}/en/api/details/order`, data)
+            .then(response => {
+              this.nextStep = true
+              if (this.$refs.formCheckOut.validate() && this.nextStep) {
+                res.done()
+              }
+            })
+            .catch(err => console.log(err))
+        // if (this.order) {
+        //   this.form.orderId = this.order._id
+        //   this.updateCheckOutInfo(this.form).then(res => {
+        //     this.nextStep = true
+        //     if (this.$refs.formCheckOut.validate() && this.nextStep) {
+        //       response.done()
+        //     }
+        //   })
+        // } else {
+        //   this.addCheckOutInfo(this.form).then(res => {
+        //     this.nextStep = true
+        //     if (this.$refs.formCheckOut.validate() && this.nextStep) {
+        //       response.done()
+        //     }
+        //   })
+        // }
       }
     }
   }

@@ -67,7 +67,7 @@ module.exports = {
     apollo: {
         clientConfigs: {
             default: {
-                httpEndpoint: 'https://mintbase-testnet.hasura.app/v1/graphql',
+                httpEndpoint: 'https://mintbase-mainnet.hasura.app/v1/graphql',
             },
         },
     },

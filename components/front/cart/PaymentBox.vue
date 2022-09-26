@@ -23,17 +23,17 @@
     </v-col>
 
     <v-col>
-      <v-card
-          :class="[(methods.card) ? 'selected-method' : '', 'mx-auto', 'payment-card']"
-          @click="changePayment('card')"
-          max-width="300"
-      >
-        <v-card-text class="text-center">
-          <h3 class="payment-title">Credit Card</h3>
-          <img src="/card.jpeg" class="payment-img"/>
+<!--      <v-card-->
+<!--          :class="[(methods.card) ? 'selected-method' : '', 'mx-auto', 'payment-card']"-->
+<!--          @click="changePayment('card')"-->
+<!--          max-width="300"-->
+<!--      >-->
+<!--        <v-card-text class="text-center">-->
+<!--          <h3 class="payment-title">Credit Card</h3>-->
+<!--          <img src="/card.jpeg" class="payment-img"/>-->
 
-        </v-card-text>
-      </v-card>
+<!--        </v-card-text>-->
+<!--      </v-card>-->
     </v-col>
     <!-- <v-col>
         <v-card
@@ -48,15 +48,15 @@
         </v-card>
     </v-col> -->
     <v-col>
-      <stripe-checkout
-          ref="checkoutRef"
-          mode="payment"
-          :pk="publishableKey"
-          :line-items="lineItems"
-          :success-url="successURL"
-          :cancel-url="cancelURL"
-          @loading="v => loading = v"
-      />
+<!--      <stripe-checkout-->
+<!--          ref="checkoutRef"-->
+<!--          mode="payment"-->
+<!--          :pk="publishableKey"-->
+<!--          :line-items="lineItems"-->
+<!--          :success-url="successURL"-->
+<!--          :cancel-url="cancelURL"-->
+<!--          @loading="v => loading = v"-->
+<!--      />-->
       <!-- <v-btn @click="submit">test stripe</v-btn> -->
     </v-col>
   </v-row>
@@ -64,12 +64,12 @@
 
 <script>
 
-import {StripeCheckout} from '@vue-stripe/vue-stripe';
+// import {StripeCheckout} from '@vue-stripe/vue-stripe';
 import {mapGetters, mapActions} from 'vuex'
 import cartApi from '@/api/cartApi'
 
 export default {
-  components: {StripeCheckout},
+  // components: {StripeCheckout},
   data() {
     return {
       ready: true,
@@ -103,15 +103,16 @@ export default {
   }),
   mounted() {
     this.$nuxt.$on('valiadatePayment', cb => {
-      if (this.payment === 'card' && this.ready) {
-        this.ready = false
-        cartApi.createStripeProducts({userId: this.user._id, cart: this.cart}, response => {
-          this.lineItems = response
-          if (this.lineItems) {
-            this.redirectToCheckout()
-          }
-        })
-      }
+      // if (this.payment === 'card' && this.ready) {
+        // this.ready = false
+        // this.redirectToCheckout()
+        // cartApi.createStripeProducts({userId: this.user._id, cart: this.cart}, response => {
+        //   this.lineItems = response
+        //   if (this.lineItems) {
+        //     this.redirectToCheckout()
+        //   }
+        // })
+      // }
       if (this.payment === 'cod' && this.ready) {
         this.codOrder()
       }
@@ -152,25 +153,34 @@ export default {
         this.ready = true
       })
     },
-    codOrder() {
-      if (!this.payment) {
-        this.validateErrors = 'Change payment method'
-        return false
-      } else {
-        this.updatePaymentInfo({
-          paymentMethod: this.payment,
-          orderId: this.order._id
-        }).then(async res => {
-          await cartApi.addCartToOrder({
-            userId: this.user._id,
-            cart: this.cart,
-            orderId: this.order._id,
-            amount: this.total
-          }, res => {
-          })
-          await this.handleBilling()
-        })
-      }
+    async codOrder() {
+      this.resetMethods()
+      this.resetOrder()
+      await this.clearCart({
+        userId: this.userCartId,
+        language: this.language.lang,
+        currency: this.currency.id,
+      }, res => {
+      })
+      this.$router.push(`/${this.language.lang}/thank-you`)
+      // if (!this.payment) {
+      //   this.validateErrors = 'Change payment method'
+      //   return false
+      // } else {
+      //   this.updatePaymentInfo({
+      //     paymentMethod: this.payment,
+      //     orderId: this.order._id
+      //   }).then(async res => {
+      //     await cartApi.addCartToOrder({
+      //       userId: this.user._id,
+      //       cart: this.cart,
+      //       orderId: this.order._id,
+      //       amount: this.total
+      //     }, res => {
+      //     })
+      //     await this.handleBilling()
+      //   })
+      // }
     },
     handleBilling() {
       const order = this.order
