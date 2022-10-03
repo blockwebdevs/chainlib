@@ -106,7 +106,7 @@
                   {{ currency.abbr }}
                 </p>
 
-                <v-btn v-if="product.homewear"
+                <v-btn
                        :href="`https://mintbase.io/thing/${mainnnetId}`"
                        target="_blank" class="ml-20 custom__btn">
                   <v-icon>mdi-cart-variant</v-icon>
