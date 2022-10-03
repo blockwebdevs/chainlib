@@ -114,8 +114,8 @@
                 </v-btn>
 
                 <span v-if="thing.length && product.homewear">
-                  <span v-if="currentUser.accountId === thing[0].tokens[0].ownerId">
-                    <CartBtn :product="product" v-if="currentUser"></CartBtn>
+                  <span>
+                    <CartBtn :product="product"></CartBtn>
                   </span>
                 </span>
 
